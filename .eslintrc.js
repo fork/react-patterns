@@ -6,6 +6,7 @@ module.exports = {
   },
   parser: 'babel-eslint',
   rules: {
+    'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'linebreak-style': 'off',
     'prettier/prettier': ['error'],

@@ -1,4 +1,5 @@
-import { configure, addParameters, addDecorator } from '@storybook/react';
+import React from 'react';
+import { addParameters, addDecorator } from '@storybook/react';
 import { create } from '@storybook/theming';
 import { withA11y } from '@storybook/addon-a11y';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
@@ -6,11 +7,9 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import 'lazysizes';
 import 'picturefill';
 
-const req = require.context('../components/', true, /stories\.(js|jsx|mdx)$/);
-
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
+import { ThemeProvider } from 'styled-components';
+import theme from '../stylesheets/theme';
+import GlobalStyle from '../stylesheets/global';
 
 addDecorator(withA11y);
 
@@ -23,11 +22,16 @@ addParameters({
 addParameters({
   options: {
     theme: create({
-      base: 'dark',
+      base: 'light',
       brandTitle: 'React Patterns',
       brandUrl: 'https://fork.de'
     })
   }
 });
 
-configure(loadStories, module);
+addDecorator(storyFn => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    {storyFn()}
+  </ThemeProvider>
+));
