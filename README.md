@@ -6,7 +6,7 @@ This repository contains basic React Components, Hooks and Patterns. You can cop
 
 ### 1. Install dependecies
 
-```sh
+```shell
 // Required
 yarn add react react-dom styled-components prop-types
 
@@ -24,7 +24,7 @@ yarn add js-cookies
 
 ### Scripts
 
-```sh
+```shell
 yarn start  // Starts storybook
 yarn build  // Builds storybook
 yarn deploy // Deploys storybook via staticpages-cli
