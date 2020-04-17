@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Button should render correctly 1`] = `
+<styled.button
+  as="button"
+  disabled={false}
+  href={null}
+  size="small"
+  type="button"
+  variant="primary"
+>
+  Primary Button
+</styled.button>
+`;

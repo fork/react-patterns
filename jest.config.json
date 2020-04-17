@@ -1,0 +1,7 @@
+{
+  "testRegex": "((\\.|/*.)(spec|test))\\.(js|jsx)?$",
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "setupFilesAfterEnv": ["<rootDir>/setup/enzyme.js"],
+  "collectCoverage": true,
+  "coverageDirectory": "__tests__/coverage"
+}
