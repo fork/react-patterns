@@ -33,7 +33,7 @@ IconButton.propTypes = {
   size: PropTypes.oneOf(['small', 'large']),
   icon: PropTypes.string.isRequired,
   /**
-   * Defines the tag of the component. <a> or <button>.
+   * Defines the tag of the component. 'a' or 'button'.
    */
   href: PropTypes.string
 };

@@ -15,8 +15,8 @@ const StyledIconButton = styled.button`
   border-radius: 50%;
   color: ${color('white')};
   background: ${color('primary')};
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 
   &[disabled] {
     pointer-events: none;

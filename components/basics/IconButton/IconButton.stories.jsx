@@ -9,30 +9,35 @@ export default {
 
 export const Small = () => (
   <>
-    <IconButton icon="date" variant="primary">
-      Primary
-    </IconButton>
-    <IconButton icon="date" variant="secondary">
-      Secondary
-    </IconButton>
+    <IconButton icon="date" label="This is a label" variant="primary" />
+
+    <IconButton icon="date" label="This is a label" variant="secondary" />
   </>
 );
 
 export const Large = () => (
   <>
-    <IconButton icon="date" size="large" variant="primary">
-      Primary
-    </IconButton>
-    <IconButton icon="date" size="large" variant="secondary">
-      Secondary
-    </IconButton>
+    <IconButton icon="date" size="large" label="This is a label" variant="primary" />
+    <IconButton icon="date" size="large" label="This is a label" variant="secondary" />
   </>
 );
 
 export const asLink = () => (
   <>
-    <IconButton icon="date" variant="primary" href="https://wwww.fork.de" target="_blank">
-      Primary
-    </IconButton>
+    <IconButton
+      icon="date"
+      variant="primary"
+      href="https://wwww.fork.de"
+      label="This is a label"
+      target="_blank"
+    />
+    <IconButton
+      icon="date"
+      variant="secondary"
+      size="large"
+      href="https://wwww.fork.de"
+      label="This is a label"
+      target="_blank"
+    />
   </>
 );

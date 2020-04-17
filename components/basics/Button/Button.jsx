@@ -24,7 +24,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['small', 'large']),
   type: PropTypes.oneOf(['submit', 'button', 'reset']),
   /**
-   * Defines the tag of the component. <a> or <button>.
+   * Defines the tag of the component. 'a' or 'button'.
    */
   href: PropTypes.string
 };
