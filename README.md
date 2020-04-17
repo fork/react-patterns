@@ -1,7 +1,6 @@
 # TODO:
 
     - Readme ausführen
-    - Image komponente mit HTML lazy Standard versehen
 
 ### Scripts
 

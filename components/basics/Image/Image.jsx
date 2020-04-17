@@ -11,7 +11,7 @@ const Image = ({ alt, src, srcset, sizes, lazy, ratio, className }) => {
   const { image, imageClass } = buildImageObject(
     {
       alt,
-      role: !alt ? 'presentation' : 'image',
+      role: !alt ? 'presentation' : undefined,
       sizes,
       src,
       srcSet: srcset ? buildSrcSet(srcset) : undefined
