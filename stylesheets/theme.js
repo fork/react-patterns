@@ -7,7 +7,8 @@ const theme = {
   colors: {
     black: '#000',
     white: '#fff',
-    primary: 'hsl(360, 100%, 50%)'
+    primary: 'hsl(360, 100%, 50%)',
+    secondary: 'hsl(360, 100%, 30%)'
   },
   grid: {
     columns: 12,

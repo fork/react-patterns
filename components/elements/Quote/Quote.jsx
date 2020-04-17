@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Text from '../../basics/Text';
+
 import StyledQuote from './Quote.style';
 
 const Quote = ({ author, quote, ...props }) => (
   <StyledQuote {...props}>
-    <p>{quote}</p>
+    <Text>{quote}</Text>
 
-    {author && <cite>{author}</cite>}
+    {author && <Text as="cite">{author}</Text>}
   </StyledQuote>
 );
 
