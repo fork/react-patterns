@@ -13,7 +13,9 @@ bash migrate.sh /Users/path/to/your/project
 Follow the steps and the script will copy and install all necessary files and dependecies. After it is finished add the following scripts depending on what you need to your `package.json` file.
 
 ```
-"storybook": "start-storybook -p 8000",
+"storybook": "start-storybook -s ./public -p 8000",
+"storybook:build": "build-storybook && cp -r ./public/. ./storybook-static/public/",
+"deploy": "yarn build && staticpages-cli",
 "test": "jest --config ./jest.config.json",
 "test:update": "jest --config ./jest.config.json -u"
 ```
