@@ -27,6 +27,7 @@ then
   echo "e.g. bash import.sh /users/path/to/directory"
   set -e
 else
+  echo ""
   echo "Starting the copying process..."
 
   echo "Copying 'components', 'stylesheets' and 'public' directories to $DIR."
@@ -35,8 +36,8 @@ else
   cp -r ./public $DIR
   
   echo ""
-
   echo -e $QUESTIONS
+
   # Ask if user wants to copy the custom hooks directory
   while true; do
       read -p "Do you want to copy the 'hooks' directory? " yn
