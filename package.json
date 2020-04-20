@@ -8,8 +8,8 @@
     "email": "obj@fork.de"
   },
   "scripts": {
-    "build": "build-storybook -o out && cd out/ && cp -r ../public/. ./public/",
-    "start": "start-storybook -p 8000",
+    "build": "build-storybook -s ./public && cp -r ./public/. ./storybook-static/public/",
+    "start": "start-storybook -s ./public -p 8000",
     "deploy": "yarn build && staticpages-cli",
     "test": "jest --config ./jest.config.json",
     "test:update": "jest --config ./jest.config.json -u"

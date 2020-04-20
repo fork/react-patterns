@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Arguments
-DIR=$1
+DIR=${@%/}
 
 # Variables
 DEP="react react-dom styled-components prop-types lazysizes picturefill what-input js-cookie svg-sprite-loader"
@@ -19,6 +19,7 @@ SUCCESS="${GREEN}SUCCESS${NC}"
 
 JEST=false
 STORYBOOK=false
+STATICPAGES=false
 
 if [ -z "$DIR" ]
 then
@@ -28,9 +29,10 @@ then
 else
   echo "Starting the copying process..."
 
-  echo "Copying 'components' and 'stylesheets' directory to $DIR."
-  cp -r ./components $DIR/components
-  cp -r ./stylesheets $DIR/stylesheets
+  echo "Copying 'components', 'stylesheets' and 'public' directories to $DIR."
+  cp -r ./components $DIR
+  cp -r ./stylesheets $DIR
+  cp -r ./public $DIR
   
   echo ""
 
@@ -40,7 +42,7 @@ else
       read -p "Do you want to copy the 'hooks' directory? " yn
       case $yn in
           [Yy]* ) 
-            cp -r ./hooks $DIR/hooks; 
+            cp -r ./hooks $DIR; 
             break;;
           [Nn]* ) break;;
           
@@ -53,7 +55,7 @@ else
       read -p "Do you want to add Storybook to your directory? " yn
       case $yn in
           [Yy]* )
-            cp -r ./.storybook $DIR/.storybook; 
+            cp -r ./.storybook $DIR; 
             STORYBOOK=true
             DEVDEP=$DEVDEP" @storybook/react @storybook/addon-a11y @storybook/theming @storybook/addon-docs @storybook/addon-viewport babel-loader @babel/core"; 
             break;;
@@ -69,8 +71,8 @@ else
       read -p "Do you want to add Jest tests to your directory? " yn
       case $yn in
           [Yy]* ) 
-            cp -r ./__tests__ $DIR/__tests__; 
-            cp -r ./setup $DIR/setup; 
+            cp -r ./__tests__ $DIR; 
+            cp -r ./setup $DIR; 
             cp ./jest.config.json $DIR; 
             
             JEST=true
@@ -84,6 +86,31 @@ else
       esac
   done
 
+  # Ask if user wants to add staticpages-cli to their project
+  while true; do
+      read -p "Do you want to add the staticpages-cli for deployment? " yn
+      case $yn in
+          [Yy]* ) 
+            STATICPAGES=true
+            DEVDEP=$DEVDEP" @4rk/staticpages-cli";
+            break;;
+          
+          [Nn]* ) break;;
+          
+          * ) echo "Please insert yes or no";
+      esac
+  done
+
+
+  PACKAGE="$DIR/package.json"
+  if [ -f "$PACKAGE" ]; then
+    echo ""
+    echo -e "$INSTALL package.json found"
+  else
+    echo ""
+    echo -e "$INSTALL Init project:"
+    yarn --cwd $DIR init
+  fi
 
   echo ""
   echo -e "$INSTALL dependencies:"
@@ -96,17 +123,19 @@ else
   echo $DEVDEP
   echo ""
   yarn --cwd $DIR add -D $DEVDEP
-  
-  
 
-  if [ "$STORYBOOK" = true ] || [ "$JEST" = true ] ; then
+  if [ "$STORYBOOK" = true ] || [ "$JEST" = true ] || [ "$STATICPAGES" = true ] ; then
     echo ""
-    echo -e $INFO
-    echo "Add the follwing scripts to your package.json file:"; 
+    echo -e "$INFO Add the follwing scripts to your package.json file:"; 
     echo ""
 
     if [ "$STORYBOOK" = true ] ; then
-      echo "\"storybook\": \"start-storybook\","; 
+      echo "\"storybook\": \"start-storybook -s ./public -p 8000\","; 
+      echo "\"storybook:build\": \"build-storybook && cp -r ./public/. ./storybook-static/public/\","; 
+    fi
+
+    if [ "$STATICPAGES" = true ] ; then
+      echo "\"deploy\": \"yarn build && staticpages-cli\","; 
     fi
 
       
@@ -114,6 +143,15 @@ else
       echo "\"test\": \"jest --config ./jest.config.json\","; 
       echo "\"test:update\": \"jest --config ./jest.config.json -u\""; 
     fi
+  fi
+
+
+  if [ "$STATICPAGES" = true ] ; then
+    echo ""
+    echo -e "$INFO Add the follwing variables to your .env file:"; 
+    echo ""
+    echo "DEPLOY_KEY=staticpages-deploy-key";
+    echo "DEPLOY_SRC=storybook-static";
   fi
 
   echo ""

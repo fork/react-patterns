@@ -4,17 +4,18 @@ This repository contains basic React Components, Hooks and Patterns. You can cop
 
 ## How to migrate components to your own React project
 
-### 1. Install dependecies
+You can copy and paste what you need or run the `migrate.sh` script with your project path as an argument.
 
-```shell
-// Required
-yarn add react react-dom styled-components prop-types
+```sh
+bash migrate.sh /Users/path/to/your/project
+```
 
-// Optional
-yarn add lazysizes picturefill what-input
+Follow the steps and the script will copy and install all necessary files and dependecies. After it is finished add the following scripts depending on what you need to your `package.json` file.
 
-// Only needed in CookieLayer
-yarn add js-cookies
+```
+"storybook": "start-storybook -p 8000",
+"test": "jest --config ./jest.config.json",
+"test:update": "jest --config ./jest.config.json -u"
 ```
 
 ## TODO:

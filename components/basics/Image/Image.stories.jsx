@@ -9,11 +9,11 @@ export default {
 
 export const Normal = () => (
   <div style={{ maxWidth: '500px' }}>
-    <Image src="/public/images/760x570.jpg" lazy />
+    <Image src="/images/760x570.jpg" lazy />
   </div>
 );
 export const withRatio = () => (
   <div style={{ maxWidth: '500px' }}>
-    <Image ratio="16:9" src="/public/images/760x570.jpg" lazy />
+    <Image ratio="16:9" src="/images/760x570.jpg" lazy />
   </div>
 );
