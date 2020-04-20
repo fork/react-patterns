@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea Textarea should render correctly 1`] = `
+<styled.div
+  disabled={false}
+  error={false}
+  success={false}
+>
+  <label
+    htmlFor="1"
+  >
+    <span
+      className="textarea__labelText"
+    >
+      Textarea Label
+    </span>
+  </label>
+  <textarea
+    aria-invalid={false}
+    aria-required={false}
+    autoComplete="off"
+    disabled={false}
+    id="1"
+    name="1"
+    onChange={null}
+    placeholder=""
+    required={false}
+    rows={4}
+    value=""
+  />
+</styled.div>
+`;
+
+exports[`Textarea Textarea with default value should render correctly 1`] = `
+<styled.div
+  disabled={false}
+  error={false}
+  hideLabel={true}
+  success={false}
+>
+  <label
+    htmlFor="1"
+  >
+    <span
+      className="textarea__labelText"
+    >
+      Textarea Label
+    </span>
+  </label>
+  <textarea
+    aria-invalid={false}
+    aria-required={false}
+    autoComplete="off"
+    disabled={false}
+    hideLabel={true}
+    id="1"
+    name="1"
+    onChange={null}
+    placeholder=""
+    required={false}
+    rows={4}
+    value="true"
+  />
+</styled.div>
+`;
+
+exports[`Textarea Textarea with hidden label should render correctly 1`] = `
+<styled.div
+  disabled={false}
+  error={false}
+  hideLabel={true}
+  success={false}
+>
+  <label
+    htmlFor="1"
+  >
+    <span
+      className="textarea__labelText"
+    >
+      Textarea Label
+    </span>
+  </label>
+  <textarea
+    aria-invalid={false}
+    aria-required={false}
+    autoComplete="off"
+    disabled={false}
+    hideLabel={true}
+    id="1"
+    name="1"
+    onChange={null}
+    placeholder=""
+    required={false}
+    rows={4}
+    value=""
+  />
+</styled.div>
+`;

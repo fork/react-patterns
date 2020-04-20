@@ -12,3 +12,17 @@ exports[`Button Button should render correctly 1`] = `
   Primary Button
 </styled.button>
 `;
+
+exports[`Button Secondary Button should render correctly 1`] = `
+<styled.button
+  as="button"
+  disabled={false}
+  href={null}
+  icon="close"
+  size="small"
+  type="button"
+  variant="primary"
+>
+  Secondary Button
+</styled.button>
+`;
