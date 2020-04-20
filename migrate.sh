@@ -4,7 +4,7 @@
 DIR=$1
 
 # Variables
-DEP="react react-dom styled-components prop-types lazysizes picturefill what-input js-cookies svg-sprite-loader"
+DEP="react react-dom styled-components prop-types lazysizes picturefill what-input js-cookie svg-sprite-loader"
 DEVDEP=""
 
 YELLOW='\033[1;33m'
