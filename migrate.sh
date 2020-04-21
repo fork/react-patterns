@@ -5,17 +5,16 @@ DIR=${@%/}
 
 # Variables
 DEP="react react-dom styled-components prop-types lazysizes picturefill what-input js-cookie svg-sprite-loader"
-DEVDEP=""
+DEVDEP=
 
-YELLOW='\033[1;33m'
-BLUE='\033[1;34m'
+PURPLE='\033[0;35m'
+BLUE='\033[0;34m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-QUESTIONS="${YELLOW}QUESTIONS${NC}"
-INSTALL="${GREEN}INSTALLING${NC}"
-INFO="${BLUE}INFO${NC}"
-SUCCESS="${GREEN}SUCCESS${NC}"
+INSTALL="${PURPLE}installing${NC}"
+INFO="${BLUE}info${NC}"
+SUCCESS="${GREEN}success${NC}"
 
 JEST=false
 STORYBOOK=false
@@ -26,24 +25,13 @@ then
   echo "You have to provide a directory as an argument,"
   echo "e.g. bash import.sh /users/path/to/directory"
   set -e
-else
-  echo ""
-  echo "Starting the copying process..."
-
-  echo "Copying 'components', 'stylesheets' and 'public' directories to $DIR."
-  cp -r ./components $DIR
-  cp -r ./stylesheets $DIR
-  cp -r ./public $DIR
-  
-  echo ""
-  echo -e $QUESTIONS
-
+else  
   # Ask if user wants to copy the custom hooks directory
   while true; do
       read -p "Do you want to copy the 'hooks' directory? " yn
       case $yn in
           [Yy]* ) 
-            cp -r ./hooks $DIR; 
+            cp -r -n ./hooks $DIR; 
             break;;
           [Nn]* ) break;;
           
@@ -56,7 +44,7 @@ else
       read -p "Do you want to add Storybook to your directory? " yn
       case $yn in
           [Yy]* )
-            cp -r ./.storybook $DIR; 
+            cp -r -n ./.storybook $DIR; 
             STORYBOOK=true
             DEVDEP=$DEVDEP" @storybook/react @storybook/addon-a11y @storybook/theming @storybook/addon-docs @storybook/addon-viewport babel-loader @babel/core"; 
             break;;
@@ -72,8 +60,8 @@ else
       read -p "Do you want to add Jest tests to your directory? " yn
       case $yn in
           [Yy]* ) 
-            cp -r ./__tests__ $DIR; 
-            cp -r ./setup $DIR; 
+            cp -r -n ./__tests__ $DIR; 
+            cp -r -n ./setup $DIR; 
             cp ./jest.config.json $DIR; 
             
             JEST=true
@@ -102,7 +90,14 @@ else
       esac
   done
 
+  echo ""
+  echo -e "$INFO Copying 'components', 'stylesheets' and 'public' directories to $DIR."
+  cp -r -n ./components $DIR
+  cp -r -n ./stylesheets $DIR
+  cp -r -n ./public $DIR
 
+
+  # Check if package.json exists, else init project
   PACKAGE="$DIR/package.json"
   if [ -f "$PACKAGE" ]; then
     echo ""
@@ -113,17 +108,25 @@ else
     yarn --cwd $DIR init
   fi
 
+  # Install dependencies
   echo ""
   echo -e "$INSTALL dependencies:"
   echo $DEP
   echo ""
   yarn --cwd $DIR add $DEP
 
-  echo ""
-  echo -e "$INSTALL dev dependencies:"
-  echo $DEVDEP
-  echo ""
-  yarn --cwd $DIR add -D $DEVDEP
+  # Check if dev dependencies need to be installed
+  if [ -z "$DEVDEP" ]
+  then
+    echo ""
+    echo -e "$INSTALL No dev dependencies to install."
+  else
+    echo ""
+    echo -e "$INSTALL dev dependencies:"
+    echo $DEVDEP
+    echo ""
+    yarn --cwd $DIR add -D $DEVDEP
+  fi
 
   if [ "$STORYBOOK" = true ] || [ "$JEST" = true ] || [ "$STATICPAGES" = true ] ; then
     echo ""
@@ -154,6 +157,30 @@ else
     echo "DEPLOY_KEY=staticpages-deploy-key";
     echo "DEPLOY_SRC=storybook-static";
   fi
+
+  # svg-sprite-loader information
+  echo ""
+  echo -e "$INFO The components make use of the 'svg-sprite-loader'. Make sure you add the following rule to your webpack config:"; 
+  echo ""
+  echo "{";
+  echo "  test: /\.svg$/,";
+  echo "  loader: 'svg-sprite-loader'";
+  echo "}";
+
+  # Theme Provider Information
+  echo ""
+  echo -e "$INFO Also make sure that you wrap your React tree in a 'ThemeProvider':"; 
+  echo ""
+  echo "import React from 'react';"
+  echo "import { ThemeProvider } from 'styled-components';"
+  echo ""
+  echo "import theme from 'path/to/stylesheets/theme';"
+  echo ""
+  echo "export default () => ("
+  echo "  <ThemeProvider theme={theme}>"
+  echo "    <ReactTree />"
+  echo "  </ThemeProvider>"
+  echo ");"
 
   echo ""
   echo -e "$SUCCESS Everything was copied and installed!"
