@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 
 import Button from '../../basics/Button';
-import TextContainer from '../../layouts/TextContainer';
+import Richtext from '../Richtext';
 
 import StyledCookieLayer from './CookieLayer.style';
 
@@ -23,7 +23,7 @@ const CookieLayer = ({ content, acceptLabel, rejectLabel, onAccept, onReject, ..
   return (
     isVisible && (
       <StyledCookieLayer isVisible={isVisible} {...props}>
-        <TextContainer html={content} className="cookieLayer__content" />
+        <Richtext html={content} className="cookieLayer__content" />
         <div className="cookieLayer__buttons">
           <Button
             onClick={() => {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { color } from '../../../stylesheets';
 
-const StyledTextContainer = styled.div`
+const StyledRichtext = styled.div`
   p {
     padding: 0.75rem 0;
   }
@@ -35,4 +35,4 @@ const StyledTextContainer = styled.div`
   }
 `;
 
-export default StyledTextContainer;
+export default StyledRichtext;

@@ -11,7 +11,9 @@ git clone git@lab.fork.de:fork/react-patterns.git
 cd react-patterns/
 ```
 
-Copy and paste what you need or run the `migrate.sh` script with your project path as an argument.
+## Automatic migration
+
+Run the `migrate.sh` script with your project path as an argument.
 
 ```sh
 bash migrate.sh /Users/path/to/your/project
@@ -26,6 +28,10 @@ Follow the steps and the script will copy and install all necessary files and de
 "test": "jest --config ./jest.config.json",
 "test:update": "jest --config ./jest.config.json -u"
 ```
+
+## Manual migration
+
+What to copy
 
 ### Scripts
 
