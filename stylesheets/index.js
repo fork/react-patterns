@@ -3,6 +3,7 @@ export { btnReset, hideVisually, hexToRgbA, stripUnit, modularScale } from './to
 export { space, px2rem } from './tools/spacing';
 export { default as mq } from './tools/mediaQuery';
 export { default as color } from './tools/color';
+export { default as variant } from './tools/variant';
 
 export {
   displayGrid,
