@@ -94,6 +94,7 @@ else
   echo -e "$INFO Copying 'components', 'stylesheets' and 'public' directories to $DIR."
   cp -r -n ./components $DIR
   cp -r -n ./stylesheets $DIR
+  cp -r -n ./tokens $DIR
   cp -r -n ./public $DIR
 
 
@@ -174,10 +175,10 @@ else
   echo "import React from 'react';"
   echo "import { ThemeProvider } from 'styled-components';"
   echo ""
-  echo "import theme from 'path/to/stylesheets/theme';"
+  echo "import tokens from 'path/to/tokens';"
   echo ""
   echo "export default () => ("
-  echo "  <ThemeProvider theme={theme}>"
+  echo "  <ThemeProvider theme={tokens}>"
   echo "    <ReactTree />"
   echo "  </ThemeProvider>"
   echo ");"

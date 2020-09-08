@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: "Tilde", Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-display: swap;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   input, textarea, select, button {
-    font-family: "Tilde", Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
   }
 
   a {
