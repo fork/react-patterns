@@ -8,6 +8,7 @@ const Select = ({
   defaultValue,
   disabled,
   error,
+  errorMessage,
   hideLabel,
   id,
   label,
@@ -43,7 +44,7 @@ const Select = ({
         aria-required={required}
         required={required}
         disabled={disabled}
-        defaultValue={placeholder ? '' : defaultValue}
+        defaultValue={defaultValue || ''}
       >
         {placeholder && <option value="">{placeholder}</option>}
         {options.map(option => (
@@ -54,6 +55,7 @@ const Select = ({
       </select>
       <Icon icon="angleDown" />
     </div>
+    {error && errorMessage && <span className="select__error">{errorMessage}</span>}
   </StyledSelect>
 );
 Select.propTypes = {
@@ -71,6 +73,7 @@ Select.propTypes = {
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
+  errorMessage: PropTypes.string,
   error: PropTypes.bool,
   success: PropTypes.bool,
   disabled: PropTypes.bool,
@@ -80,6 +83,7 @@ Select.propTypes = {
 Select.defaultProps = {
   defaultValue: '',
   disabled: false,
+  errorMessage: '',
   error: false,
   hideLabel: false,
   onBlur: null,

@@ -4,9 +4,9 @@ import { color, space, hideVisually } from '../../stylesheets';
 const StyledSelect = styled.div`
   label {
     display: block;
-    margin-bottom: ${space('m')};
+    margin-bottom: ${space(4)};
     font-weight: bold;
-    color: ${color('black')};
+    color: ${color('schwarz')};
     line-height: 1;
     ${props => props.hideLabel && hideVisually()}
   }
@@ -16,7 +16,7 @@ const StyledSelect = styled.div`
     pointer-events: none;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
-    right: ${space('m')};
+    right: ${space(4)};
   }
 
   .select__wrapper {
@@ -28,12 +28,12 @@ const StyledSelect = styled.div`
     outline: none;
     background: transparent;
     appearance: none;
-    color: ${color('black')};
+    color: ${color('schwarz')};
     font-size: inherit;
     font-weight: normal;
     line-height: 1;
-    border: 1px solid ${color('black')};
-    padding: ${space('m')};
+    border: 1px solid ${color('schwarz')};
+    padding: ${space(4)};
 
     option {
       color: black;
@@ -68,13 +68,18 @@ const StyledSelect = styled.div`
     props.error &&
     css`
       label {
-        color: ${color('primary')};
+        color: ${color('pink')};
       }
 
       select {
-        border-color: ${color('primary')};
+        border-color: ${color('pink')};
       }
     `}
+
+  .select__error {
+    display: block;
+    color: ${color('pink')};
+  }
 `;
 
 export default StyledSelect;
