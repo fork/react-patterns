@@ -1,5 +1,7 @@
-<div style="text-align: center; margin: 0 auto; max-width: 150px;">
-    <img src="./assets/fork-logo.png" alt="Fork Logo"/>
+<div align="center">
+  <a href="https://www.fork.de">
+    <img src="./assets/fork-logo.png" width="156" height="30" alt="Fork Logo" />
+  </a>
 </div>
 
 # React Patterns
