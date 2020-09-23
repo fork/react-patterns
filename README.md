@@ -1,5 +1,5 @@
 <div style="text-align: center; margin: 20px 0;">
-    <img src="./assets/fork-logo.png" alt="Fork Logo" style="width: 150px;"/>
+    <img src="./assets/fork-logo.png" alt="Fork Logo" style="max-width: 150px;"/>
 </div>
 
 # React Patterns
