@@ -1,6 +1,10 @@
+<div style="text-align: center; margin: 20px 0;">
+    <img src="./assets/fork-logo.png" alt="Fork Logo" style="width: 150px;"/>
+</div>
+
 # React Patterns
 
-This repository contains basic React Components, Hooks and Patterns.
+This repository contains basic React Components, Hooks and Patterns, which we use at [Fork Unstable Media](https://www.fork.de/).
 
 ## How to install components to your own React project
 
@@ -16,22 +20,20 @@ cd react-patterns/
 Run the `migrate.sh` script with your project path as an argument.
 
 ```sh
-bash migrate.sh /Users/path/to/your/project
+bash .migration/migrate.sh /Users/path/to/your/project
 ```
 
-Follow the steps and the script will copy and install all necessary files and dependecies. After it is finished add the following scripts depending on what you need to your `package.json` file.
-
-```json
-"storybook": "start-storybook -s ./public -p 8000",
-"storybook:build": "build-storybook && cp -r ./public/. ./storybook-static/public/",
-"deploy": "yarn build && staticpages-cli",
-"test": "jest --config ./jest.config.json",
-"test:update": "jest --config ./jest.config.json -u"
-```
+Follow the steps and the script will copy and install all necessary files and dependecies.
 
 ## Manual migration
 
-What to copy
+### `components`
+
+Copy all components you need for your new project. All components consist of a `component.jsx`, `component.style.jsx` and a `component.stories.jsx` file.
+
+### `stylesheets`
+
+Copy the `stylesheets` directory to your new project, because all components depend on some stylesheet helpers.
 
 ### Scripts
 

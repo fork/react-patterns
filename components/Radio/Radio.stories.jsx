@@ -9,16 +9,16 @@ export default {
 
 const options = [
   {
-    value: 'frau',
-    label: 'Frau'
+    value: 'cao',
+    label: '🍲 Cao'
   },
   {
-    value: 'herr',
-    label: 'Herr'
+    value: 'polo',
+    label: '🏇 Polokantine'
   },
   {
-    value: 'divers',
-    label: 'Divers'
+    value: 'ottos',
+    label: '🍔 Ottos'
   }
 ];
 
@@ -28,7 +28,7 @@ export const withState = () => {
   return (
     <Radio
       id="radio-1"
-      label="Anrede"
+      label="What do we eat for lunch?"
       value={value}
       options={options}
       onChange={e => setValue(e.target.value)}
@@ -36,25 +36,29 @@ export const withState = () => {
   );
 };
 
-export const withoutValue = () => <Radio id="radio-2" label="Anrede" options={options} />;
+export const withoutValue = () => (
+  <Radio id="radio-2" label="What do we eat for lunch?" options={options} />
+);
 
 export const withValue = () => (
-  <Radio id="radio-3" label="Anrede" value="divers" options={options} />
+  <Radio id="radio-3" label="What do we eat for lunch?" value="ottos" options={options} />
 );
 
 export const withoutLabel = () => (
-  <Radio id="radio-4" label="Anrede" value="divers" options={options} hideLabel />
+  <Radio id="radio-4" label="What do we eat for lunch?" value="ottos" options={options} hideLabel />
 );
 
 export const error = () => (
   <Radio
     id="radio-5"
-    label="Anrede"
+    label="What do we eat for lunch?"
     options={options}
     error
-    errorMessage="Dies ist ein Pflichtfeld"
+    errorMessage="We need to eat something. Choose wisely."
     required
   />
 );
 
-export const disabled = () => <Radio id="radio-6" label="Anrede" options={options} disabled />;
+export const disabled = () => (
+  <Radio id="radio-6" label="What do we eat for lunch?" options={options} disabled />
+);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { ThemeProvider } from 'styled-components';
+import { withThemePlayground } from 'storybook-addon-theme-playground';
 
 import 'lazysizes';
 import 'picturefill';
@@ -15,10 +16,14 @@ export const parameters = {
 };
 
 export const decorators = [
+  withThemePlayground({
+    theme: tokens,
+    provider: ThemeProvider
+  }),
   storyFn => (
-    <ThemeProvider theme={tokens}>
+    <>
       <GlobalStyle />
       {storyFn()}
-    </ThemeProvider>
+    </>
   )
 ];

@@ -21,6 +21,7 @@ const Radio = ({
       {label}
       {required && <span className="radio__required">*</span>}
     </p>
+
     {options.map(option => (
       <div className="radio__item" key={option.value}>
         <input

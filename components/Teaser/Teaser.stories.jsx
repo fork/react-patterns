@@ -12,8 +12,8 @@ export const Normal = () => (
     headline="Dummy headline"
     copy="Dumm intro copy"
     image={{
-      src: 'public/images/760x570.jpg',
-      srcset: 'public/images/760x570.jpg',
+      src: '/images/760x570.jpg',
+      srcset: '/images/760x570.jpg',
       ratio: '4:3',
       alt: 'Robot Girl'
     }}

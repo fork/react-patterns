@@ -7,8 +7,8 @@ const tokens = {
   colors: {
     black: '#000',
     white: '#fff',
-    primary: 'hsl(360, 100%, 50%)',
-    secondary: 'hsl(360, 100%, 30%)'
+    primary: '#00FF88',
+    secondary: '#008952'
   },
   grid: {
     columns: 12,
