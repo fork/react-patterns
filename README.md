@@ -11,7 +11,7 @@ This repository contains basic React Components, Hooks and Patterns, which we us
 Clone the `react-patterns` repository.
 
 ```sh
-git clone git@lab.fork.de:fork/react-patterns.git
+git clone https://github.com/fork/react-patterns
 cd react-patterns/
 ```
 
