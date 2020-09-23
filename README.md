@@ -8,7 +8,7 @@
 
 This repository contains basic React Components, Hooks and Patterns, which we use at [Fork Unstable Media](https://www.fork.de/).
 
-## How to install components to your own React project
+## How to install the components to your own React project
 
 Clone the `react-patterns` repository.
 
@@ -39,13 +39,13 @@ Copy the `stylesheets` directory to your new project, because all components dep
 
 ### Scripts
 
-```shell
+```sh
 yarn start  // Starts storybook
 yarn build  // Builds storybook
 yarn deploy // Deploys storybook via staticpages-cli
 
 yarn test         // Run jest test
-yarn test:update  // Update snapshots
+yarn test:update  // Update tests
 
 ```
 
@@ -60,7 +60,7 @@ yarn test:update  // Update snapshots
     - Add more jest tests
 
 <div align="center">
-  <img src="./assets/heart.png" width="50" height="54" alt="Fork Logo" />
+  <img src="./assets/heart.png" width="38" height="41" alt="Fork Logo" />
 
-  <p>Brough to you by <a href="https://www.fork.de">Fork Unstable Media GmbH</a></p>
+  <p>Brought to you by <a href="https://www.fork.de">Fork Unstable Media GmbH</a></p>
 </div>
