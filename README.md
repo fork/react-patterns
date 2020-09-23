@@ -59,6 +59,8 @@ yarn test:update  // Update tests
     - Update readme
     - Add more jest tests
 
+---
+
 <div align="center">
   <img src="./assets/heart.png" width="38" height="41" alt="Fork Logo" />
 
