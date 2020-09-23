@@ -49,7 +49,7 @@ yarn test:update  // Update tests
 
 ```
 
-### How to deploy
+### Deployment
 
 1. Copy `.env.example` to `.env` and add your staticpages `DEPLOY_KEY`.
 2. Run `yarn deploy` to deploy static storybook app via staticpages-cli.

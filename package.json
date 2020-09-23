@@ -1,11 +1,19 @@
 {
   "name": "react-patterns",
-  "version": "0.0.1",
+  "description": "Basic React Components, Hooks and Patterns, which we use at Fork",
+  "keywords": [
+    "react",
+    "patterns",
+    "storybook"
+  ],
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Fork Unstable Media GmbH",
     "email": "obj@fork.de"
   },
+  "bugs": "https://github.com/fork/react-patterns/issues",
+  "repository": "fork/react-patterns",
   "scripts": {
     "build": "build-storybook -s ./public && cp -r ./public/. ./storybook-static/public/",
     "start": "start-storybook -s ./public -p 8000",
