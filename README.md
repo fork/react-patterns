@@ -58,3 +58,9 @@ yarn test:update  // Update snapshots
 
     - Update readme
     - Add more jest tests
+
+<div align="center">
+  <img src="./assets/heart.png" width="50" height="54" alt="Fork Logo" />
+
+  <p>Brough to you by <a href="https://www.fork.de">Fork Unstable Media GmbH</a></p>
+</div>
