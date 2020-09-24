@@ -19,7 +19,6 @@ This repository contains basic React Components, Hooks and Patterns, which we us
 
 **Table of contents**
 
-- [Requirements](#requirements)
 - [Installation](#installation)
 - [Scripts](#scripts)
 - [Theming](#theming)
@@ -90,11 +89,15 @@ We use `styled-components` to style our react components. There are several help
 
 ```js
 import styled from 'styled-components';
-import { color, space } from 'path/to/stylesheets';
+import { color, space, mq } from 'path/to/stylesheets';
 
 const StyledComponent = styled.h2`
   margin: ${space('m')} 0;
   color: ${color('primary')};
+
+  ${mq('m')} {
+    color: ${color('secondary')};
+  }
 `;
 ```
 

@@ -15,7 +15,7 @@
   "bugs": "https://github.com/fork/react-patterns/issues",
   "repository": "fork/react-patterns",
   "scripts": {
-    "build": "build-storybook -s ./public && cp -r ./public/. ./storybook-static/public/",
+    "build": "build-storybook",
     "start": "start-storybook -s ./public -p 8000",
     "deploy": "yarn build && staticpages-cli",
     "test": "jest --config ./jest.config.json",
