@@ -4,7 +4,7 @@ import Form, { FormInput } from './Form';
 import Button from '../Button';
 
 export default {
-  title: 'Form',
+  title: 'Components/Form',
   component: Form
 };
 

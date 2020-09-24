@@ -43,18 +43,18 @@ const StyledTextarea = styled.div`
 
   .textarea__error {
     display: block;
-    color: ${color('primary')};
+    color: ${color('critical')};
   }
 
   ${props =>
     props.error &&
     css`
       label {
-        color: ${color('primary')};
+        color: ${color('critical')};
       }
 
       textarea {
-        border-color: ${color('primary')};
+        border-color: ${color('critical')};
       }
     `}
 
@@ -62,11 +62,11 @@ const StyledTextarea = styled.div`
     props.success &&
     css`
       label {
-        color: green;
+        color: ${color('positive')};
       }
 
       textarea {
-        border-color: green;
+        border-color: ${color('positive')};
       }
     `}
 `;

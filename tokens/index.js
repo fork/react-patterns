@@ -8,7 +8,10 @@ const tokens = {
     black: '#000',
     white: '#fff',
     primary: '#00FF88',
-    secondary: '#008952'
+    secondary: '#008952',
+    critical: '#ff0000',
+    positive: '#009900',
+    caution: '#ffff00'
   },
   grid: {
     columns: 12,

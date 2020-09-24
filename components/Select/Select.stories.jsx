@@ -20,7 +20,7 @@ const data = {
 };
 
 export default {
-  title: 'Select',
+  title: 'Components/Select',
   component: Select
 };
 

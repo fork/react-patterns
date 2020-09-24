@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Radio from './Radio';
 
 export default {
-  title: 'Radio',
+  title: 'Components/Radio',
   component: Radio
 };
 

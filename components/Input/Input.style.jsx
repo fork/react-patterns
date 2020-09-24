@@ -48,18 +48,18 @@ const StyledInput = styled.div`
 
   .input__error {
     display: block;
-    color: ${color('primary')};
+    color: ${color('critical')};
   }
 
   ${props =>
     props.success &&
     css`
       label {
-        color: green;
+        color: ${color('positive')};
       }
 
       input {
-        border-color: green;
+        border-color: ${color('positive')};
       }
     `}
 
@@ -67,11 +67,11 @@ const StyledInput = styled.div`
     props.error &&
     css`
       label {
-        color: ${color('primary')};
+        color: ${color('critical')};
       }
 
       input {
-        border-color: ${color('primary')};
+        border-color: ${color('critical')};
       }
     `}
 `;

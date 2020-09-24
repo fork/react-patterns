@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Textarea from './Textarea';
 
 export default {
-  title: 'Textarea',
+  title: 'Components/Textarea',
   component: Textarea
 };
 

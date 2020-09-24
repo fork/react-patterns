@@ -3,7 +3,7 @@ import React from 'react';
 import Richtext from './Richtext';
 
 export default {
-  title: 'Richtext',
+  title: 'Components/Richtext',
   component: Richtext
 };
 

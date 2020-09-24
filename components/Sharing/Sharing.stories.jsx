@@ -3,7 +3,7 @@ import React from 'react';
 import Sharing from './Sharing';
 
 export default {
-  title: 'Sharing',
+  title: 'Components/Sharing',
   component: Sharing
 };
 

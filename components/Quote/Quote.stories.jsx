@@ -3,7 +3,7 @@ import React from 'react';
 import Quote from './Quote';
 
 export default {
-  title: 'Quote',
+  title: 'Components/Quote',
   component: Quote
 };
 
