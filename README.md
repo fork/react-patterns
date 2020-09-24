@@ -21,6 +21,7 @@ This repository contains basic React Components, Hooks and Patterns, which we us
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Scripts](#scripts)
+- [Styling](#styling)
 - [Deployment](#deployment)
 - [Roadmap](#roadmap)
 
@@ -62,6 +63,22 @@ yarn deploy # Deploys storybook via staticpages-cli
 yarn test         # Run jest test
 yarn test:update  # Update tests
 
+```
+
+## Styling
+
+We use `styled-components` to style our react components. There are several helper methods and tools in the `stylesheets` direcetory which will return theme aware design tokens.
+
+**Example**
+
+```js
+import styled from 'styled-components';
+import { color, space } from 'path/to/stylesheets';
+
+const StyledComponent = styled.h2`
+  margin: ${space('m')} 0;
+  color: ${color('primary')};
+`;
 ```
 
 ## Deployment
