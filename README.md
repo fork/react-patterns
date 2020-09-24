@@ -51,7 +51,63 @@ Follow the steps and the script will copy and install all necessary files and de
 
 ### 2. Manual migration
 
-Copy all components you need for your new project. All components consist of a `component.jsx`, `component.style.jsx`, `component.stories.jsx` and a `index.js` file. All components depend on design tokens and our stylesheet helpers, therefore you also need to copy the `stylesheets` and the `tokens` directory to your new project. Install the missing dependencies.
+Copy all components you need for your new project. All components consist of a `component.jsx`, `component.style.jsx`, `component.stories.jsx` and a `index.js` file. All components depend on design tokens and our stylesheet helpers, therefore you also need to copy the `stylesheets` and the `tokens` directory to your new project.
+
+<details>
+  <summary>Install missing dependencies</summary>
+
+```sh
+# Install dependencies
+yarn add react react-dom styled-components prop-types lazysizes picturefill what-input js-cookie svg-sprite-loader
+
+# Install dev dependencies
+yarn add -D @storybook/react @storybook/addon-a11y @storybook/theming @storybook/addon-docs @storybook/addon-viewport babel-loader @babel/core babel-jest enzyme enzyme-adapter-react-16 enzyme-to-json jest react-is react-test-renderer @4rk/staticpages-cli
+```
+
+</details>
+
+<details>
+  <summary>Add scripts to package.json</summary>
+
+```sh
+"storybook": "start-storybook -s ./public -p 8000",
+"storybook:build": "build-storybook",
+"deploy": "yarn build && staticpages-cli",
+"test": "jest --config ./jest.config.json",
+"test:update": "jest --config ./jest.config.json -u"
+```
+
+</details>
+
+<details>
+  <summary>Add <b>svg-sprite-loader</b> to your webpack config</summary>
+
+```js
+{
+  test: /\.svg$/,
+  loader: "svg-sprite-loader"
+}
+```
+
+</details>
+
+<details>
+  <summary>Wrap your React tree in a <b>ThemeProvider</b></summary>
+
+```js
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+
+import tokens from 'path/to/tokens';
+
+export default () => (
+  <ThemeProvider theme={tokens}>
+    <ReactTree />
+  </ThemeProvider>
+);
+```
+
+</details>
 
 ## Scripts
 
@@ -121,3 +177,4 @@ Write something about future releases and whats on the list for the next develop
 
   <p>Brought to you by <a href="https://www.fork.de">Fork Unstable Media GmbH</a></p>
 </div>
+````
