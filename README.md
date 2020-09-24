@@ -20,7 +20,6 @@ This repository contains basic React Components, Hooks and Patterns, which we us
 **Table of contents**
 
 - [Installation](#installation)
-- [Scripts](#scripts)
 - [Theming](#theming)
 - [Stylesheets](#stylesheets)
 - [Deployment](#deployment)
@@ -72,7 +71,7 @@ yarn add -D @storybook/react @storybook/addon-a11y @storybook/theming @storybook
 ```sh
 "storybook": "start-storybook -s ./public -p 8000",
 "storybook:build": "build-storybook",
-"deploy": "yarn build && staticpages-cli",
+"deploy": "yarn storybook:build && staticpages-cli",
 "test": "jest --config ./jest.config.json",
 "test:update": "jest --config ./jest.config.json -u"
 ```
@@ -81,6 +80,8 @@ yarn add -D @storybook/react @storybook/addon-a11y @storybook/theming @storybook
 
 <details>
   <summary>Add <b>svg-sprite-loader</b> to your webpack config</summary>
+
+The components make use of the 'svg-sprite-loader'. Make sure you add the following rule to your webpack config:
 
 ```js
 {
@@ -108,19 +109,6 @@ export default () => (
 ```
 
 </details>
-
-## Scripts
-
-```sh
-yarn start  # Starts storybook
-yarn build  # Builds storybook
-yarn deploy # Deploys storybook via staticpages-cli
-
-# Only copy them if you need testing
-yarn test         # Run jest test
-yarn test:update  # Update tests
-
-```
 
 ## Theming
 
