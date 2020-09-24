@@ -8,17 +8,6 @@
 
 This repository contains basic React Components, Hooks and Patterns, which we use at [Fork Unstable Media](https://www.fork.de/).
 
-**Table of contents**
-
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Scripts](#scripts)
-- [Deployment](#deployment)
-- [Roadmap](#roadmap)
-
----
-
 ## Features
 
 - 📦 Basic React components to start with
@@ -26,6 +15,16 @@ This repository contains basic React Components, Hooks and Patterns, which we us
 - 🔧 ESLint, Stylelint und Prettier already configured
 - 🎛 Storybook Integration with A11y, Docs and Viewport Plugin
 - 📐 Styling helpers for color, spacings and media queries
+
+**Table of contents**
+
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Scripts](#scripts)
+- [Deployment](#deployment)
+- [Roadmap](#roadmap)
+
+---
 
 ## Installation
 
