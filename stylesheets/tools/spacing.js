@@ -15,10 +15,11 @@ export function px2rem(px) {
 /**
  * Returns spacing from theme object referenced by id
  * @param  {string} id - Identifier for the spacing in theme object. Default: "s"
+ * @param  {boolean} usePx - default: false, whether to return space as pixel or rem
  * @returns {string} Resulting spacing from theme object
  * @example margin: ${space('m')};
  */
-export const space = (id = 's') => ({ theme }) => {
+export const space = (id = 's', usePx = false) => ({ theme }) => {
   const { spacings } = theme;
 
   if (!spacings) {
@@ -29,5 +30,5 @@ export const space = (id = 's') => ({ theme }) => {
     throw new Error(`Spacings ${id} not known`);
   }
 
-  return px2rem(spacings[id]);
+  return usePx ? spacings[id] : px2rem(spacings[id]);
 };

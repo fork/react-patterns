@@ -38,7 +38,7 @@ const StyledInput = styled.div`
     }
 
     &:focus {
-      border-color: orange;
+      border-color: ${color('secondary')};
     }
   }
 
@@ -48,18 +48,18 @@ const StyledInput = styled.div`
 
   .input__error {
     display: block;
-    color: ${color('primary')};
+    color: ${color('highlight')};
   }
 
   ${props =>
     props.success &&
     css`
       label {
-        color: green;
+        color: ${color('secondary')};
       }
 
       input {
-        border-color: green;
+        border-color: ${color('secondary')};
       }
     `}
 
@@ -67,11 +67,11 @@ const StyledInput = styled.div`
     props.error &&
     css`
       label {
-        color: ${color('primary')};
+        color: ${color('highlight')};
       }
 
       input {
-        border-color: ${color('primary')};
+        border-color: ${color('highlight')};
       }
     `}
 `;

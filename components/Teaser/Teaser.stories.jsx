@@ -3,21 +3,23 @@ import React from 'react';
 import Teaser from './Teaser';
 
 export default {
-  title: 'Teaser',
+  title: 'Components/Teaser',
   component: Teaser
 };
 
 export const Normal = () => (
   <Teaser
-    headline="Dummy headline"
-    copy="Dumm intro copy"
+    headline="A Highlighting Headline"
+    copy="And a capturing copy"
     image={{
-      src: '/images/760x570.jpg',
-      srcset: '/images/760x570.jpg',
-      ratio: '4:3',
-      alt: 'Robot Girl'
+      src: '/images/750x750.jpg',
+      srcset: '/images/750x750.jpg',
+      ratio: '1:1',
+      alt: 'Fan on red background'
     }}
   />
 );
 
-export const withoutImage = () => <Teaser headline="Dummy headline" copy="Dumm intro copy" />;
+export const withoutImage = () => (
+  <Teaser headline="A Highlighting Headline" copy="And a capturing copy" />
+);

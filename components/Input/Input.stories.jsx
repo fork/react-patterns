@@ -5,7 +5,7 @@ import Input from './Input';
 import props from './data/00-default';
 
 export default {
-  title: 'Input',
+  title: 'Components/Input',
   component: Input
 };
 

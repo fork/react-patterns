@@ -37,24 +37,24 @@ const StyledTextarea = styled.div`
     }
 
     &:focus {
-      border-color: orange;
+      border-color: ${color('secondary')};
     }
   }
 
   .textarea__error {
     display: block;
-    color: ${color('primary')};
+    color: ${color('highlight')};
   }
 
   ${props =>
     props.error &&
     css`
       label {
-        color: ${color('primary')};
+        color: ${color('highlight')};
       }
 
       textarea {
-        border-color: ${color('primary')};
+        border-color: ${color('highlight')};
       }
     `}
 
@@ -62,11 +62,11 @@ const StyledTextarea = styled.div`
     props.success &&
     css`
       label {
-        color: green;
+        color: ${color('secondary')};
       }
 
       textarea {
-        border-color: green;
+        border-color: ${color('secondary')};
       }
     `}
 `;

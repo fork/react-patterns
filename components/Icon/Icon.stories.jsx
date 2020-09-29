@@ -4,7 +4,7 @@ import DateIcon from './icons/date.svg';
 import Icon from './Icon';
 
 export default {
-  title: 'Icon',
+  title: 'Components/Icon',
   component: Icon
 };
 

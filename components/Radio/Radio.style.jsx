@@ -65,7 +65,7 @@ const StyledRadio = styled.div`
 
   .radio__error {
     display: block;
-    color: ${color('primary')};
+    color: ${color('highlight')};
     margin-top: ${space('s')};
   }
 
@@ -73,7 +73,7 @@ const StyledRadio = styled.div`
     props.error &&
     css`
       .radio__label {
-        color: ${color('primary')};
+        color: ${color('highlight')};
       }
 
       label .radio__custom-icon {

@@ -5,10 +5,11 @@ const tokens = {
     l: 1024
   },
   colors: {
-    black: '#000',
+    black: '#181920',
     white: '#fff',
-    primary: '#00FF88',
-    secondary: '#008952'
+    primary: '#00ffff',
+    secondary: '#80ff00',
+    highlight: '#ff0000'
   },
   grid: {
     columns: 12,

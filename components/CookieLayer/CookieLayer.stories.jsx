@@ -2,7 +2,7 @@ import React from 'react';
 import CookieLayer from './CookieLayer';
 
 export default {
-  title: 'CookieLayer',
+  title: 'Components/CookieLayer',
   component: CookieLayer
 };
 
