@@ -44,13 +44,13 @@ const StyledCheckbox = styled.div`
     ${props =>
       props.error &&
       css`
-        border-color: ${color('highlight')};
+        border-color: ${color('critical')};
       `}
 
     ${props =>
       props.success &&
       css`
-        border-color: ${color('secondary')}; ;
+        border-color: ${color('positive')};
       `}
 
     svg {
@@ -61,7 +61,7 @@ const StyledCheckbox = styled.div`
       ${props =>
         props.success &&
         css`
-          fill: ${color('secondary')}; ;
+          fill: ${color('positive')};
         `}
     }
   }
@@ -91,19 +91,19 @@ const StyledCheckbox = styled.div`
     ${props =>
       props.error &&
       css`
-        color: ${color('highlight')};
+        color: ${color('critical')};
       `}
 
     ${props =>
       props.success &&
       css`
-        color: ${color('secondary')}; ;
+        color: ${color('positive')};
       `}
   }
 
   .checkbox__error {
     display: block;
-    color: ${color('highlight')};
+    color: ${color('critical')};
   }
 `;
 

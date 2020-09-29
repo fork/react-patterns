@@ -3,3 +3,4 @@ node_modules
 .env
 storybook-static
 __tests__/coverage/
+yarn-error.log

@@ -4,7 +4,7 @@ import { color, space, hideVisually } from '../../stylesheets';
 const StyledSelect = styled.div`
   label {
     display: block;
-    margin-bottom: ${space('m')};
+    margin-bottom: ${space('xs')};
     font-weight: bold;
     color: ${color('black')};
     line-height: 1;
@@ -16,7 +16,7 @@ const StyledSelect = styled.div`
     pointer-events: none;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
-    right: ${space('m')};
+    right: ${space('xs')};
   }
 
   .select__wrapper {
@@ -33,7 +33,8 @@ const StyledSelect = styled.div`
     font-weight: normal;
     line-height: 1;
     border: 1px solid ${color('black')};
-    padding: ${space('m')};
+
+    padding: ${space('xs')};
 
     option {
       color: black;
@@ -56,11 +57,11 @@ const StyledSelect = styled.div`
     props.success &&
     css`
       label {
-        color: ${color('secondary')};
+        color: ${color('positive')};
       }
 
       select {
-        border-color: ${color('secondary')};
+        border-color: ${color('positive')};
       }
     `}
 
@@ -68,17 +69,17 @@ const StyledSelect = styled.div`
     props.error &&
     css`
       label {
-        color: ${color('highlight')};
+        color: ${color('critical')};
       }
 
       select {
-        border-color: ${color('highlight')};
+        border-color: ${color('critical')};
       }
     `}
 
   .select__error {
     display: block;
-    color: ${color('highlight')};
+    color: ${color('critical')};
   }
 `;
 

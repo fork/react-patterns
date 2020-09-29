@@ -9,7 +9,8 @@ const tokens = {
     white: '#fff',
     primary: '#00ffff',
     secondary: '#80ff00',
-    highlight: '#ff0000'
+    positive: '#009900',
+    critical: '#ff0000'
   },
   grid: {
     columns: 12,

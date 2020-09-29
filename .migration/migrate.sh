@@ -136,11 +136,11 @@ else
 
     if [ "$STORYBOOK" = true ] ; then
       echo "\"storybook\": \"start-storybook -s ./public -p 8000\","; 
-      echo "\"storybook:build\": \"build-storybook && cp -r ./public/. ./storybook-static/public/\","; 
+      echo "\"storybook:build\": \"build-storybook\","; 
     fi
 
     if [ "$STATICPAGES" = true ] ; then
-      echo "\"deploy\": \"yarn build && staticpages-cli\","; 
+      echo "\"deploy\": \"yarn storybook:build && staticpages-cli\","; 
     fi
 
       

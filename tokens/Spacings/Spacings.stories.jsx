@@ -1,37 +1,33 @@
-/* eslint-disable no-irregular-whitespace */
 import React from 'react';
-import styled from 'styled-components';
 
-import { space } from '../../stylesheets';
+import tokens from '../index';
 
 export default {
   title: 'Tokens/Spacings'
 };
 
-const getSpacing = (usePx = false) => props => space(props.size, usePx)(props);
-
-const Spacing = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  height: ${getSpacing()};
-  background: #00ffff;
-  margin-bottom: ${space('xl')};
-  margin-top: ${space('l')};
-
-  &:before {
-    position: absolute;
-    top: -${space('l')};
-    content: '${props => props.size} | ${getSpacing(true)}px | ${getSpacing()} ';
-  }
-`;
-
-export const Story = () => (
-  <>
-    <Spacing size="xs" />
-    <Spacing size="s" />
-    <Spacing size="m" />
-    <Spacing size="l" />
-    <Spacing size="xl" />
-  </>
+export const Simple = () => (
+  <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    {Object.keys(tokens.spacings).map(key => (
+      <div
+        key={key}
+        style={{
+          margin: '10px'
+        }}
+      >
+        <div
+          style={{
+            width: '70px',
+            height: `${tokens.spacings[key]}px`,
+            boxShadow: '0px 0px 2px 0px rgba(0,0,0,0.75)',
+            marginBottom: '5px',
+            background: '#00ffff'
+          }}
+        />
+        <p>
+          {key} - {tokens.spacings[key]}px
+        </p>
+      </div>
+    ))}
+  </div>
 );

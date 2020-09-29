@@ -14,8 +14,8 @@ const StyledButton = styled.button`
       color: ${color('black')};
     `,
     secondary: css`
-      background: ${color('black')};
-      color: ${color('white')};
+      background: ${color('secondary')};
+      color: ${color('black')};
     `
   })}
 
