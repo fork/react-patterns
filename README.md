@@ -1,5 +1,5 @@
 <div align="left">
-    <img width="600" title="Webpack Plugin" src="http://github.fork.de/ReactPatterns.svg">
+    <img width="600" title="Webpack Plugin" src="http://github.fork.de/ReactPatterns1.svg">
 </div>
 
 This repository contains basic React Components, Hooks and Patterns, which we use as a starting point at [Fork Unstable Media](https://www.fork.de/).
@@ -157,7 +157,7 @@ Write something about future releases and whats on the list for the next develop
 ---
 
 <div align="center">
-  <img src="http://github.fork.de/ReactPatterns.svg" width="38" height="41" alt="Fork Logo" />
+  <img src="http://github.fork.de/heart.png" width="38" height="41" alt="Fork Logo" />
 
   <p>Brought to you by <a href="https://www.fork.de">Fork Unstable Media GmbH</a></p>
 </div>
