@@ -157,7 +157,7 @@ Write something about future releases and whats on the list for the next develop
 ---
 
 <div align="center">
-  <img src="./assets/heart.png" width="38" height="41" alt="Fork Logo" />
+  <img src="http://github.fork.de/ReactPatterns.svg" width="38" height="41" alt="Fork Logo" />
 
   <p>Brought to you by <a href="https://www.fork.de">Fork Unstable Media GmbH</a></p>
 </div>
