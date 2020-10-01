@@ -1,8 +1,21 @@
 <div align="left">
-    <img width="600" title="Webpack Plugin" src="http://github.fork.de/ReactPatterns.svg">
+    <img width="600" title="React Patterns" src="http://github.fork.de/ReactPatterns.svg">
 </div>
 
 This repository contains basic React Components, Hooks and Patterns, which we use as a starting point at [Fork Unstable Media](https://www.fork.de/).
+
+**Table of contents**
+
+- [Features](#features)
+- [Installation](#installation)
+- [Theming](#theming)
+- [Stylesheets](#stylesheets)
+- [Deployment](#deployment)
+- [Roadmap](#roadmap)
+
+<!-- /TOC -->
+
+---
 
 ## Features
 
@@ -12,16 +25,6 @@ This repository contains basic React Components, Hooks and Patterns, which we us
 - 🧱 Storybook Integration with A11y, Docs and Viewport Plugin
 - 📐 Styling helpers for color, spacings and media queries
 - ⚙️ Basic jest snapshot testing is already implemented
-
-**Table of contents**
-
-- [Installation](#installation)
-- [Theming](#theming)
-- [Stylesheets](#stylesheets)
-- [Deployment](#deployment)
-- [Roadmap](#roadmap)
-
----
 
 ## Installation
 
