@@ -1,10 +1,6 @@
 <div align="left">
-    <img width="600" height="177" title="Webpack Plugin" src="http://github.fork.de/Github.jpg">
+    <img width="600" title="Webpack Plugin" src="http://github.fork.de/ReactPatterns.svg">
 </div>
-
----
-
-## React Patterns
 
 This repository contains basic React Components, Hooks and Patterns, which we use as a starting point at [Fork Unstable Media](https://www.fork.de/).
 
