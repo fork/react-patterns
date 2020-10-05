@@ -1,5 +1,5 @@
 <div align="left">
-    <img width="600" title="React Patterns" src="http://github.fork.de/ReactPatterns.svg">
+    <img width="600" title="React Patterns" src="http://github.fork.de/ReactPatterns2.svg">
 </div>
 
 This repository contains basic React Components, Hooks and Patterns, which we use as a starting point at [Fork Unstable Media](https://www.fork.de/).
