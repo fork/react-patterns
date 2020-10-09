@@ -2,10 +2,11 @@
 
 # Arguments
 DIR=${@%/}
+SRCDIR=${@%/src}
 
 # Variables
 DEP="react react-dom styled-components prop-types lazysizes picturefill what-input js-cookie svg-sprite-loader"
-DEVDEP=
+DEVDEP="@types/js-cookie @types/node @types/react @types/react-dom @types/styled-components typescript"
 
 PURPLE='\033[0;35m'
 BLUE='\033[0;34m'
@@ -31,7 +32,7 @@ else
       read -p "Do you want to copy the 'hooks' directory? " yn
       case $yn in
           [Yy]* ) 
-            cp -r -n ./hooks $DIR; 
+            cp -r -n ./src/hooks $SRCDIR; 
             break;;
           [Nn]* ) break;;
           
@@ -65,7 +66,7 @@ else
             cp ./jest.config.json $DIR; 
             
             JEST=true
-            DEVDEP=$DEVDEP" babel-jest enzyme enzyme-adapter-react-16 enzyme-to-json jest react-is react-test-renderer";
+            DEVDEP=$DEVDEP"@types/jest babel-jest enzyme enzyme-adapter-react-16 enzyme-to-json jest react-is react-test-renderer";
             
             break;;
           
@@ -91,10 +92,11 @@ else
   done
 
   echo ""
-  echo -e "$INFO Copying 'components', 'stylesheets' and 'public' directories to $DIR."
-  cp -r -n ./components $DIR
-  cp -r -n ./stylesheets $DIR
-  cp -r -n ./tokens $DIR
+  echo -e "$INFO Copying 'components', 'stylesheets' directories to $SRCDIR."
+  cp -r -n ./src/components $SRCDIR
+  cp -r -n ./src/stylesheets $SRCDIR
+  cp -r -n ./src/tokens $SRCDIR
+  echo -e "$INFO Copying public' directory to $DIR."
   cp -r -n ./public $DIR
 
 
