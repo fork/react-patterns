@@ -11,6 +11,7 @@ export type IconButtonProps = {
   label: string;
   className?: string;
   disabled?: boolean;
+  onClick?: () => void;
 };
 
 const IconButton = ({
@@ -19,6 +20,7 @@ const IconButton = ({
   disabled,
   className,
   variant = 'primary',
+  onClick,
   label
 }: IconButtonProps) => (
   <StyledIconButton
@@ -29,6 +31,7 @@ const IconButton = ({
     title={label}
     aria-label={label}
     variant={variant}
+    onClick={onClick}
     size={size}
   >
     <Icon icon={icon} size={size} />

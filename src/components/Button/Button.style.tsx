@@ -14,7 +14,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   ${variant({
     primary: css`
       background: ${color('primary')};
-      color: ${color('black')};
+      color: ${color('white')};
     `,
     secondary: css`
       background: ${color('secondary')};

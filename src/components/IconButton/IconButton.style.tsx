@@ -27,7 +27,7 @@ const StyledIconButton = styled.button<Pick<IconButtonProps, 'size' | 'variant'>
       background: ${color('primary')};
     `,
     secondary: css`
-      color: ${color('white')};
+      color: ${color('black')};
       background: ${color('secondary')};
     `
   })}

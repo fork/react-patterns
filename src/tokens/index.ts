@@ -34,8 +34,8 @@ const tokens: Tokens = {
   colors: {
     black: '#181920',
     white: '#fff',
-    primary: '#00ffff',
-    secondary: '#80ff00',
+    primary: '#1E41FF',
+    secondary: '#eee',
     positive: '#009900',
     critical: '#ff0000'
   },
