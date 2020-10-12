@@ -10,6 +10,7 @@ export type BoxProps = {
   margin?: Spacings | Spacings[];
   borderRadius?: Spacings;
   alignment?: 'left' | 'center' | 'right' | 'justify';
+  flexGrow?: number;
 };
 
 export const getBackground = (bg: Colors | Colors[]) => {
@@ -31,6 +32,7 @@ const Box = styled.div<BoxProps>`
   margin: ${({ margin }) => (margin ? space(margin) : undefined)};
   text-align: ${props => props.alignment};
   border-radius: ${({ borderRadius }) => (borderRadius ? space(borderRadius) : undefined)};
+  flex-grow: ${({ flexGrow }) => flexGrow || undefined};
 `;
 
 export default Box;
