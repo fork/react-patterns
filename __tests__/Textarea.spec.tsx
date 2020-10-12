@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Textarea from '../components/Textarea';
+import Textarea from '../src/components/Textarea';
 
 describe('Textarea', () => {
   test('Textarea should render correctly', () => {

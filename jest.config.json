@@ -1,5 +1,5 @@
 {
-  "testRegex": "((\\.|/*.)(spec|test))\\.(js|jsx)?$",
+  "testRegex": "((\\.|/*.)(spec|test))\\.(ts|tsx)?$",
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "setupFilesAfterEnv": ["<rootDir>/setup/enzyme.js"],
   "collectCoverage": true,

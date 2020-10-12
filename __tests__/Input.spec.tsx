@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Input from '../components/Input';
+import Input from '../src/components/Input';
 
 describe('Input', () => {
   test('Input should render correctly', () => {
@@ -17,7 +17,7 @@ describe('Input', () => {
   });
 
   test('Input with default value should render correctly', () => {
-    const component = shallow(<Input hideLabel label="Input Label" value="true" id="1" />);
+    const component = shallow(<Input hideLabel label="Input Label" value="Testinput" id="1" />);
 
     expect(component).toMatchSnapshot();
   });

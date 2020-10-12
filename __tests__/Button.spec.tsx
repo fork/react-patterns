@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Button from '../components/Button';
+import Button from '../src/components/Button';
 
 describe('Button', () => {
   test('Button should render correctly', () => {
@@ -11,7 +11,7 @@ describe('Button', () => {
   });
 
   test('Secondary Button should render correctly', () => {
-    const component = shallow(<Button icon="close">Secondary Button</Button>);
+    const component = shallow(<Button variant="secondary">Secondary Button</Button>);
 
     expect(component).toMatchSnapshot();
   });

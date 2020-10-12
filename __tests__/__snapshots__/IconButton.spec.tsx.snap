@@ -2,11 +2,7 @@
 
 exports[`IconButton IconButton should render correctly 1`] = `
 <styled.button
-  aria-disabled={false}
   aria-label="Close"
-  as="button"
-  className={null}
-  disabled={false}
   size="small"
   title="Close"
   type="button"
@@ -21,11 +17,7 @@ exports[`IconButton IconButton should render correctly 1`] = `
 
 exports[`IconButton Secondary IconButton should render correctly 1`] = `
 <styled.button
-  aria-disabled={false}
   aria-label="Close"
-  as="button"
-  className={null}
-  disabled={false}
   size="small"
   title="Close"
   type="button"

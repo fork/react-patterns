@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
-import PropTypes from 'prop-types';
 
 import mq from './mediaQuery';
 import useWindowEvent from '../../hooks/useWindowEvent';
@@ -238,16 +237,6 @@ export const DebugGrid = ({ isHidden, onUpdate }: DebugGridProps) => {
   useWindowEvent('keydown', (e: any) => handleKeyDown(e));
 
   return <DebugGridContainer hidden={hidden}>{createColumns()}</DebugGridContainer>;
-};
-
-DebugGrid.propTypes = {
-  isHidden: PropTypes.bool,
-  onUpdate: PropTypes.func
-};
-
-DebugGrid.defaultProps = {
-  isHidden: true,
-  onUpdate: undefined
 };
 
 const DebugGridContainer = styled.div`

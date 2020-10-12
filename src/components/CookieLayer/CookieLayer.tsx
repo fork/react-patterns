@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 
@@ -61,22 +60,6 @@ const CookieLayer = ({
       </StyledCookieLayer>
     )
   );
-};
-
-CookieLayer.propTypes = {
-  content: PropTypes.string,
-  acceptLabel: PropTypes.string,
-  rejectLabel: PropTypes.string,
-  onAccept: PropTypes.func,
-  onReject: PropTypes.func
-};
-
-CookieLayer.defaultProps = {
-  content: null,
-  acceptLabel: 'Accept',
-  rejectLabel: 'Reject',
-  onAccept: () => {},
-  onReject: () => {}
 };
 
 export default CookieLayer;

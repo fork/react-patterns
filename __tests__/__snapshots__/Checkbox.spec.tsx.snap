@@ -1,21 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox Checkbox should render correctly 1`] = `
-<styled.div
-  error={false}
-  hideLabel={false}
-  success={false}
->
+<styled.div>
   <label
     htmlFor="1"
   >
     <input
-      aria-invalid={false}
-      checked={false}
-      disabled={false}
       id="1"
       name="1"
-      onChange={null}
       type="checkbox"
     />
     <span
@@ -23,7 +15,6 @@ exports[`Checkbox Checkbox should render correctly 1`] = `
     >
       <Icon
         icon="check"
-        size="small"
       />
     </span>
     <span
@@ -37,20 +28,15 @@ exports[`Checkbox Checkbox should render correctly 1`] = `
 
 exports[`Checkbox Checkbox with default value should render correctly 1`] = `
 <styled.div
-  error={false}
   hideLabel={true}
-  success={false}
 >
   <label
     htmlFor="1"
   >
     <input
-      aria-invalid={false}
-      checked="true"
-      disabled={false}
+      checked={true}
       id="1"
       name="1"
-      onChange={null}
       type="checkbox"
     />
     <span
@@ -58,32 +44,27 @@ exports[`Checkbox Checkbox with default value should render correctly 1`] = `
     >
       <Icon
         icon="check"
-        size="small"
       />
     </span>
     <span
       className="checkbox__label"
-    />
+    >
+      Checkbox Label
+    </span>
   </label>
 </styled.div>
 `;
 
 exports[`Checkbox Checkbox without label should render correctly 1`] = `
 <styled.div
-  error={false}
   hideLabel={true}
-  success={false}
 >
   <label
     htmlFor="1"
   >
     <input
-      aria-invalid={false}
-      checked={false}
-      disabled={false}
       id="1"
       name="1"
-      onChange={null}
       type="checkbox"
     />
     <span
@@ -91,12 +72,13 @@ exports[`Checkbox Checkbox without label should render correctly 1`] = `
     >
       <Icon
         icon="check"
-        size="small"
       />
     </span>
     <span
       className="checkbox__label"
-    />
+    >
+      Checkbox Label
+    </span>
   </label>
 </styled.div>
 `;

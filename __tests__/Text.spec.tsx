@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Text from '../components/Text';
+import Text from '../src/components/Text';
 
 describe('Text', () => {
   test('Text should render correctly', () => {

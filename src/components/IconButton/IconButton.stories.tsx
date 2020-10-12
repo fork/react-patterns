@@ -10,7 +10,6 @@ export default {
 export const Small = () => (
   <>
     <IconButton icon="date" label="This is a label" variant="primary" />
-
     <IconButton icon="date" label="This is a label" variant="secondary" />
   </>
 );

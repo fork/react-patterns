@@ -66,7 +66,7 @@ else
             cp ./jest.config.json $DIR; 
             
             JEST=true
-            DEVDEP=$DEVDEP"@types/jest babel-jest enzyme enzyme-adapter-react-16 enzyme-to-json jest react-is react-test-renderer";
+            DEVDEP=$DEVDEP"@types/jest babel-jest enzyme enzyme-adapter-react-16 enzyme-to-json jest react-is react-test-renderer @babel/preset-typescript";
             
             break;;
           

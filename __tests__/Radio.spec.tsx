@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Radio from '../components/Radio';
+import Radio from '../src/components/Radio';
 
 const options = [
   {
