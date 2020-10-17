@@ -125,9 +125,11 @@ const Dialog: React.FC<DialogProps> = ({
     const [first] = getFocusElements();
     first?.focus();
 
-    return () => {
-      prevFocus && prevFocus.focus ? prevFocus.focus() : null;
-    };
+    if (prevFocus && prevFocus.focus) {
+      prevFocus.focus();
+    }
+
+    return null;
   }, []);
 
   useEffect(() => {
