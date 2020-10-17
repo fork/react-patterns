@@ -49,7 +49,6 @@ const Radio: React.FC<RadioProps> = ({
           disabled={disabled}
           required={required}
           checked={value === option.value}
-          aria-invalid={error}
         />
         <label htmlFor={option.value}>
           <span className={`radio__custom-icon ${value === option.value ? 'checked' : ''}`} />
