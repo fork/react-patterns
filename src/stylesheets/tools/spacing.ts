@@ -16,7 +16,7 @@ export function px2rem(px: number): string {
 
 /**
  * Returns spacing from theme object referenced by id
- * @param  {string} id - Identifier for the spacing in theme object. Default: "s"
+ * @param  {string} spacing - Identifier for the spacing in theme object. Default: "s"
  * @returns {string} Resulting spacing from theme object
  * @example margin: ${space('m')};
  */
