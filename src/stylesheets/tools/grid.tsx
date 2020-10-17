@@ -269,7 +269,7 @@ const Column = styled.span`
  * @returns {string} Returns simple debug grid (just use in development)
  * @example <DebugGrid />;
  */
-export const DebugGrid = ({ isHidden, onUpdate }: DebugGridProps): typeof DebugGridContainer => {
+export const DebugGrid: React.FC<DebugGridProps> = ({ isHidden, onUpdate }: DebugGridProps) => {
   const [hidden, setHidden] = useState<boolean>(isHidden);
 
   useEffect(() => setHidden(isHidden), [isHidden]);
@@ -291,6 +291,13 @@ export const DebugGrid = ({ isHidden, onUpdate }: DebugGridProps): typeof DebugG
     }
   };
   useWindowEvent('keydown', (e: any) => handleKeyDown(e));
+
+  DebugGrid.defaultProps = {
+    isHidden: true,
+    onUpdate: () => {
+      console.log('DebugGrid update');
+    }
+  };
 
   return <DebugGridContainer hidden={hidden}>{createColumns()}</DebugGridContainer>;
 };
