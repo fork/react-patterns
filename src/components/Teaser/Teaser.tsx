@@ -29,4 +29,9 @@ const Teaser: React.FC<TeaserProps> = ({ headline, copy, image }: TeaserProps) =
   </StyledTeaser>
 );
 
+Teaser.defaultProps = {
+  copy: 'Teaser',
+  image: { src: '' }
+};
+
 export default Teaser;
