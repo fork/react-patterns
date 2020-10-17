@@ -14,9 +14,15 @@ const props: InputProps = {
   required: true,
   type: 'text',
   placeholder: 'Gebe einen Vornamen ein...',
-  onChange: (): void => {},
-  onFocus: (): void => {},
-  onBlur: (): void => {},
+  onChange: (): void => {
+    console.log('Input onChange');
+  },
+  onFocus: (): void => {
+    console.log('Input onFocus');
+  },
+  onBlur: (): void => {
+    console.log('Input onBlur');
+  },
   error: false,
   success: false,
   pattern: null,
