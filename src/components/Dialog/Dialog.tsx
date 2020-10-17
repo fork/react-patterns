@@ -8,7 +8,11 @@ import { Colors } from '../../tokens';
 import Flex from '../Flex';
 import IconButton from '../IconButton';
 
-const DialogContext = createContext({ onClose: () => {} });
+const DialogContext = createContext({
+  onClose: () => {
+    console.log('Dialog onClose');
+  }
+});
 
 type StyledDialogProps = {
   size: 'narrow' | 'default' | 'wide' | 'full';
