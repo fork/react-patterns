@@ -106,12 +106,7 @@ export const alignItems = (prop: string) => css`
  * @returns {string} Returns grid calculation and sets styles
  * @example ${getGridSpan('m', 6, 'spread', 9)};
  */
-function getGridSpan(
-  key: Breakpoints,
-  columns: number,
-  spread: string = 'normal',
-  parentColumns?: number
-) {
+function getGridSpan(key: Breakpoints, columns: number, spread = 'normal', parentColumns?: number) {
   if (parentColumns > grid.columns[key]) {
     throw Error(`Maximum parent columns for this breakpoint (${key}) are ${grid.columns[key]}`);
   }

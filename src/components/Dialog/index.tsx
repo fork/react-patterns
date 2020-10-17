@@ -1,7 +1,1 @@
-export {
-  default,
-  DialogBody,
-  DialogClose,
-  DialogHeader,
-  DialogFooter,
-} from "./Dialog";
+export { default, DialogBody, DialogClose, DialogHeader, DialogFooter } from './Dialog';
