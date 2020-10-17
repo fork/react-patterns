@@ -4,8 +4,10 @@ type VariantsObject = {
 };
 
 const variant = (variants: VariantsObject): any => (props: any) => {
-  const { prop } = variants;
-  const key = prop || 'variant';
+  const { prop: variantsProp } = variants;
+  const { [variantsProp]: propsProp } = props;
+
+  const key = propsProp || 'variant';
 
   if (variants[key]) {
     return variants[key];
