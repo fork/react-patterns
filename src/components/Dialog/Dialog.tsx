@@ -110,11 +110,15 @@ const Dialog: React.FC<DialogProps> = ({
       last?.focus();
       e.preventDefault();
     }
+
+    return null;
   }, []);
 
   const handleKeyDown = useCallback(e => {
     if (e.keyCode === 27) return onClose();
     if (e.keyCode === 9) return handleTabKey(e);
+
+    return null;
   }, []);
 
   useEffect(() => {
