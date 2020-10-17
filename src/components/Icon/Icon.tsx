@@ -1,4 +1,4 @@
-/* eslint-disable global-require, import/no-dynamic-require */
+/* eslint-disable global-require, import/no-dynamic-require, @typescript-eslint/no-var-requires */
 import React from 'react';
 
 import StyledIcon from './Icon.style';
