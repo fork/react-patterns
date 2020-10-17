@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Button should render correctly 1`] = `
+<styled.button
+  size="small"
+  type="button"
+  variant="primary"
+>
+  Primary Button
+</styled.button>
+`;
+
+exports[`Button Secondary Button should render correctly 1`] = `
+<styled.button
+  size="small"
+  type="button"
+  variant="secondary"
+>
+  Secondary Button
+</styled.button>
+`;

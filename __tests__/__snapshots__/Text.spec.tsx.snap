@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Text should render correctly 1`] = `
+<p
+  className="sc-dlnjPT gLErRH"
+>
+  Primary Text
+</p>
+`;

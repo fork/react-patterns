@@ -8,13 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- ...
+
+- Basic Dialog component
+- Different layout components (e.g. Flex, Box, Stack and Row)
+- TypeScript linting
 
 ### Changed
-- ...
 
-### Fixed
-- ...
+- Changed components to typescript
+- Updated stories and jest snapshot tests for typescript
+
+### Removed
+
+- Removed some unused packages (e.g. prop-types)
 
 ## [0.1.0] - 2020-10-05
-### Added
