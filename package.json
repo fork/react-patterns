@@ -27,7 +27,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --quiet --fix"
     ]
@@ -62,13 +62,15 @@
     "@types/react": "^16.9.51",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.3",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
     "babel-eslint": "10.1.0",
     "babel-jest": "^26.5.2",
     "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
-    "eslint": "7.10.0",
+    "eslint": "^7.11.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "6.12.0",
     "eslint-plugin-import": "^2.22.1",
