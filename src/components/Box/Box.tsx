@@ -13,18 +13,6 @@ export type BoxProps = {
   flexGrow?: number;
 };
 
-export const getBackground = (bg: Colors | Colors[]) => {
-  if (typeof bg === 'undefined') return undefined;
-
-  if (typeof bg === 'string') {
-    return color(bg);
-  }
-
-  const colorStops = bg.map(id => color(id)).join(',');
-
-  return `linear-gradient(to bottom, ${colorStops})`;
-};
-
 const Box = styled.div<BoxProps>`
   color: ${p => (p.color ? color(p.color) : undefined)};
   background-color: ${({ background }) => (background ? color(background) : undefined)}};

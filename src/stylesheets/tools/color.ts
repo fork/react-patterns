@@ -6,7 +6,7 @@ import { Colors, Tokens } from '../../tokens';
  * @returns {string} Resulting color from theme object
  * @example color: ${color('white')};
  */
-const color = (id: Colors = 'white') => ({ theme }: { theme: Tokens }) => {
+const color = (id: Colors = 'white') => ({ theme }: { theme: Tokens }): string => {
   const { colors } = theme;
 
   if (!colors) {

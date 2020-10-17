@@ -7,14 +7,14 @@ export default {
   component: Button
 };
 
-export const Small = () => (
+export const Small: React.FC = () => (
   <>
     <Button variant="primary">Primary</Button>
     <Button variant="secondary">Secondary</Button>
   </>
 );
 
-export const Large = () => (
+export const Large: React.FC = () => (
   <>
     <Button variant="primary" size="large">
       Primary

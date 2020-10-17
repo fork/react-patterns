@@ -7,14 +7,14 @@ export default {
   component: IconButton
 };
 
-export const Small = () => (
+export const Small: React.FC = () => (
   <>
     <IconButton icon="date" label="This is a label" variant="primary" />
     <IconButton icon="date" label="This is a label" variant="secondary" />
   </>
 );
 
-export const Large = () => (
+export const Large: React.FC = () => (
   <>
     <IconButton icon="date" size="large" label="This is a label" variant="primary" />
     <IconButton icon="date" size="large" label="This is a label" variant="secondary" />

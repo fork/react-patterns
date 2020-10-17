@@ -25,7 +25,15 @@ export type ImageProps = {
   className?: string;
 };
 
-const Image = ({ alt, src, srcset, sizes, lazy = false, ratio, className }: ImageProps) => {
+const Image: React.FC<ImageProps> = ({
+  alt,
+  src,
+  srcset,
+  sizes,
+  lazy = false,
+  ratio,
+  className
+}: ImageProps) => {
   const { image, imageClass } = buildImageObject(
     {
       alt,

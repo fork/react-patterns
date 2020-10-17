@@ -7,7 +7,7 @@ export default {
   component: Teaser
 };
 
-export const Normal = () => (
+export const Normal: React.FC = () => (
   <Teaser
     headline="A Highlighting Headline"
     copy="And a capturing copy"
@@ -20,6 +20,6 @@ export const Normal = () => (
   />
 );
 
-export const withoutImage = () => (
+export const withoutImage: React.FC = () => (
   <Teaser headline="A Highlighting Headline" copy="And a capturing copy" />
 );

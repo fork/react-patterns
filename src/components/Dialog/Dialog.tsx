@@ -74,7 +74,7 @@ export interface DialogProps {
   fullHeight?: boolean;
 }
 
-const Dialog = ({
+const Dialog: React.FC<DialogProps> = ({
   children,
   size = 'default',
   background = 'white',
@@ -183,7 +183,7 @@ export const DialogFooter = styled(Flex)`
   flex-shrink: 0;
 `;
 
-export const DialogClose = () => {
+export const DialogClose: React.FC = () => {
   const { onClose } = useContext(DialogContext);
 
   return <IconButton icon="close" label="Close dialog" onClick={onClose} />;

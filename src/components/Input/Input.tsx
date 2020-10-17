@@ -24,7 +24,7 @@ export type InputProps = {
   value?: string;
 };
 
-const Input = ({
+const Input: React.FC<InputProps> = ({
   autocomplete,
   disabled,
   error,

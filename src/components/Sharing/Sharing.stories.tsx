@@ -7,7 +7,7 @@ export default {
   component: Sharing
 };
 
-export const Normal = () => (
+export const Normal: React.FC = () => (
   <Sharing
     links={[
       { link: 'https://www.fork.de', icon: 'facebook', label: 'Share on Facebook' },

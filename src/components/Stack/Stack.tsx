@@ -18,7 +18,13 @@ const StyledStack = styled(Flex)<{ gap?: Spacings }>`
   }
 `;
 
-const Stack = ({ alignItems, children, gap, justifyContent, className }: StackProps) => {
+const Stack: React.FC<StackProps> = ({
+  alignItems,
+  children,
+  gap,
+  justifyContent,
+  className
+}: StackProps) => {
   return (
     <StyledStack
       alignItems={alignItems}

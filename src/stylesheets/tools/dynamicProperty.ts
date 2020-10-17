@@ -7,7 +7,10 @@ export type DynamicProp<T = string> = {
   [key in DynamicKey]?: T;
 };
 
-export default function <T = string>(property: string, value?: string | number | DynamicProp<T>) {
+export default function <T = string>(
+  property: string,
+  value?: string | number | DynamicProp<T>
+): string {
   if (typeof value === 'undefined') return undefined;
 
   if (typeof value !== 'number' && typeof value !== 'string') {

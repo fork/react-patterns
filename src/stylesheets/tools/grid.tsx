@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 
 import mq from './mediaQuery';
 import useWindowEvent from '../../hooks/useWindowEvent';
@@ -47,7 +47,7 @@ const parseGridSpan = (
   };
 };
 
-export const gridColumn = (prop: string) => {
+export const gridColumn = (prop: string): FlattenSimpleInterpolation => {
   const { start, end, span } = parseGridSpan(prop);
 
   return css`
@@ -58,7 +58,7 @@ export const gridColumn = (prop: string) => {
   `;
 };
 
-export const gridRow = (prop: string) => {
+export const gridRow = (prop: string): FlattenSimpleInterpolation => {
   const { start, end, span } = parseGridSpan(prop);
 
   return css`
@@ -69,7 +69,7 @@ export const gridRow = (prop: string) => {
   `;
 };
 
-export const gridTemplateColumns = (prop: string) => {
+export const gridTemplateColumns = (prop: string): FlattenSimpleInterpolation => {
   const repeat = prop.match(/^repeat\((\d+), (.+)\)$/);
 
   return css`
@@ -78,7 +78,7 @@ export const gridTemplateColumns = (prop: string) => {
   `;
 };
 
-export const gridTemplateRows = (prop: string) => {
+export const gridTemplateRows = (prop: string): FlattenSimpleInterpolation => {
   const repeat = prop.match(/^repeat\((\d+), (.+)\)$/);
 
   return css`
@@ -87,12 +87,12 @@ export const gridTemplateRows = (prop: string) => {
   `;
 };
 
-export const justifyItems = (prop: string) => css`
+export const justifyItems = (prop: string): FlattenSimpleInterpolation => css`
   -ms-grid-column-align: ${prop};
   justify-items: ${prop};
 `;
 
-export const alignItems = (prop: string) => css`
+export const alignItems = (prop: string): FlattenSimpleInterpolation => css`
   -ms-grid-row-align: ${prop};
   align-items: ${prop};
 `;
@@ -147,7 +147,7 @@ type GridSpansObject = { [key: string]: any };
  * @returns {string} Returns full grid calculation with media queries and sets styles
  * @example ${getGridSpans('width', { s: 12, m: [8, 'spread', 10], l: [6, 'spread', 8] })};
  */
-export function getGridSpans(property: string, obj: GridSpansObject) {
+export function getGridSpans(property: string, obj: GridSpansObject): string {
   if (typeof property !== 'string') {
     throw Error('Property needs to be a string');
   }
@@ -196,43 +196,11 @@ export function getGridSpans(property: string, obj: GridSpansObject) {
   return string;
 }
 
-export function getGridGutter(key: Breakpoints) {
+export function getGridGutter(key: Breakpoints): string {
   return `${grid.gutters[key]}px`;
 }
 
 type DebugGridProps = { isHidden?: boolean; onUpdate?: (hidden: boolean) => void };
-
-/**
- * Displays a simple debug Grid to show columns and gaps
- * @param {bool} isHidden - Boolean for visibility state. Default: true
- * @returns {string} Returns simple debug grid (just use in development)
- * @example <DebugGrid />;
- */
-export const DebugGrid = ({ isHidden, onUpdate }: DebugGridProps) => {
-  const [hidden, setHidden] = useState<boolean>(isHidden);
-
-  useEffect(() => setHidden(isHidden), [isHidden]);
-  useEffect(() => {
-    if (onUpdate) onUpdate(hidden);
-  }, [hidden]);
-
-  const createColumns = () => {
-    const columns = [];
-    for (let i = 0; i < grid.columns.l; i += 1) {
-      columns.push(<Column key={i} />);
-    }
-    return columns;
-  };
-
-  const handleKeyDown = (event: any) => {
-    if (event.code === 'KeyG') {
-      setHidden(prev => !prev);
-    }
-  };
-  useWindowEvent('keydown', (e: any) => handleKeyDown(e));
-
-  return <DebugGridContainer hidden={hidden}>{createColumns()}</DebugGridContainer>;
-};
 
 const DebugGridContainer = styled.div`
   position: absolute;
@@ -294,3 +262,35 @@ const Column = styled.span`
     margin-right: 0;
   }
 `;
+
+/**
+ * Displays a simple debug Grid to show columns and gaps
+ * @param {bool} isHidden - Boolean for visibility state. Default: true
+ * @returns {string} Returns simple debug grid (just use in development)
+ * @example <DebugGrid />;
+ */
+export const DebugGrid = ({ isHidden, onUpdate }: DebugGridProps): typeof DebugGridContainer => {
+  const [hidden, setHidden] = useState<boolean>(isHidden);
+
+  useEffect(() => setHidden(isHidden), [isHidden]);
+  useEffect(() => {
+    if (onUpdate) onUpdate(hidden);
+  }, [hidden]);
+
+  const createColumns = () => {
+    const columns = [];
+    for (let i = 0; i < grid.columns.l; i += 1) {
+      columns.push(<Column key={i} />);
+    }
+    return columns;
+  };
+
+  const handleKeyDown = (event: any) => {
+    if (event.code === 'KeyG') {
+      setHidden(prev => !prev);
+    }
+  };
+  useWindowEvent('keydown', (e: any) => handleKeyDown(e));
+
+  return <DebugGridContainer hidden={hidden}>{createColumns()}</DebugGridContainer>;
+};

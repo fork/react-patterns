@@ -29,7 +29,7 @@ export type SourceProps = {
   lazy?: boolean;
 };
 
-export const Source = ({ media, srcset, sizes, lazy }: SourceProps) => {
+export const Source: React.FC<SourceProps> = ({ media, srcset, sizes, lazy }: SourceProps) => {
   const { image } = buildImageObject(
     {
       sizes: null,
@@ -42,7 +42,7 @@ export const Source = ({ media, srcset, sizes, lazy }: SourceProps) => {
   return <source media={media} sizes={sizes} {...image} />;
 };
 
-const Picture = ({ src, alt, children, lazy }: PictureProps) => (
+const Picture: React.FC<PictureProps> = ({ src, alt, children, lazy }: PictureProps) => (
   <StyledPicture>
     {children}
     <Image src={src} alt={alt} lazy={lazy} />

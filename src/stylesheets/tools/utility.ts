@@ -5,7 +5,7 @@
  * @returns {string} - Returns CSS to hide content
  * @example ${hideVisually()}
  */
-export const hideVisually = () => `
+export const hideVisually = (): string => `
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -23,7 +23,7 @@ export const hideVisually = () => `
  * @returns {string} - Button reset styles
  * @example ${btnReset()}
  */
-export const btnReset = () => `
+export const btnReset = (): string => `
   appearance: none;
   border: 0;
   margin: 0;
@@ -32,7 +32,7 @@ export const btnReset = () => `
   cursor: pointer;
 `;
 
-export const hexToRgbA = (hex: string, opacity = 1) => {
+export const hexToRgbA = (hex: string, opacity = 1): string => {
   let c: any;
   if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
     c = hex.substring(1).split('');

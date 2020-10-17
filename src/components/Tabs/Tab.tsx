@@ -9,7 +9,7 @@ export interface TabProps {
   children?: ReactNode;
 }
 
-const Tab = ({ children, index, selected }: TabProps) => (
+const Tab: React.FC<TabProps> = ({ children, index, selected }: TabProps) => (
   <StyledTab
     id={`tabpanel_${index}`}
     role="tabpanel"

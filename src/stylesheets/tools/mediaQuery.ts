@@ -8,7 +8,7 @@ import { px2rem } from './spacing';
  * @returns {string} Media query definition
  * @example ${mq('m', 'max')} { css styles go here };
  */
-const mq = (id: Breakpoints, minMax = 'min') => ({ theme }: { theme: Tokens }) => {
+const mq = (id: Breakpoints, minMax = 'min') => ({ theme }: { theme: Tokens }): string => {
   let mediaQueries = theme.breakpoints;
 
   const defaultMediaQueries = {

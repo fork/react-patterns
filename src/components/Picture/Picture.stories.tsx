@@ -7,7 +7,7 @@ export default {
   component: Picture
 };
 
-export const Normal = () => (
+export const Normal: React.FC = () => (
   <div style={{ maxWidth: '800px' }}>
     <Picture src="/images/600x400.jpg" alt="A fan on red background" lazy>
       <Source

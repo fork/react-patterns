@@ -8,7 +8,7 @@ export default {
   component: Tabs
 };
 
-export const Simple = () => (
+export const Simple: React.FC = () => (
   <Tabs>
     <Tab title="Profile">
       <h2>Profile</h2>
@@ -22,7 +22,7 @@ export const Simple = () => (
   </Tabs>
 );
 
-export const Centered = () => (
+export const Centered: React.FC = () => (
   <Tabs centered>
     <Tab title="Profile">
       <h2>Profile</h2>
@@ -36,7 +36,7 @@ export const Centered = () => (
   </Tabs>
 );
 
-export const Scrolled = () => (
+export const Scrolled: React.FC = () => (
   <Tabs>
     <Tab title="Pricing">
       <h2>Pricing</h2>

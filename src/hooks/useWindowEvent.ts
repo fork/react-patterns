@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default (event: keyof WindowEventMap, callback: (e: any) => void) => {
+export default (event: keyof WindowEventMap, callback: (e: any) => void): void => {
   useEffect(() => {
     if (window) {
       window.addEventListener(event, callback);

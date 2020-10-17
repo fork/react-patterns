@@ -12,7 +12,12 @@ export type TabsProps = {
   children: ReactNode;
 };
 
-const Tabs = ({ initialIndex = 0, onClick, children, centered }: TabsProps) => {
+const Tabs: React.FC<TabsProps> = ({
+  initialIndex = 0,
+  onClick,
+  children,
+  centered
+}: TabsProps) => {
   const [selected, setSelected] = useState(initialIndex);
   const [activeLink, setActiveLink] = useState(null);
 

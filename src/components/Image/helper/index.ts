@@ -1,10 +1,10 @@
-export const buildSrcSet = (srcset: { [key: string]: string }) => {
+export const buildSrcSet = (srcset: { [key: string]: string }): string => {
   return Object.keys(srcset)
     .map(key => `${srcset[key]} ${key}`)
     .join(',');
 };
 
-export const buildImageObject = (obj: any, lazy: boolean) => {
+export const buildImageObject = (obj: any, lazy: boolean): any => {
   let image = obj;
   let imageClass = '';
 

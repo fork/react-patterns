@@ -39,7 +39,7 @@ export type FormProps = {
   className?: string;
 };
 
-const Form = ({
+const Form: React.FC<FormProps> = ({
   initialFormData,
   onSuccess,
   onError,

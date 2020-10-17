@@ -20,7 +20,7 @@ export type RadioProps = {
   hideLabel?: boolean;
 };
 
-const Radio = ({
+const Radio: React.FC<RadioProps> = ({
   disabled,
   error,
   errorMessage,

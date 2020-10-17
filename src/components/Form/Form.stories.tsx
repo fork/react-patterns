@@ -9,7 +9,7 @@ export default {
   component: Form
 };
 
-export const form = () => {
+export const form: React.FC = () => {
   const initialFormData: FormInputProps[] = [
     {
       fieldType: 'select',
@@ -62,6 +62,7 @@ export const form = () => {
       label: 'Data Privacy und so'
     }
   ];
+
   return (
     <Form
       onSuccess={data => console.log('success', data)}

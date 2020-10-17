@@ -15,7 +15,7 @@ export type CheckboxProps = {
   hideLabel?: boolean;
 };
 
-const Checkbox = ({
+const Checkbox: React.FC<CheckboxProps> = ({
   label,
   id,
   required,

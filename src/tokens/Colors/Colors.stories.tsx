@@ -6,7 +6,7 @@ export default {
   title: 'Tokens/Colors'
 };
 
-export const Simple = () => (
+export const Simple: React.FC = () => (
   <div style={{ display: 'flex' }}>
     {Object.keys(tokens.colors).map(key => (
       <div

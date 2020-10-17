@@ -7,31 +7,31 @@ export default {
   component: Box
 };
 
-export const withPadding = () => (
+export const withPadding: React.FC = () => (
   <Box background="primary" padding="xl">
     Primary Background
   </Box>
 );
 
-export const withMargin = () => (
+export const withMargin: React.FC = () => (
   <Box background="primary" margin="xl">
     Primary Background
   </Box>
 );
 
-export const withMarginAndPadding = () => (
+export const withMarginAndPadding: React.FC = () => (
   <Box background="primary" margin="xl" padding="l">
     Primary Background
   </Box>
 );
 
-export const withBorderRadius = () => (
+export const withBorderRadius: React.FC = () => (
   <Box background="primary" margin="xl" padding="l" borderRadius="l">
     Primary Background
   </Box>
 );
 
-export const withTextAlign = () => (
+export const withTextAlign: React.FC = () => (
   <Box background="primary" alignment="center">
     Primary Background
   </Box>

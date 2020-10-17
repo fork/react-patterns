@@ -9,7 +9,7 @@ export default {
   component: Flex
 };
 
-export const row = () => (
+export const row: React.FC = () => (
   <Flex>
     <Box padding="xl" background="primary">
       Box 1
@@ -20,7 +20,7 @@ export const row = () => (
   </Flex>
 );
 
-export const column = () => (
+export const column: React.FC = () => (
   <Flex direction="column">
     <Box padding="xl" background="primary">
       Box 1
@@ -31,7 +31,7 @@ export const column = () => (
   </Flex>
 );
 
-export const Center = () => (
+export const Center: React.FC = () => (
   <Flex justifyContent="center" alignItems="center">
     <Box padding="xl" background="primary">
       Box 1
@@ -42,7 +42,7 @@ export const Center = () => (
   </Flex>
 );
 
-export const flexGrow = () => (
+export const flexGrow: React.FC = () => (
   <Flex alignItems="center">
     <Box padding="xl" background="primary">
       Box 1

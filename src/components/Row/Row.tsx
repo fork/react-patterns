@@ -18,7 +18,14 @@ const StyledRow = styled(Flex)<{ gap?: Spacings }>`
   }
 `;
 
-const Row = ({ alignItems, children, gap, justifyContent, wrap, className }: RowProps) => {
+const Row: React.FC<RowProps> = ({
+  alignItems,
+  children,
+  gap,
+  justifyContent,
+  wrap,
+  className
+}: RowProps) => {
   return (
     <StyledRow
       gap={gap}

@@ -7,7 +7,7 @@ export default {
   component: Row
 };
 
-export const noGap = () => (
+export const noGap: React.FC = () => (
   <Row>
     <Box background="primary" padding="s">
       Line 1
@@ -29,7 +29,8 @@ export const noGap = () => (
     </Box>
   </Row>
 );
-export const withGap = () => (
+
+export const withGap: React.FC = () => (
   <Row gap="m">
     <Box background="primary" padding="s">
       Line 1
