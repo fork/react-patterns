@@ -14,15 +14,9 @@ const props: InputProps = {
   required: true,
   type: 'text',
   placeholder: 'Gebe einen Vornamen ein...',
-  onChange: (): void => {
-    console.log('Input onChange');
-  },
-  onFocus: (): void => {
-    console.log('Input onFocus');
-  },
-  onBlur: (): void => {
-    console.log('Input onBlur');
-  },
+  onChange: () => console.log('Change'),
+  onFocus: () => console.log('Focus'),
+  onBlur: () => console.log('Blur'),
   error: false,
   success: false,
   pattern: null,
@@ -37,6 +31,34 @@ export const withoutLabel: React.FC = () => <Input {...props} hideLabel />;
 export const error: React.FC = () => <Input {...props} value="Hans Peter" error />;
 export const success: React.FC = () => <Input {...props} value="Hans Peter" success />;
 export const disabled: React.FC = () => <Input {...props} disabled />;
+export const withList: React.FC = () => {
+  const [value, setValue] = useState('');
+  return (
+    <Input
+      {...props}
+      value={value}
+      onChange={e => setValue(e.target.value)}
+      list={{
+        id: 'names',
+        options: [
+          'Andreas',
+          'Holger',
+          'Jan',
+          'Joachim',
+          'Johannes',
+          'Jonas',
+          'Julia',
+          'Leonard',
+          'Martin',
+          'Olaf',
+          'Sascha',
+          'Siegfried',
+          'Wolf'
+        ]
+      }}
+    />
+  );
+};
 export const withState: React.FC = () => {
   const [value, setValue] = useState('');
   return <Input {...props} value={value} onChange={e => setValue(e.target.value)} />;

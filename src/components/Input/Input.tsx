@@ -22,6 +22,7 @@ export type InputProps = {
   success?: boolean;
   type?: string;
   value?: string;
+  list?: { id: string; options: string[] };
 };
 
 const Input: React.FC<InputProps> = ({
@@ -40,7 +41,8 @@ const Input: React.FC<InputProps> = ({
   required,
   success,
   type = 'text',
-  value
+  value,
+  list
 }: InputProps) => (
   <StyledInput error={error} success={success} hideLabel={hideLabel}>
     <label htmlFor={id}>
@@ -51,6 +53,7 @@ const Input: React.FC<InputProps> = ({
     <div className="input__wrapper">
       <input
         id={id}
+        list={list ? list.id : undefined}
         name={id}
         type={type}
         placeholder={placeholder}
@@ -64,6 +67,16 @@ const Input: React.FC<InputProps> = ({
         autoComplete={autocomplete}
         value={value}
       />
+
+      {list && (
+        <datalist id={list.id}>
+          {list.options.map(item => (
+            <option value={item} key={item}>
+              {item}
+            </option>
+          ))}
+        </datalist>
+      )}
     </div>
     {error && errorMessage && <span className="input__error">{errorMessage}</span>}
   </StyledInput>
