@@ -5,7 +5,7 @@ DIR=${@%/}
 SRCDIR=${@%/src}
 
 # Variables
-DEP="react react-dom styled-components prop-types lazysizes picturefill what-input js-cookie svg-sprite-loader"
+DEP="react react-dom styled-components lazysizes picturefill what-input js-cookie svg-sprite-loader"
 DEVDEP="@types/js-cookie @types/node @types/react @types/react-dom @types/styled-components typescript"
 
 PURPLE='\033[0;35m'
@@ -47,7 +47,7 @@ else
           [Yy]* )
             cp -r -n ./.storybook $DIR; 
             STORYBOOK=true
-            DEVDEP=$DEVDEP" @storybook/react @storybook/addon-a11y @storybook/theming @storybook/addon-docs @storybook/addon-viewport babel-loader @babel/core"; 
+            DEVDEP=$DEVDEP" @storybook/react @storybook/addon-a11y @storybook/theming @storybook/addon-docs @storybook/addon-viewport storybook-addon-theme-playground babel-loader @babel/core"; 
             break;;
           
           [Nn]* ) break;;
@@ -92,8 +92,9 @@ else
   done
 
   echo ""
-  echo -e "$INFO Copying 'components', 'stylesheets' directories to $SRCDIR."
+  echo -e "$INFO Copying 'components', 'templates', 'stylesheets' directories to $SRCDIR."
   cp -r -n ./src/components $SRCDIR
+  cp -r -n ./src/templates $SRCDIR
   cp -r -n ./src/stylesheets $SRCDIR
   cp -r -n ./src/tokens $SRCDIR
   echo -e "$INFO Copying public' directory to $DIR."
