@@ -1,9 +1,11 @@
-import React, { createContext, useContext, useCallback, useEffect, useRef, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import styled, { css } from 'styled-components';
 
 import { space, color, variant } from '../../stylesheets';
 import { Colors } from '../../tokens';
+
+import useFocusTrap from '../../hooks/useFocusTrap';
 
 import Flex from '../Flex';
 import IconButton from '../IconButton';
@@ -86,64 +88,12 @@ const Dialog: React.FC<DialogProps> = ({
   fullHeight,
   initialFocusRef
 }: DialogProps) => {
-  const dialogRef = useRef<HTMLDivElement>(null);
-
-  const prevFocus = document.activeElement as HTMLElement | null;
-
-  const getFocusElements = useCallback(() => {
-    const dialogElement = dialogRef.current;
-    const elements = dialogElement?.querySelectorAll<HTMLElement>(
-      'a[href], button:not([disabled]), textarea, input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select'
-    );
-
-    const first = elements ? elements[0] : null;
-    const last = elements ? elements[elements.length - 1] : null;
-
-    return [first, last];
-  }, [dialogRef]);
-
-  const handleTabKey = useCallback(e => {
-    const [first, last] = getFocusElements();
-
-    if (!e.shiftKey && document.activeElement === last) {
-      first?.focus();
-      return e.preventDefault();
+  const { ref } = useFocusTrap<HTMLDivElement>({
+    initialFocusRef,
+    onKeyDown: e => {
+      if (e.keyCode === 27) onClose();
     }
-
-    if (e.shiftKey && document.activeElement === first) {
-      last?.focus();
-      e.preventDefault();
-    }
-
-    return null;
-  }, []);
-
-  const handleKeyDown = useCallback(e => {
-    if (e.keyCode === 27) return onClose();
-    if (e.keyCode === 9) return handleTabKey(e);
-
-    return null;
-  }, []);
-
-  useEffect(() => {
-    if (initialFocusRef && initialFocusRef.current) {
-      return initialFocusRef.current.focus();
-    }
-
-    const [first] = getFocusElements();
-    first?.focus();
-
-    if (prevFocus && prevFocus.focus) {
-      prevFocus.focus();
-    }
-
-    return null;
-  }, []);
-
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  });
 
   return createPortal(
     <StyledDialog
@@ -156,12 +106,7 @@ const Dialog: React.FC<DialogProps> = ({
       <DialogContext.Provider value={{ onClose }}>
         <ShimLayer aria-label="Close Dialog" onClick={onClose} />
 
-        <Flex
-          ref={dialogRef}
-          direction="column"
-          background={background}
-          className="dialog__wrapper"
-        >
+        <Flex ref={ref} direction="column" background={background} className="dialog__wrapper">
           {children}
         </Flex>
       </DialogContext.Provider>

@@ -8,6 +8,6 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-viewport/register',
     '@storybook/addon-a11y',
-    'storybook-addon-theme-playground/dist/register'
+    'storybook-addon-theme-playground'
   ]
 };
