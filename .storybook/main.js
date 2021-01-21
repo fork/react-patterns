@@ -7,7 +7,7 @@ module.exports = {
   addons: [
     '@storybook/addon-docs',
     '@storybook/addon-viewport/register',
-    '@storybook/addon-a11y',
-    'storybook-addon-theme-playground'
+    'storybook-addon-theme-playground',
+    '@storybook/addon-a11y'
   ]
 };

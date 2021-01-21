@@ -22,7 +22,7 @@ This repository contains basic React Components, Hooks and Patterns, which we us
 - 📦 Basic React components to start with
 - 💅 styled-components for styling
 - 🔧 ESLint, Stylelint und Prettier already configured
-- 🧱 Storybook Integration with A11y, Docs and Viewport Plugin
+- 🧱 Storybook Integration with A11y, Docs, Viewport and Theme Playground Plugin
 - 📐 Styling helpers for color, spacings and media queries
 - ⚙️ Basic jest snapshot testing is already implemented
 
@@ -154,8 +154,8 @@ const StyledComponent = styled.h2`
 Write something about future releases and whats on the list for the next development phase.
 
 - [x] Update readme
+- [x] Use Typescript
 - [ ] Add more jest tests
-- [ ] Use Typescript
 
 ---
 
