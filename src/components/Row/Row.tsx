@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { space } from '../../stylesheets';
 import { Spacings } from '../../tokens';
@@ -14,7 +14,11 @@ export type RowProps = {
 
 const StyledRow = styled(Flex)<{ gap?: Spacings }>`
   > * + * {
-    margin-left: ${props => (props.gap ? space(props.gap) : undefined)} !important;
+    ${props =>
+      props.gap &&
+      css`
+        margin-left: ${space(props.gap)} !important;
+      `}
   }
 `;
 
