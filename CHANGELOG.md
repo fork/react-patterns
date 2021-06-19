@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Updated babel config to build esmodules
 - Added new Image Component
 - Changed components to typescript
 - Updated stories and jest snapshot tests for typescript
