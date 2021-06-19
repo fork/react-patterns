@@ -13,15 +13,7 @@ type TeaserProps = {
 
 const Teaser: React.FC<TeaserProps> = ({ headline, copy, image }: TeaserProps) => (
   <StyledTeaser>
-    {image && (
-      <Image
-        src={image.src}
-        srcset={image.srcset}
-        alt={image.alt}
-        ratio={image.ratio}
-        lazy={image.lazy}
-      />
-    )}
+    {image && <Image src={image.src} srcSet={image.srcSet} alt={image.alt} lazy={image.lazy} />}
 
     <Text as="h2">{headline}</Text>
 

@@ -1,30 +1,34 @@
-export const buildSrcSet = (srcset: { [key: string]: string }): string => {
-  return Object.keys(srcset)
-    .map(key => `${srcset[key]} ${key}`)
-    .join(',');
-};
+import { ImageProps } from '../Image';
 
-export const buildImageObject = (obj: any, lazy: boolean): any => {
-  let image = obj;
-  let imageClass = '';
+const buildImageProps = (obj: ImageProps): ImageProps => {
+  const image = {
+    alt: obj.alt,
+    media: obj.media,
+    sizes: obj.sizes,
+    className: obj.className,
+    role: obj.role,
+    width: obj.width,
+    height: obj.height
+  };
 
-  if (lazy && 'loading' in HTMLImageElement.prototype) {
-    image = {
-      ...image,
-      loading: 'lazy'
-    };
-  } else if (lazy) {
-    image = {
-      ...image,
-      src: null,
-      sizes: null,
-      srcSet: null,
+  if (obj.lazy && !obj.hasNativeLazyLoading) {
+    Object.assign(image, {
+      'data-src': obj.src,
       'data-srcset': obj.srcSet,
-      'data-sizes': obj.sizes,
-      'data-src': obj.src
-    };
-    imageClass = 'lazyload';
+      className: `${obj.className} lazyload`
+    });
+  } else if (obj.lazy && obj.hasNativeLazyLoading) {
+    Object.assign(image, {
+      src: obj.src,
+      srcSet: obj.srcSet,
+      loading: 'lazy',
+      'data-src': undefined
+    });
+  } else if (!obj.lazy) {
+    Object.assign(image, { src: obj.src, srcSet: obj.srcSet });
   }
 
-  return { image, imageClass };
+  return image;
 };
+
+export default buildImageProps;
