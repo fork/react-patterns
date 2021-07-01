@@ -20,11 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed components to typescript
 - Updated stories and jest snapshot tests for typescript
 - Updated all packages
+- Changed grid tokens structure & grid helpers
 
 ### Removed
 
 - Removed Cookielayer component
 - Dedicated Picture component in favor of new Image Component
 - Removed some unused packages (e.g. prop-types)
+- Removed debug grid
 
 ## [0.1.0] - 2020-10-05

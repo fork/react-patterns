@@ -7,14 +7,4 @@ export { default as variant } from './tools/variant';
 export { default as dynamicProperty } from './tools/dynamicProperty';
 export type { DynamicKey, DynamicProp } from './tools/dynamicProperty';
 
-export {
-  displayGrid,
-  justifyItems,
-  gridColumn,
-  gridRow,
-  gridTemplateColumns,
-  gridTemplateRows,
-  getGridGutter,
-  getGridSpans,
-  DebugGrid
-} from './tools/grid';
+export { gridContainer, getGrid } from './tools/grid';
