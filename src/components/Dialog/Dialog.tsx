@@ -8,7 +8,7 @@ import { Colors } from '../../tokens';
 import useFocusTrap from '../../hooks/useFocusTrap';
 
 import Flex from '../Flex';
-import IconButton from '../IconButton';
+import Button from '../Button';
 
 const DialogContext = createContext({
   onClose: () => null
@@ -139,7 +139,7 @@ export const DialogFooter = styled(Flex)`
 export const DialogClose = () => {
   const { onClose } = useContext(DialogContext);
 
-  return <IconButton icon="Close" label="Close dialog" onClick={onClose} />;
+  return <Button icon="close" label="Close dialog" onClick={onClose} iconPosition="only" />;
 };
 
 export default Dialog;

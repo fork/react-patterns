@@ -5,7 +5,7 @@ import Image, { ImageProps } from '../Image';
 
 import StyledTeaser from './Teaser.style';
 
-type TeaserProps = {
+export type TeaserProps = {
   headline: string;
   copy?: string;
   image?: ImageProps;
@@ -22,8 +22,8 @@ const Teaser = ({ headline, copy, image }: TeaserProps) => (
 );
 
 Teaser.defaultProps = {
-  copy: 'Teaser',
-  image: { src: '' }
+  copy: undefined,
+  image: undefined
 };
 
 export default Teaser;

@@ -6,6 +6,7 @@ module.exports = {
   ],
   addons: [
     '@storybook/addon-docs',
+    '@storybook/addon-controls',
     '@storybook/addon-viewport/register',
     'storybook-addon-theme-playground',
     '@storybook/addon-a11y'

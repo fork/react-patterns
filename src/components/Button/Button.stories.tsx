@@ -1,26 +1,25 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import Button from './Button';
+import Button, { ButtonProps } from './Button';
 
 export default {
   title: 'Components/Button',
   component: Button
+} as Meta;
+
+const Template: Story<ButtonProps> = args => <Button {...args} />;
+
+export const Small = Template.bind({});
+Small.args = {
+  label: 'Small Button',
+  size: 'small',
+  variant: 'primary'
 };
 
-export const Small = () => (
-  <>
-    <Button variant="primary">Primary</Button>
-    <Button variant="secondary">Secondary</Button>
-  </>
-);
-
-export const Large = () => (
-  <>
-    <Button variant="primary" size="large">
-      Primary
-    </Button>
-    <Button variant="secondary" size="large">
-      Secondary
-    </Button>
-  </>
-);
+export const Large = Template.bind({});
+Large.args = {
+  label: 'Large Button',
+  size: 'large',
+  variant: 'primary'
+};

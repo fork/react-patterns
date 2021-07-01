@@ -7,18 +7,10 @@ const StyledRichtext = styled.div`
     padding: 0.75rem 0;
   }
 
-  h1 {
-    display: inline-block;
-  }
-
   h2,
-  h3 {
+  h3,
+  h4 {
     margin: 1rem 0;
-
-    [data-whatinput='mouse'] &,
-    [data-whatinput='touch'] & {
-      outline: 0;
-    }
   }
 
   ul,

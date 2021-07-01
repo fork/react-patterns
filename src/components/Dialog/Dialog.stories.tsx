@@ -22,7 +22,7 @@ export const Story = () => {
 
   return (
     <>
-      <Button onClick={() => setVisible(true)}>open modal</Button>
+      <Button onClick={() => setVisible(true)} label="Open Modal" />
       {visible && (
         <>
           <Dialog size={size} onClose={() => setVisible(false)}>
@@ -49,11 +49,8 @@ export const Story = () => {
 
             <DialogFooter justifyContent="flex-end">
               <Row gap="s">
-                <Button variant="secondary" onClick={() => setVisible(false)}>
-                  Cancel
-                </Button>
-
-                <Button onClick={() => setVisible(false)}>Accept</Button>
+                <Button variant="secondary" onClick={() => setVisible(false)} label="Cancel" />
+                <Button onClick={() => setVisible(false)} label="Accept" />
               </Row>
             </DialogFooter>
           </Dialog>
