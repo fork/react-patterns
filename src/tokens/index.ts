@@ -3,6 +3,7 @@ export type Spacings = keyof typeof tokens.spacings;
 export type Breakpoints = keyof typeof tokens.breakpoints;
 
 export type Tokens = {
+  maxwidth: number;
   breakpoints: { s: number; m: number; l: number };
   colors: {
     black: string;
@@ -13,8 +14,22 @@ export type Tokens = {
     critical: string;
   };
   grid: {
-    columns: number;
-    gutters: number;
+    default: {
+      columns: number;
+      columnGap: number;
+    };
+    s: {
+      columns: number;
+      columnGap: number;
+    };
+    m: {
+      columns: number;
+      columnGap: number;
+    };
+    l: {
+      columns: number;
+      columnGap: number;
+    };
   };
   spacings: {
     xs: number;
@@ -26,10 +41,11 @@ export type Tokens = {
 };
 
 const tokens: Tokens = {
+  maxwidth: 1680,
   breakpoints: {
-    s: 375,
-    m: 768,
-    l: 1024
+    s: 580,
+    m: 960,
+    l: 1340
   },
   colors: {
     black: '#181920',
@@ -40,8 +56,22 @@ const tokens: Tokens = {
     critical: '#ff0000'
   },
   grid: {
-    columns: 12,
-    gutters: 0
+    default: {
+      columns: 4,
+      columnGap: 12
+    },
+    s: {
+      columns: 4,
+      columnGap: 20
+    },
+    m: {
+      columns: 12,
+      columnGap: 30
+    },
+    l: {
+      columns: 12,
+      columnGap: 40
+    }
   },
   spacings: {
     xs: 5,
