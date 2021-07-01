@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton IconButton should render correctly 1`] = `
+<styled.button
+  aria-label="Close"
+  size="small"
+  title="Close"
+  type="button"
+  variant="primary"
+>
+  <Icon
+    icon="Close"
+    size="small"
+  />
+</styled.button>
+`;
+
+exports[`IconButton Secondary IconButton should render correctly 1`] = `
+<styled.button
+  aria-label="Close"
+  size="small"
+  title="Close"
+  type="button"
+  variant="secondary"
+>
+  <Icon
+    icon="Close"
+    size="small"
+  />
+</styled.button>
+`;

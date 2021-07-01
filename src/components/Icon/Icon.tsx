@@ -3,26 +3,16 @@ import React from 'react';
 
 import StyledIcon from './Icon.style';
 
-export type IconTypes =
-  | 'angleDown'
-  | 'check'
-  | 'close'
-  | 'date'
-  | 'facebook'
-  | 'instagram'
-  | 'twitter'
-  | 'whatsApp';
+import * as icons from './compiled';
+
+export type IconTypes = keyof typeof icons;
 
 export type IconProps = { icon: IconTypes; size?: 'small' | 'large' };
 
 const Icon = ({ icon, size = 'small' }: IconProps) => {
-  const updatedIcon = typeof icon === 'object' ? icon : require(`./icons/${icon}.svg`).default;
+  const ThisIcon = icons[icon];
 
-  return (
-    <StyledIcon size={size} viewBox={updatedIcon.viewBox} role="presentation">
-      <use xlinkHref={`#${updatedIcon.id}`} />
-    </StyledIcon>
-  );
+  return <StyledIcon as={ThisIcon} size={size} />;
 };
 
 export default Icon;

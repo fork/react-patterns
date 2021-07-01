@@ -1,22 +1,14 @@
+import { Story, Meta } from '@storybook/react';
 import React from 'react';
 
-import DateIcon from './icons/date.svg';
-import Icon from './Icon';
+import Icon, { IconProps } from './Icon';
 
 export default {
   title: 'Components/Icon',
   component: Icon
-};
+} as Meta;
 
-export const withString = () => (
-  <>
-    <Icon icon="date" size="large" />
-    <Icon icon="date" />
-  </>
-);
-export const withObject = () => (
-  <>
-    <Icon icon={DateIcon} size="large" />
-    <Icon icon={DateIcon} />
-  </>
-);
+const Template: Story<IconProps> = args => <Icon {...args} />;
+
+export const Default = Template.bind({});
+Default.args = { icon: 'AngleDown', size: 'small' };

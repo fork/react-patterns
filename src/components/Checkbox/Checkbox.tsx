@@ -39,7 +39,7 @@ const Checkbox = ({
       />
 
       <span className="checkbox__custom-checkbox">
-        <Icon icon="check" />
+        <Icon icon="Check" />
 
         {required && <span className="checkbox__required">*</span>}
       </span>
