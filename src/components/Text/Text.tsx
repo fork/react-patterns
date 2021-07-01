@@ -6,7 +6,7 @@ import { Colors } from '../../tokens';
 
 export type TextProps = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'figure' | 'div' | 'cite';
-  variant?: 'main' | 'sub';
+  variant?: 'copy' | 'main' | 'sub';
   color?: Colors;
   children: ReactNode;
 };
@@ -17,6 +17,9 @@ const Text = styled.p<TextProps>`
 
   ${variant({
     default: 'main',
+    copy: css`
+      font-size: 14px;
+    `,
     main: css`
       font-size: 30px;
     `,
