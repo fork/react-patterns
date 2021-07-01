@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+- Removed Cookielayer component
 - Dedicated Picture component in favor of new Image Component
 - Removed some unused packages (e.g. prop-types)
 
