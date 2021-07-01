@@ -39,7 +39,7 @@ export type FormProps = {
   className?: string;
 };
 
-const Form: React.FC<FormProps> = ({
+const Form = ({
   initialFormData,
   onSuccess,
   onError,
@@ -126,11 +126,8 @@ const Form: React.FC<FormProps> = ({
 
     setFormState(null);
 
-    const inputElements: (
-      | HTMLInputElement
-      | HTMLSelectElement
-      | HTMLTextAreaElement
-    )[] = Array.from(formRef.current.querySelectorAll('input, select, textarea'));
+    const inputElements: (HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement)[] =
+      Array.from(formRef.current.querySelectorAll('input, select, textarea'));
 
     let isValid = true;
 

@@ -15,14 +15,14 @@ export default {
   component: Dialog
 };
 
-export const Story: React.FC = () => {
+export const Story = () => {
   const [size, setSize] = useState<DialogSize>('default');
 
   const [visible, setVisible] = useState<boolean>(false);
 
   return (
     <>
-      <Button onClick={() => setVisible(true)}>open modal</Button>
+      <Button onClick={() => setVisible(true)} label="Open Modal" />
       {visible && (
         <>
           <Dialog size={size} onClose={() => setVisible(false)}>
@@ -49,11 +49,8 @@ export const Story: React.FC = () => {
 
             <DialogFooter justifyContent="flex-end">
               <Row gap="s">
-                <Button variant="secondary" onClick={() => setVisible(false)}>
-                  Cancel
-                </Button>
-
-                <Button onClick={() => setVisible(false)}>Accept</Button>
+                <Button variant="secondary" onClick={() => setVisible(false)} label="Cancel" />
+                <Button onClick={() => setVisible(false)} label="Accept" />
               </Row>
             </DialogFooter>
           </Dialog>

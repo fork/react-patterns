@@ -22,26 +22,17 @@ const StyledRow = styled(Flex)<{ gap?: Spacings }>`
   }
 `;
 
-const Row: React.FC<RowProps> = ({
-  alignItems,
-  children,
-  gap,
-  justifyContent,
-  wrap,
-  className
-}: RowProps) => {
-  return (
-    <StyledRow
-      gap={gap}
-      className={className}
-      alignItems={alignItems}
-      justifyContent={justifyContent}
-      direction="row"
-      wrap={wrap}
-    >
-      {children}
-    </StyledRow>
-  );
-};
+const Row = ({ alignItems, children, gap, justifyContent, wrap, className }: RowProps) => (
+  <StyledRow
+    gap={gap}
+    className={className}
+    alignItems={alignItems}
+    justifyContent={justifyContent}
+    direction="row"
+    wrap={wrap}
+  >
+    {children}
+  </StyledRow>
+);
 
 export default Row;

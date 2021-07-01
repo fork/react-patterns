@@ -22,7 +22,7 @@ const options = [
   }
 ];
 
-export const withState: React.FC = () => {
+export const withState = () => {
   const [value, setValue] = useState('frau');
 
   return (
@@ -36,19 +36,19 @@ export const withState: React.FC = () => {
   );
 };
 
-export const withoutValue: React.FC = () => (
+export const withoutValue = () => (
   <Radio id="radio-2" label="What do we eat for lunch?" options={options} />
 );
 
-export const withValue: React.FC = () => (
+export const withValue = () => (
   <Radio id="radio-3" label="What do we eat for lunch?" value="ottos" options={options} />
 );
 
-export const withoutLabel: React.FC = () => (
+export const withoutLabel = () => (
   <Radio id="radio-4" label="What do we eat for lunch?" value="ottos" options={options} hideLabel />
 );
 
-export const error: React.FC = () => (
+export const error = () => (
   <Radio
     id="radio-5"
     label="What do we eat for lunch?"
@@ -59,6 +59,6 @@ export const error: React.FC = () => (
   />
 );
 
-export const disabled: React.FC = () => (
+export const disabled = () => (
   <Radio id="radio-6" label="What do we eat for lunch?" options={options} disabled />
 );

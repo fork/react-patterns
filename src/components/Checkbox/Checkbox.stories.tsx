@@ -7,15 +7,15 @@ export default {
   component: Checkbox
 };
 
-export const Checked: React.FC = () => <Checkbox label="Checkbox 1" id="1" checked />;
-export const Unchecked: React.FC = () => <Checkbox label="Checkbox 2" id="2" />;
-export const Error: React.FC = () => (
+export const Checked = () => <Checkbox label="Checkbox 1" id="1" checked />;
+export const Unchecked = () => <Checkbox label="Checkbox 2" id="2" />;
+export const Error = () => (
   <Checkbox label="Checkbox 3" id="3" required error errorMessage="Dieses Feld ist verpflichtend" />
 );
-export const Success: React.FC = () => <Checkbox label="Checkbox 3" id="3" required checked />;
-export const Disabled: React.FC = () => <Checkbox label="Checkbox 4" id="4" disabled />;
-export const WithoutLabel: React.FC = () => <Checkbox label="Checkbox 5" id="5" hideLabel />;
-export const withState: React.FC = () => {
+export const Success = () => <Checkbox label="Checkbox 3" id="3" required checked />;
+export const Disabled = () => <Checkbox label="Checkbox 4" id="4" disabled />;
+export const WithoutLabel = () => <Checkbox label="Checkbox 5" id="5" hideLabel />;
+export const withState = () => {
   const [checked, setChecked] = useState(false);
   return (
     <Checkbox

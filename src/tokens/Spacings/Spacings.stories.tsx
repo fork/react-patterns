@@ -6,7 +6,7 @@ export default {
   title: 'Tokens/Spacings'
 };
 
-export const Simple: React.FC = () => (
+export const Simple = () => (
   <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(tokens.spacings).map((key: Spacings) => (
       <div

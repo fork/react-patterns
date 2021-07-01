@@ -5,13 +5,13 @@ import Image, { ImageProps } from '../Image';
 
 import StyledTeaser from './Teaser.style';
 
-type TeaserProps = {
+export type TeaserProps = {
   headline: string;
   copy?: string;
   image?: ImageProps;
 };
 
-const Teaser: React.FC<TeaserProps> = ({ headline, copy, image }: TeaserProps) => (
+const Teaser = ({ headline, copy, image }: TeaserProps) => (
   <StyledTeaser>
     {image && <Image src={image.src} srcSet={image.srcSet} alt={image.alt} lazy={image.lazy} />}
 
@@ -22,8 +22,8 @@ const Teaser: React.FC<TeaserProps> = ({ headline, copy, image }: TeaserProps) =
 );
 
 Teaser.defaultProps = {
-  copy: 'Teaser',
-  image: { src: '' }
+  copy: undefined,
+  image: undefined
 };
 
 export default Teaser;

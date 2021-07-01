@@ -13,14 +13,13 @@ export type TextareaProps = {
   errorMessage?: string;
   disabled?: boolean;
   value?: string;
-  hideLabel?: boolean;
   placeholder?: string;
   success?: boolean;
   autocomplete?: string;
   rows?: number;
 };
 
-const Textarea: React.FC<TextareaProps> = ({
+const Textarea = ({
   id,
   label,
   value,

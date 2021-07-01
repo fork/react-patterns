@@ -8,12 +8,10 @@ import { Colors } from '../../tokens';
 import useFocusTrap from '../../hooks/useFocusTrap';
 
 import Flex from '../Flex';
-import IconButton from '../IconButton';
+import Button from '../Button';
 
 const DialogContext = createContext({
-  onClose: () => {
-    console.log('Dialog onClose');
-  }
+  onClose: () => null
 });
 
 type StyledDialogProps = {
@@ -80,7 +78,7 @@ export interface DialogProps {
   fullHeight?: boolean;
 }
 
-const Dialog: React.FC<DialogProps> = ({
+const Dialog = ({
   children,
   size = 'default',
   background = 'white',
@@ -138,10 +136,10 @@ export const DialogFooter = styled(Flex)`
   flex-shrink: 0;
 `;
 
-export const DialogClose: React.FC = () => {
+export const DialogClose = () => {
   const { onClose } = useContext(DialogContext);
 
-  return <IconButton icon="close" label="Close dialog" onClick={onClose} />;
+  return <Button icon="close" label="Close dialog" onClick={onClose} iconPosition="only" />;
 };
 
 export default Dialog;

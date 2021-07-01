@@ -24,9 +24,9 @@ export default {
   component: Select
 };
 
-export const withDefaultValue: React.FC = () => <Select {...data} />;
-export const withPlaceholder: React.FC = () => <Select {...data} placeholder="Choose an option" />;
-export const withoutLabel: React.FC = () => <Select {...data} hideLabel />;
-export const success: React.FC = () => <Select {...data} success />;
-export const error: React.FC = () => <Select {...data} error />;
-export const disabled: React.FC = () => <Select {...data} disabled />;
+export const withDefaultValue = () => <Select {...data} />;
+export const withPlaceholder = () => <Select {...data} placeholder="Choose an option" />;
+export const withoutLabel = () => <Select {...data} hideLabel />;
+export const success = () => <Select {...data} success />;
+export const error = () => <Select {...data} error />;
+export const disabled = () => <Select {...data} disabled />;

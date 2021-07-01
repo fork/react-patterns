@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -33,6 +34,7 @@ module.exports = {
     ],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
+    'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'linebreak-style': 'off',

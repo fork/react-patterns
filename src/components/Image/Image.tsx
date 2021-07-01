@@ -21,7 +21,7 @@ export type ImageProps = {
 
 export type ReturnImageProps = React.HTMLProps<HTMLImageElement>;
 
-const Image: React.FC<ImageProps> = (props: ImageProps) => {
+const Image = (props: ImageProps) => {
   const [hasNativeLazyLoading, sethasNativeLazyLoading] = useState(false);
   const { alt, as = 'img' } = props;
 

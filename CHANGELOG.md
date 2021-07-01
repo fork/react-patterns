@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added TeaserContainer component
 - Basic Dialog component
 - Different layout components (e.g. Flex, Box, Stack and Row)
 - TypeScript linting
@@ -19,11 +20,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added new Image Component
 - Changed components to typescript
 - Updated stories and jest snapshot tests for typescript
+- Updated all packages
+- Changed grid tokens structure & grid helpers
 
 ### Removed
 
+- Removed IconButton component in favor of iconPosition prop on Button
 - Removed Cookielayer component
 - Dedicated Picture component in favor of new Image Component
 - Removed some unused packages (e.g. prop-types)
+- Removed debug grid
 
 ## [0.1.0] - 2020-10-05

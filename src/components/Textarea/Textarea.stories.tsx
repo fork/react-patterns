@@ -1,26 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Meta, Story } from '@storybook/react';
 
-import Textarea from './Textarea';
+import Textarea, { TextareaProps } from './Textarea';
 
 export default {
   title: 'Components/Textarea',
   component: Textarea
+} as Meta;
+
+const Template: Story<TextareaProps> = ({ value, ...args }) => {
+  const [val, setValue] = useState(value);
+
+  useEffect(() => {
+    setValue(value);
+  }, [value]);
+
+  return <Textarea value={val} onChange={e => setValue(e.target.value || '')} {...args} />;
 };
 
-const props = {
+export const Default = Template.bind({});
+Default.args = {
   id: '2',
   name: 'textarea',
   label: 'Your message',
-  placeholder: 'Enter your message...'
+  placeholder: 'Enter your message...',
+  required: true,
+  error: false,
+  success: false,
+  disabled: false,
+  value: '',
+  errorMessage: ''
 };
 
-export const WithoutValue: React.FC = () => <Textarea {...props} />;
-export const WithValue: React.FC = () => <Textarea {...props} value="Hans Peter" />;
-export const Error: React.FC = () => (
-  <Textarea {...props} error errorMessage="Bitte verfasse eine Nachricht." />
-);
-export const Success: React.FC = () => <Textarea {...props} success />;
-export const withState: React.FC = () => {
-  const [value, setValue] = useState('');
-  return <Textarea {...props} value={value} onChange={e => setValue(e.target.value)} />;
-};
+export const Error = Template.bind({});
+Error.args = { ...Default.args, error: true, errorMessage: 'Bitte verfasse eine Nachricht.' };
+
+export const Success = Template.bind({});
+Success.args = { ...Default.args, success: true };

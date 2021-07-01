@@ -25,7 +25,7 @@ export type InputProps = {
   list?: { id: string; options: string[] };
 };
 
-const Input: React.FC<InputProps> = ({
+const Input = ({
   autocomplete,
   disabled,
   error,

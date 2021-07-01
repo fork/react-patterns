@@ -1,26 +1,44 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+
+import Icon, { IconTypes } from '../Icon';
+import Text from '../Text';
 
 import StyledButton from './Button.style';
 
 export type ButtonProps = {
-  children: ReactNode;
+  label: string;
   type?: 'button' | 'submit';
   disabled?: boolean;
   variant?: 'primary' | 'secondary';
   size?: 'small' | 'large';
+  icon?: IconTypes;
+  iconPosition?: 'before' | 'after' | 'only';
   onClick?: (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
-const Button: React.FC<ButtonProps> = ({
-  children,
+const Button = ({
+  label,
   type = 'button',
   disabled,
   variant = 'primary',
   size = 'small',
-  onClick
+  onClick,
+  iconPosition = 'before',
+  icon
 }: ButtonProps) => (
-  <StyledButton type={type} disabled={disabled} variant={variant} size={size} onClick={onClick}>
-    {children}
+  <StyledButton
+    type={type}
+    disabled={disabled}
+    aria-disabled={disabled}
+    title={label}
+    aria-label={label}
+    variant={variant}
+    size={size}
+    onClick={onClick}
+    iconPosition={iconPosition}
+  >
+    {icon && <Icon icon={icon} />}
+    {iconPosition === 'only' && icon ? null : <Text variant="copy">{label}</Text>}
   </StyledButton>
 );
 
