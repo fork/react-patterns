@@ -8,27 +8,29 @@ import { px2rem } from './spacing';
  * @returns {string} Media query definition
  * @example ${mq('m', 'max')} { css styles go here };
  */
-const mq = (id: Breakpoints, minMax = 'min') => ({ theme }: { theme: Tokens }): string => {
-  let mediaQueries = theme.breakpoints;
+const mq =
+  (id: Breakpoints, minMax = 'min') =>
+  ({ theme }: { theme: Tokens }): string => {
+    let mediaQueries = theme.breakpoints;
 
-  const defaultMediaQueries = {
-    s: 375,
-    m: 768,
-    l: 1440
-  };
+    const defaultMediaQueries = {
+      s: 375,
+      m: 768,
+      l: 1440
+    };
 
-  if (typeof id !== 'string') {
-    throw new Error('id must be a string');
-  }
+    if (typeof id !== 'string') {
+      throw new Error('id must be a string');
+    }
 
-  if (!Object.prototype.hasOwnProperty.call(mediaQueries, id)) {
-    console.warn('No media queries set in theme object. Fallback to default breakpoints.');
-    mediaQueries = defaultMediaQueries;
-  }
+    if (!Object.prototype.hasOwnProperty.call(mediaQueries, id)) {
+      console.warn('No media queries set in theme object. Fallback to default breakpoints.');
+      mediaQueries = defaultMediaQueries;
+    }
 
-  return `
+    return `
     @media (${minMax}-width: ${px2rem(mediaQueries[id])}) 
   `;
-};
+  };
 
 export default mq;
