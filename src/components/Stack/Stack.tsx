@@ -22,24 +22,16 @@ const StyledStack = styled(Flex)<{ gap?: Spacings }>`
   }
 `;
 
-const Stack: React.FC<StackProps> = ({
-  alignItems,
-  children,
-  gap,
-  justifyContent,
-  className
-}: StackProps) => {
-  return (
-    <StyledStack
-      alignItems={alignItems}
-      direction="column"
-      justifyContent={justifyContent}
-      gap={gap}
-      className={className}
-    >
-      {children}
-    </StyledStack>
-  );
-};
+const Stack = ({ alignItems, children, gap, justifyContent, className }: StackProps) => (
+  <StyledStack
+    alignItems={alignItems}
+    direction="column"
+    justifyContent={justifyContent}
+    gap={gap}
+    className={className}
+  >
+    {children}
+  </StyledStack>
+);
 
 export default Stack;

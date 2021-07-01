@@ -20,7 +20,7 @@ export type TextareaProps = {
   rows?: number;
 };
 
-const Textarea: React.FC<TextareaProps> = ({
+const Textarea = ({
   id,
   label,
   value,

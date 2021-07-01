@@ -27,7 +27,7 @@ export type SelectProps = {
   success?: boolean;
 };
 
-const Select: React.FC<SelectProps> = ({
+const Select = ({
   defaultValue,
   disabled,
   error,

@@ -7,13 +7,13 @@ export default {
   component: Image
 };
 
-export const Normal: React.FC = () => (
+export const Normal = () => (
   <div style={{ maxWidth: '500px' }}>
     <Image src="/images/750x750.jpg" lazy width={750} height={750} />
   </div>
 );
 
-export const withSrcset: React.FC = () => (
+export const withSrcset = () => (
   <div style={{ maxWidth: '500px' }}>
     <Image
       src="/images/750x750.jpg"
@@ -24,7 +24,7 @@ export const withSrcset: React.FC = () => (
   </div>
 );
 
-export const withSrcsetSizes: React.FC = () => (
+export const withSrcsetSizes = () => (
   <div style={{ maxWidth: '1440px' }}>
     <Image
       src="/images/750x750-2x.jpg"
@@ -36,7 +36,7 @@ export const withSrcsetSizes: React.FC = () => (
   </div>
 );
 
-export const Picture: React.FC = () => (
+export const Picture = () => (
   <div style={{ maxWidth: '1440px' }}>
     <picture>
       <Image as="source" lazy srcSet="/images/750x750.jpg" media="(min-width:1600px)" />

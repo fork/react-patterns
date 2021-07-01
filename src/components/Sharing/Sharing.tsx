@@ -12,7 +12,7 @@ export type SharingProps = {
   className?: string;
 };
 
-const Sharing: React.FC<SharingProps> = ({ links, className }: SharingProps) => (
+const Sharing = ({ links, className }: SharingProps) => (
   <StyledSharing className={className}>
     <Text transform="uppercase">Share on</Text>
 

@@ -14,7 +14,7 @@ export type CookieLayerProps = {
   onReject?: () => void;
 };
 
-const CookieLayer: React.FC<CookieLayerProps> = ({
+const CookieLayer = ({
   content,
   acceptLabel,
   rejectLabel,

@@ -15,7 +15,7 @@ export type FormInputProps = {
   [key: string]: any;
 };
 
-const FormInput: React.FC<FormInputProps> = ({ fieldType, ...rest }: FormInputProps) => {
+const FormInput = ({ fieldType, ...rest }: FormInputProps) => {
   switch (fieldType) {
     case 'input':
       return <Input {...(rest as InputProps)} />;

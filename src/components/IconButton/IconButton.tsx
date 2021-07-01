@@ -14,7 +14,7 @@ export type IconButtonProps = {
   onClick?: () => void;
 };
 
-const IconButton: React.FC<IconButtonProps> = ({
+const IconButton = ({
   icon,
   size = 'small',
   disabled,

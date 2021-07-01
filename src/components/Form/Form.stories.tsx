@@ -9,7 +9,7 @@ export default {
   component: Form
 };
 
-export const form: React.FC = () => {
+export const form = () => {
   const initialFormData: FormInputProps[] = [
     {
       fieldType: 'select',

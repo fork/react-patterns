@@ -15,7 +15,7 @@ export type IconTypes =
 
 export type IconProps = { icon: IconTypes; size?: 'small' | 'large' };
 
-const Icon: React.FC<IconProps> = ({ icon, size = 'small' }: IconProps) => {
+const Icon = ({ icon, size = 'small' }: IconProps) => {
   const updatedIcon = typeof icon === 'object' ? icon : require(`./icons/${icon}.svg`).default;
 
   return (

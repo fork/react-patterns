@@ -4,7 +4,7 @@ import StyledRichtext from './Richtext.style';
 
 export type RichttextProps = { html?: string; children?: ReactNode; className?: string };
 
-const Richtext: React.FC<RichttextProps> = ({ html, children, className }: RichttextProps) => {
+const Richtext = ({ html, children, className }: RichttextProps) => {
   if (html) {
     return <StyledRichtext className={className} dangerouslySetInnerHTML={{ __html: html }} />;
   }

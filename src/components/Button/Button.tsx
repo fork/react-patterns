@@ -11,7 +11,7 @@ export type ButtonProps = {
   onClick?: (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   children,
   type = 'button',
   disabled,

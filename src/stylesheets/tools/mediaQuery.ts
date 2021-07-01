@@ -28,9 +28,7 @@ const mq =
       mediaQueries = defaultMediaQueries;
     }
 
-    return `
-    @media (${minMax}-width: ${px2rem(mediaQueries[id])}) 
-  `;
+    return `@media (${minMax}-width: ${px2rem(mediaQueries[id])})`;
   };
 
 export default mq;

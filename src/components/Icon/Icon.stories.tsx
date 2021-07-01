@@ -8,13 +8,13 @@ export default {
   component: Icon
 };
 
-export const withString: React.FC = () => (
+export const withString = () => (
   <>
     <Icon icon="date" size="large" />
     <Icon icon="date" />
   </>
 );
-export const withObject: React.FC = () => (
+export const withObject = () => (
   <>
     <Icon icon={DateIcon} size="large" />
     <Icon icon={DateIcon} />

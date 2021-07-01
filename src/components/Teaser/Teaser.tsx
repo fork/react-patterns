@@ -11,7 +11,7 @@ type TeaserProps = {
   image?: ImageProps;
 };
 
-const Teaser: React.FC<TeaserProps> = ({ headline, copy, image }: TeaserProps) => (
+const Teaser = ({ headline, copy, image }: TeaserProps) => (
   <StyledTeaser>
     {image && <Image src={image.src} srcSet={image.srcSet} alt={image.alt} lazy={image.lazy} />}
 

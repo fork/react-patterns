@@ -7,7 +7,7 @@ export default {
   component: Stack
 };
 
-export const noGap: React.FC = () => (
+export const noGap = () => (
   <Stack>
     <Box background="primary" padding="s">
       Line 1
@@ -30,7 +30,7 @@ export const noGap: React.FC = () => (
   </Stack>
 );
 
-export const withGap: React.FC = () => (
+export const withGap = () => (
   <Stack gap="m">
     <Box background="primary" padding="s">
       Line 1

@@ -15,7 +15,7 @@ export default {
   component: Dialog
 };
 
-export const Story: React.FC = () => {
+export const Story = () => {
   const [size, setSize] = useState<DialogSize>('default');
 
   const [visible, setVisible] = useState<boolean>(false);

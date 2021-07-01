@@ -269,7 +269,7 @@ const Column = styled.span`
  * @returns {string} Returns simple debug grid (just use in development)
  * @example <DebugGrid />;
  */
-export const DebugGrid: React.FC<DebugGridProps> = ({ isHidden, onUpdate }: DebugGridProps) => {
+export const DebugGrid = ({ isHidden, onUpdate }: DebugGridProps) => {
   const [hidden, setHidden] = useState<boolean>(isHidden);
 
   useEffect(() => setHidden(isHidden), [isHidden]);
