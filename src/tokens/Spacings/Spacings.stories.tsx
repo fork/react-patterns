@@ -1,6 +1,6 @@
 import React from 'react';
 
-import tokens from '../index';
+import tokens, { Spacings } from '../index';
 
 export default {
   title: 'Tokens/Spacings'
@@ -8,7 +8,7 @@ export default {
 
 export const Simple: React.FC = () => (
   <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-    {Object.keys(tokens.spacings).map(key => (
+    {Object.keys(tokens.spacings).map((key: Spacings) => (
       <div
         key={key}
         style={{

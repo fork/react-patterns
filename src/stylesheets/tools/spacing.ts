@@ -20,16 +20,18 @@ export function px2rem(px: number): string {
  * @returns {string} Resulting spacing from theme object
  * @example margin: ${space('m')};
  */
-export const space = (spacing: Spacings | Spacings[]) => ({ theme }: { theme: Tokens }): string => {
-  const { spacings } = theme;
+export const space =
+  (spacing: Spacings | Spacings[]) =>
+  ({ theme }: { theme: Tokens }): string => {
+    const { spacings } = theme;
 
-  if (!spacings) {
-    throw new Error('Spacings are not defined in theme object');
-  }
+    if (!spacings) {
+      throw new Error('Spacings are not defined in theme object');
+    }
 
-  if (typeof spacing === 'string') {
-    return px2rem(spacings[spacing]);
-  }
+    if (typeof spacing === 'string') {
+      return px2rem(spacings[spacing]);
+    }
 
-  return spacing.map(id => px2rem(spacings[id])).join(' ');
-};
+    return spacing.map(id => px2rem(spacings[id])).join(' ');
+  };

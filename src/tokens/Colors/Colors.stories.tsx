@@ -1,6 +1,6 @@
 import React from 'react';
 
-import tokens from '../index';
+import tokens, { Colors } from '../index';
 
 export default {
   title: 'Tokens/Colors'
@@ -8,7 +8,7 @@ export default {
 
 export const Simple: React.FC = () => (
   <div style={{ display: 'flex' }}>
-    {Object.keys(tokens.colors).map(key => (
+    {Object.keys(tokens.colors).map((key: Colors) => (
       <div
         key={key}
         style={{

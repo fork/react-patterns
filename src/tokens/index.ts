@@ -17,11 +17,13 @@ export type Tokens = {
     gutters: number;
   };
   spacings: {
+    xxs: number;
     xs: number;
     s: number;
     m: number;
     l: number;
     xl: number;
+    xxl: number;
   };
 };
 
@@ -44,11 +46,13 @@ const tokens: Tokens = {
     gutters: 0
   },
   spacings: {
-    xs: 5,
-    s: 10,
-    m: 15,
-    l: 20,
-    xl: 25
+    xxs: 4,
+    xs: 8,
+    s: 12,
+    m: 20,
+    l: 40,
+    xl: 60,
+    xxl: 80
   }
 };
 
