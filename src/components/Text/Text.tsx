@@ -1,19 +1,29 @@
-import styled from 'styled-components';
+import { ReactNode } from 'react';
+import styled, { css } from 'styled-components';
 
-import { color } from '../../stylesheets';
+import { color, variant } from '../../stylesheets';
 import { Colors } from '../../tokens';
 
 export type TextProps = {
-  alignment?: 'center' | 'left' | 'right' | 'justify';
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'figure' | 'div' | 'cite';
+  variant?: 'main' | 'sub';
   color?: Colors;
-  transform?: 'uppercase' | 'lowercase';
+  children: ReactNode;
 };
 
 const Text = styled.p<TextProps>`
   color: ${props => (props.color ? color(props.color)(props) : 'inherit')};
-  text-align: ${props => props.alignment};
-  text-transform: ${props => props.transform};
   margin: 0;
+
+  ${variant({
+    default: 'main',
+    main: css`
+      font-size: 30px;
+    `,
+    sub: css`
+      font-size: 16px;
+    `
+  })}
 `;
 
 export default Text;
