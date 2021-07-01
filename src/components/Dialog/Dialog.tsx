@@ -139,7 +139,7 @@ export const DialogFooter = styled(Flex)`
 export const DialogClose = () => {
   const { onClose } = useContext(DialogContext);
 
-  return <IconButton icon="close" label="Close dialog" onClick={onClose} />;
+  return <IconButton icon="Close" label="Close dialog" onClick={onClose} />;
 };
 
 export default Dialog;

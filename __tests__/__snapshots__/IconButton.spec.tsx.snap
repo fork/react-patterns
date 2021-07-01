@@ -9,7 +9,7 @@ exports[`IconButton IconButton should render correctly 1`] = `
   variant="primary"
 >
   <Icon
-    icon="close"
+    icon="Close"
     size="small"
   />
 </styled.button>
@@ -24,7 +24,7 @@ exports[`IconButton Secondary IconButton should render correctly 1`] = `
   variant="secondary"
 >
   <Icon
-    icon="close"
+    icon="Close"
     size="small"
   />
 </styled.button>

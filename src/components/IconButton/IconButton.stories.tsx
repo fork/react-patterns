@@ -9,14 +9,14 @@ export default {
 
 export const Small = () => (
   <>
-    <IconButton icon="date" label="This is a label" variant="primary" />
-    <IconButton icon="date" label="This is a label" variant="secondary" />
+    <IconButton icon="Date" label="This is a label" variant="primary" />
+    <IconButton icon="Date" label="This is a label" variant="secondary" />
   </>
 );
 
 export const Large = () => (
   <>
-    <IconButton icon="date" size="large" label="This is a label" variant="primary" />
-    <IconButton icon="date" size="large" label="This is a label" variant="secondary" />
+    <IconButton icon="Date" size="large" label="This is a label" variant="primary" />
+    <IconButton icon="Date" size="large" label="This is a label" variant="secondary" />
   </>
 );
