@@ -14,9 +14,9 @@ const mq =
     let mediaQueries = theme.breakpoints;
 
     const defaultMediaQueries = {
-      s: 375,
-      m: 768,
-      l: 1440
+      s: 580,
+      m: 960,
+      l: 1340
     };
 
     if (typeof id !== 'string') {
