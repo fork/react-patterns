@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-import { color, variant } from '../../stylesheets';
-import { Colors } from '../../tokens';
+import { color, typography } from '../../stylesheets';
+import { Colors, Typography } from '../../tokens';
 
 export type TextProps = {
   as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'figure' | 'div' | 'cite';
-  variant?: 'copy' | 'main' | 'sub';
+  variant?: Typography;
   color?: Colors;
   children: ReactNode;
 };
@@ -15,18 +15,7 @@ const Text = styled.p<TextProps>`
   color: ${props => (props.color ? color(props.color)(props) : 'inherit')};
   margin: 0;
 
-  ${variant({
-    default: 'main',
-    copy: css`
-      font-size: 14px;
-    `,
-    main: css`
-      font-size: 30px;
-    `,
-    sub: css`
-      font-size: 16px;
-    `
-  })}
+  ${props => typography(props.variant || 'copy')(props)}
 `;
 
 export default Text;

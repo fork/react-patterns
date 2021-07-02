@@ -15,7 +15,9 @@ const Teaser = ({ headline, copy, image }: TeaserProps) => (
   <StyledTeaser>
     {image && <Image src={image.src} srcSet={image.srcSet} alt={image.alt} lazy={image.lazy} />}
 
-    <Text as="h2">{headline}</Text>
+    <Text as="h2" variant="headline2">
+      {headline}
+    </Text>
 
     {copy && <Text>{copy}</Text>}
   </StyledTeaser>

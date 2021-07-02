@@ -1,9 +1,154 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Text Text should render correctly 1`] = `
-<p
-  className="sc-bdnxRM dSnbYG"
+<ContextProvider
+  value={
+    Object {
+      "breakpoints": Object {
+        "l": 1340,
+        "m": 960,
+        "s": 580,
+      },
+      "colors": Object {
+        "black": "#181920",
+        "critical": "#ff0000",
+        "positive": "#009900",
+        "primary": "#1E41FF",
+        "secondary": "#eee",
+        "white": "#fff",
+      },
+      "fontFamilies": Object {
+        "default": "sans-serif",
+        "serif": "serif",
+      },
+      "grid": Object {
+        "default": Object {
+          "columnGap": 12,
+          "columns": 4,
+        },
+        "l": Object {
+          "columnGap": 40,
+          "columns": 12,
+        },
+        "m": Object {
+          "columnGap": 30,
+          "columns": 12,
+        },
+        "s": Object {
+          "columnGap": 20,
+          "columns": 4,
+        },
+      },
+      "maxwidth": 1680,
+      "spacings": Object {
+        "l": 40,
+        "m": 20,
+        "s": 12,
+        "xl": 60,
+        "xs": 8,
+        "xxl": 80,
+        "xxs": 4,
+      },
+      "typography": Object {
+        "button": Object {
+          "fontSizes": Array [
+            12,
+            14,
+          ],
+        },
+        "copy": Object {
+          "fontSizes": Array [
+            12,
+            14,
+          ],
+        },
+        "copySmall": Object {
+          "fontSizes": Array [
+            12,
+            14,
+          ],
+        },
+        "formHint": Object {
+          "fontSizes": Array [
+            12,
+            14,
+          ],
+        },
+        "formLabel": Object {
+          "fontSizes": Array [
+            12,
+            14,
+          ],
+        },
+        "formValue": Object {
+          "fontSizes": Array [
+            12,
+            14,
+          ],
+        },
+        "headline1": Object {
+          "fontSizes": Array [
+            26,
+            42,
+          ],
+          "lineHeights": Array [
+            1.4,
+            1.2,
+          ],
+          "weight": "bold",
+        },
+        "headline2": Object {
+          "fontSizes": Array [
+            22,
+            34,
+          ],
+          "lineHeights": Array [
+            1.3,
+            1.2,
+          ],
+          "weight": "bold",
+        },
+        "headline3": Object {
+          "fontSizes": Array [
+            20,
+            24,
+          ],
+          "lineHeights": Array [
+            1.5,
+            1.5,
+          ],
+          "weight": "bold",
+        },
+        "headline4": Object {
+          "fontSizes": Array [
+            18,
+            18,
+          ],
+          "lineHeights": Array [
+            1.65,
+            2,
+          ],
+          "weight": "bold",
+        },
+        "link": Object {
+          "fontSizes": Array [
+            12,
+            14,
+          ],
+        },
+        "quote": Object {
+          "family": "serif",
+          "fontSizes": Array [
+            12,
+            14,
+          ],
+        },
+      },
+    }
+  }
 >
-  Primary Text
-</p>
+  <styled.p>
+    Primary Text
+  </styled.p>
+</ContextProvider>
 `;
