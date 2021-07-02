@@ -2,10 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { Meta, Story } from '@storybook/react';
 
 import Textarea, { TextareaProps } from './Textarea';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Textarea',
-  component: Textarea
+  component: Textarea,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 } as Meta;
 
 const Template: Story<TextareaProps> = ({ value, ...args }) => {

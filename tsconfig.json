@@ -8,5 +8,5 @@
     "esModuleInterop": true,
     "allowJs": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", ".storybook/mdx.d.ts"]
 }

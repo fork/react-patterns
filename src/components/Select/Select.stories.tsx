@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Select from './Select';
+import docs from './docs.mdx';
 
 const data = {
   id: '2',
@@ -21,7 +22,12 @@ const data = {
 
 export default {
   title: 'Components/Select',
-  component: Select
+  component: Select,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const withDefaultValue = () => <Select {...data} />;

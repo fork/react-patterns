@@ -3,10 +3,16 @@ import React from 'react';
 import Box from '../Box';
 
 import Flex from './Flex';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Flex',
-  component: Flex
+  component: Flex,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const row = () => (

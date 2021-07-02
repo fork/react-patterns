@@ -3,10 +3,16 @@ import { Story, Meta } from '@storybook/react';
 
 import TeaserContainer, { TeaserContainerProps } from './TeaserContainer';
 import Teaser from '../Teaser/Teaser';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/TeaserContainer',
-  component: TeaserContainer
+  component: TeaserContainer,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 } as Meta;
 
 const Template: Story<TeaserContainerProps> = ({ children, ...args }) => (

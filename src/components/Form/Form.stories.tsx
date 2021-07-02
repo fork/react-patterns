@@ -1,12 +1,18 @@
 import React from 'react';
 
 import Form from './Form';
+import docs from './docs.mdx';
 import FormInput, { FormInputProps } from './FormInput';
 import Button from '../Button';
 
 export default {
   title: 'Components/Form',
-  component: Form
+  component: Form,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const form = () => {

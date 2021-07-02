@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 
 import Input, { InputProps } from './Input';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Input',
-  component: Input
+  component: Input,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 const props: InputProps = {

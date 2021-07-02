@@ -1,10 +1,16 @@
 import React from 'react';
 
 import Image from './Image';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Image',
-  component: Image
+  component: Image,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const Normal = () => (

@@ -1,10 +1,16 @@
 import React from 'react';
 import Stack from './Stack';
 import Box from '../Box';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Stack',
-  component: Stack
+  component: Stack,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const noGap = () => (

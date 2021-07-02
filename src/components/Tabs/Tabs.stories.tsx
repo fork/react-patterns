@@ -2,13 +2,19 @@ import React from 'react';
 
 import Tabs from './Tabs';
 import Tab from './Tab';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Tabs',
-  component: Tabs
+  component: Tabs,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
-export const Simple = () => (
+export const Default = () => (
   <Tabs>
     <Tab title="Profile">
       <h2>Profile</h2>

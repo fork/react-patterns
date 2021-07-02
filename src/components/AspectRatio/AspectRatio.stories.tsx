@@ -1,10 +1,16 @@
 import React from 'react';
 
 import AspectRatio from './AspectRatio';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/AspectRatio',
-  component: AspectRatio
+  component: AspectRatio,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const Square = () => (

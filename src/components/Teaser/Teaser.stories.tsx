@@ -1,13 +1,19 @@
 import React from 'react';
 
 import Teaser from './Teaser';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Teaser',
-  component: Teaser
+  component: Teaser,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
-export const Normal = () => (
+export const Default = () => (
   <Teaser
     headline="A Highlighting Headline"
     copy="And a capturing copy"

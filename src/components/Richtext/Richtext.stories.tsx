@@ -1,10 +1,16 @@
 import React from 'react';
 
 import Richtext from './Richtext';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Richtext',
-  component: Richtext
+  component: Richtext,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const withInnerHtml = () => (

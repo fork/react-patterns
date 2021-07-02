@@ -1,10 +1,16 @@
 import React from 'react';
 
 import Box from './Box';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Box',
-  component: Box
+  component: Box,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const withPadding = () => (

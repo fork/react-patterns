@@ -2,10 +2,16 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 import Button, { ButtonProps } from './Button';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Button',
-  component: Button
+  component: Button,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 } as Meta;
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;

@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 
 import Radio from './Radio';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Radio',
-  component: Radio
+  component: Radio,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 const options = [

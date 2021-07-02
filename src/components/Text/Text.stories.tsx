@@ -2,10 +2,16 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 import Text, { TextProps } from './Text';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Text',
-  component: Text
+  component: Text,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 } as Meta;
 
 const Template: Story<TextProps> = ({ children, ...args }) => <Text {...args}>{children}</Text>;

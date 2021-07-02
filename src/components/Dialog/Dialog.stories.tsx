@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 
 import Dialog, { DialogBody, DialogClose, DialogHeader, DialogFooter } from './Dialog';
+import docs from './docs.mdx';
 
 import Button from '../Button';
 import Text from '../Text';
@@ -12,7 +13,12 @@ type DialogSize = 'narrow' | 'default' | 'wide' | 'full';
 
 export default {
   title: 'Components/Dialog',
-  component: Dialog
+  component: Dialog,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const Story = () => {

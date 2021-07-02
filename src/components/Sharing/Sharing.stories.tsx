@@ -1,13 +1,19 @@
 import React from 'react';
 
 import Sharing from './Sharing';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Sharing',
-  component: Sharing
+  component: Sharing,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
-export const Normal = () => (
+export const Default = () => (
   <Sharing
     links={[
       { link: 'https://www.fork.de', icon: 'facebook', label: 'Share on Facebook' },

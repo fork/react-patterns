@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Basic Dialog component
 - Different layout components (e.g. Flex, Box, Stack and Row)
 - TypeScript linting
+- MDX for stories
 
 ### Changed
 

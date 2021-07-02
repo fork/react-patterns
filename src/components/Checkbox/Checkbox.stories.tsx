@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 
 import Checkbox from './Checkbox';
+import docs from './docs.mdx';
 
 export default {
   title: 'Components/Checkbox',
-  component: Checkbox
+  component: Checkbox,
+  parameters: {
+    docs: {
+      page: docs
+    }
+  }
 };
 
 export const Checked = () => <Checkbox label="Checkbox 1" id="1" checked />;

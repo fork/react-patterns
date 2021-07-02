@@ -1,10 +1,18 @@
 import styled from 'styled-components';
 
-import { getGridSpans } from '../../stylesheets';
+import { gridContainer, getGrid, mq } from '../../stylesheets';
 
 const StyledQuote = styled.blockquote`
-  margin: 0;
-  ${getGridSpans('width', { s: 2, m: 4, l: 12 })};
+  ${gridContainer};
+  ${getGrid()};
+
+  > * {
+    grid-column: 1 / span 4;
+
+    ${mq('m')} {
+      grid-column: 1 / span 12;
+    }
+  }
 
   cite {
     display: block;
