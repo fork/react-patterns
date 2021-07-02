@@ -19,7 +19,7 @@ const StyledTabs = styled.div<{ centered?: boolean }>`
       flex-shrink: 0;
     }
 
-    a {
+    button {
       position: relative;
       display: flex;
       align-items: center;

@@ -20,7 +20,8 @@
     "deploy": "yarn build && staticpages-cli",
     "test": "jest --config ./jest.config.json",
     "test:update": "jest --config ./jest.config.json -u",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "build:icons": "svgr --no-dimensions --typescript -d src/components/Icon/compiled src/components/Icon/icons"
   },
   "husky": {
     "hooks": {
@@ -54,6 +55,7 @@
     "@storybook/addon-viewport": "^6.3.2",
     "@storybook/react": "^6.3.2",
     "@storybook/theming": "^6.3.2",
+    "@svgr/cli": "^5.5.0",
     "@types/jest": "^26.0.20",
     "@types/js-cookie": "^2.2.6",
     "@types/node": "^15.12.5",

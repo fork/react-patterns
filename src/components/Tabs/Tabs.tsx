@@ -61,9 +61,9 @@ const Tabs = ({ initialIndex = 0, onClick, children, centered }: TabsProps) => {
 
           return (
             <li role="presentation" key={`tab_${i}`}>
-              <a
+              <button
                 id={`tab_${i}`}
-                href={`#tabpanel_${i}`}
+                type="button"
                 role="tab"
                 aria-controls={`tab_${i}`}
                 aria-selected={i === selected}
@@ -75,7 +75,7 @@ const Tabs = ({ initialIndex = 0, onClick, children, centered }: TabsProps) => {
                 }}
               >
                 {tab.props.title}
-              </a>
+              </button>
             </li>
           );
         })}
