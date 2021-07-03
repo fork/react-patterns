@@ -1,28 +1,46 @@
 import styled from 'styled-components';
 
-import { color } from '../../stylesheets';
+import { color, space, typography } from '../../stylesheets';
 
 const StyledRichtext = styled.div`
   p {
-    padding: 0.75rem 0;
+    padding: 0;
+    margin: 0 0 ${space('s')};
+    ${typography('copy')};
+  }
+
+  h2 {
+    ${typography('headline2')};
+  }
+
+  h3 {
+    ${typography('headline3')};
+  }
+
+  h4 {
+    ${typography('headline4')};
   }
 
   h2,
   h3,
   h4 {
-    margin: 1rem 0;
+    margin: ${space('m')} 0 ${space('s')};
   }
 
   ul,
   ol {
-    margin: 0;
-    padding: 0;
     list-style-position: inside;
+    padding: 0;
+    margin: 0 0 ${space('m')};
+
+    li {
+      ${typography('copy')};
+    }
   }
 
   a {
-    border-bottom: 1px solid ${color('black')};
-    color: ${color('black')};
+    border-bottom: 1px solid ${color('primary')};
+    color: ${color('primary')};
     text-decoration: none;
   }
 `;

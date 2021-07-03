@@ -26,8 +26,8 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
   .radio__custom-icon {
     position: relative;
     display: inline-block;
-    width: ${space('l')};
-    height: ${space('l')};
+    width: ${space('m')};
+    height: ${space('m')};
     border: 1px solid ${color('black')};
     margin-right: ${space('xs')};
     border-radius: 100%;
@@ -40,8 +40,8 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: ${space('s')};
-      height: ${space('s')};
+      width: ${space('xs')};
+      height: ${space('xs')};
       background: ${color('black')};
     }
   }

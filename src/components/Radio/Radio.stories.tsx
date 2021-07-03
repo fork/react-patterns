@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Story } from '@storybook/react';
 
-import Radio from './Radio';
+import Radio, { RadioProps } from './Radio';
 import docs from './docs.mdx';
 
 export default {
@@ -13,58 +14,51 @@ export default {
   }
 };
 
-const options = [
-  {
-    value: 'cao',
-    label: '🍲 Cao'
-  },
-  {
-    value: 'polo',
-    label: '🏇 Polokantine'
-  },
-  {
-    value: 'ottos',
-    label: '🍔 Ottos'
-  }
-];
-
-export const withState = () => {
-  const [value, setValue] = useState('frau');
-
-  return (
-    <Radio
-      id="radio-1"
-      label="What do we eat for lunch?"
-      value={value}
-      options={options}
-      onChange={e => setValue(e.target.value)}
-    />
-  );
+const defaults: RadioProps = {
+  id: 'radio-id',
+  label: 'What do we eat for lunch?',
+  required: true,
+  error: false,
+  disabled: false,
+  hideLabel: false,
+  errorMessage: undefined,
+  options: [
+    {
+      value: 'cao',
+      label: '🍲 Cao'
+    },
+    {
+      value: 'polo',
+      label: '🏇 Polokantine'
+    },
+    {
+      value: 'ottos',
+      label: '🍔 Ottos'
+    }
+  ]
 };
 
-export const withoutValue = () => (
-  <Radio id="radio-2" label="What do we eat for lunch?" options={options} />
-);
+const Template: Story<RadioProps> = ({ value, ...args }) => {
+  const [val, setValue] = useState(value);
 
-export const withValue = () => (
-  <Radio id="radio-3" label="What do we eat for lunch?" value="ottos" options={options} />
-);
+  useEffect(() => {
+    setValue(value);
+  }, [value]);
 
-export const withoutLabel = () => (
-  <Radio id="radio-4" label="What do we eat for lunch?" value="ottos" options={options} hideLabel />
-);
+  return <Radio value={val} onChange={e => setValue(e.target.value)} {...args} />;
+};
 
-export const error = () => (
-  <Radio
-    id="radio-5"
-    label="What do we eat for lunch?"
-    options={options}
-    error
-    errorMessage="We need to eat something. Choose wisely."
-    required
-  />
-);
+export const Default = Template.bind({});
+Default.args = defaults;
 
-export const disabled = () => (
-  <Radio id="radio-6" label="What do we eat for lunch?" options={options} disabled />
-);
+export const WithValue = Template.bind({});
+WithValue.args = { ...defaults, value: 'ottos' };
+
+export const WithoutLabel = Template.bind({});
+WithoutLabel.args = { ...defaults, value: 'ottos', hideLabel: true };
+
+export const Error = Template.bind({});
+Error.args = { ...defaults, error: true, errorMessage: 'We need to eat something. Choose wisely.' };
+
+export const Disabled = Template.bind({});
+Disabled.args = { ...defaults, disabled: true };
