@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
-import tokens from '../tokens';
 
 import sanitize from './sanitize';
+
+import color from './tools/color';
 import {
   colorsToCSSVariables,
   objectToCSSVariables,
@@ -19,14 +20,14 @@ const GlobalStyle = createGlobalStyle`
 
   :root {
     /* General object to css variables transformation */
-    ${objectToCSSVariables('spacings', tokens.spacings)}
-    ${objectToCSSVariables('font-families', tokens.fontFamilies)}
+    ${props => objectToCSSVariables('spacings', props.theme.spacings)}
+    ${props => objectToCSSVariables('font-families', props.theme.fontFamilies)}
 
     /* Special mixin to avoid color default value as css variable */
-    ${colorsToCSSVariables(tokens.colors)}
+    ${props => colorsToCSSVariables(props.theme.colors)}
     
     /* Special mixin to build css variables from adaptive-size */
-    ${typographyToCSSVariables(tokens.typography)}
+    ${props => typographyToCSSVariables(props.theme.typography)}
   }
 
   html {
@@ -42,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
-    background: #fff;
+    background: ${color('neutral', 10)};
   }
   
   input, textarea, select, button {

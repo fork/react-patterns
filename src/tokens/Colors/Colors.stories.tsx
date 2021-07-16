@@ -1,6 +1,6 @@
 import React from 'react';
 
-import tokens, { Colors } from '../index';
+import { tokens, Colors } from '../index';
 
 export default {
   title: 'Tokens/Colors'
@@ -8,7 +8,7 @@ export default {
 
 export const Simple = () => (
   <div>
-    {Object.keys(tokens.colors).map((key: Colors) => (
+    {Object.keys(tokens.default.colors).map((key: Colors) => (
       <div
         key={key}
         style={{
@@ -18,7 +18,7 @@ export const Simple = () => (
         <p>{key}</p>
 
         <div style={{ display: 'inline-flex' }}>
-          {Object.keys(tokens.colors[key]).map(shade =>
+          {Object.keys(tokens.default.colors[key]).map(shade =>
             shade !== 'default' ? (
               <div key={`${key}-${shade}`}>
                 <div
@@ -26,12 +26,12 @@ export const Simple = () => (
                     width: '150px',
                     height: '150px',
                     border: '1px solid #ddd',
-                    background: tokens.colors[key][shade]
+                    background: tokens.default.colors[key][shade]
                   }}
                 />
 
                 <p>
-                  <b>{shade}</b> {tokens.colors[key][shade]}
+                  <b>{shade}</b> {tokens.default.colors[key][shade]}
                 </p>
               </div>
             ) : null

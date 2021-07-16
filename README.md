@@ -85,10 +85,8 @@ yarn add -D @storybook/react @storybook/addon-a11y @storybook/theming @storybook
 import React from 'react';
 import { ThemeProvider } from 'path/to/stylesheets';
 
-import tokens from 'path/to/tokens';
-
 export default () => (
-  <ThemeProvider theme={tokens}>
+  <ThemeProvider theme="default">
     <ReactTree />
   </ThemeProvider>
 );
@@ -104,10 +102,9 @@ You need to wrap the whole React tree inside a `ThemeProvider` to make the token
 
 ```js
 import { ThemeProvider } from 'path/to/stylesheets';
-import tokens from 'path/to/tokens';
 
 const App = ({ children }) => {
-  return <ThemeProvider theme={tokens}>{children}</ThemeProvider>;
+  return <ThemeProvider theme="default">{children}</ThemeProvider>;
 };
 ```
 

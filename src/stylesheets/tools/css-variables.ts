@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import tokens from '../../tokens';
+import { baseTokens } from '../../tokens';
 import { adaptiveSizeCssVariables } from './adaptive-size';
 import { px2rem } from './spacing';
 
@@ -57,7 +57,7 @@ export const typographyToCSSVariables = (obj: any) => {
 
   Object.keys(obj).forEach(k => {
     const newVars: { [key: string]: any } = adaptiveSizeCssVariables(['typography', k].join('-'), {
-      breakpoints: Object.values(tokens.breakpoints),
+      breakpoints: Object.values(baseTokens.breakpoints),
       fontSizes: obj[k].fontSizes,
       letterSpacings: obj[k].letterSpacings,
       lineHeights: obj[k].lineHeights
