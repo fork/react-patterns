@@ -80,9 +80,7 @@ export const form = () => {
           {data.map((item: FormInputProps) => (
             <FormInput key={item.id} onChange={onChange} onFocus={onFocus} {...item} />
           ))}
-          <Button type="submit" variant="secondary">
-            Submit
-          </Button>
+          <Button type="submit" variant="secondary" label="Submit" />
 
           <div>
             {error && (

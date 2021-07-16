@@ -19,7 +19,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
     cursor: pointer;
     display: flex;
     align-items: center;
-    color: ${color('black')};
+    color: ${color('neutral', 100)};
     line-height: 1;
   }
 
@@ -28,7 +28,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
     display: inline-block;
     width: ${space('m')};
     height: ${space('m')};
-    border: 1px solid ${color('black')};
+    border: 1px solid ${color('neutral', 100)};
     margin-right: ${space('xs')};
     border-radius: 100%;
 
@@ -42,7 +42,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
       transform: translate(-50%, -50%);
       width: ${space('xs')};
       height: ${space('xs')};
-      background: ${color('black')};
+      background: ${color('neutral', 100)};
     }
   }
 
@@ -65,7 +65,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
 
   .radio__error {
     display: block;
-    color: ${color('critical')};
+    color: ${color('warning')};
     margin-top: ${space('s')};
   }
 
@@ -73,7 +73,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
     props.error &&
     css`
       .radio__label {
-        color: ${color('critical')};
+        color: ${color('warning')};
       }
 
       label .radio__custom-icon {

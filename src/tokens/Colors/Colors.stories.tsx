@@ -7,26 +7,36 @@ export default {
 };
 
 export const Simple = () => (
-  <div style={{ display: 'flex' }}>
+  <div>
     {Object.keys(tokens.colors).map((key: Colors) => (
       <div
         key={key}
         style={{
-          margin: '10px'
+          margin: '20px'
         }}
       >
-        <div
-          style={{
-            width: '200px',
-            height: '200px',
-            background: tokens.colors[key],
-            boxShadow: '0px 0px 2px 0px rgba(0,0,0,0.75)',
-            marginBottom: '5px'
-          }}
-        />
-        <p>
-          {key} - {tokens.colors[key]}
-        </p>
+        <p>{key}</p>
+
+        <div style={{ display: 'inline-flex' }}>
+          {Object.keys(tokens.colors[key]).map(shade =>
+            shade !== 'default' ? (
+              <div key={`${key}-${shade}`}>
+                <div
+                  style={{
+                    width: '150px',
+                    height: '150px',
+                    border: '1px solid #ddd',
+                    background: tokens.colors[key][shade]
+                  }}
+                />
+
+                <p>
+                  <b>{shade}</b> {tokens.colors[key][shade]}
+                </p>
+              </div>
+            ) : null
+          )}
+        </div>
       </div>
     ))}
   </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import { ThemeProvider } from 'styled-components';
 
 import 'lazysizes';
 import 'picturefill';
 
 import tokens from '../src/tokens';
+import { ThemeProvider } from '../src/stylesheets';
 import GlobalStyle from '../src/stylesheets/global';
 
 export const parameters = {
@@ -14,7 +14,7 @@ export const parameters = {
   },
   themePlayground: {
     theme: tokens,
-    provider: ThemeProvider,
+    provider: ({ theme, children }) => <ThemeProvider tokens={theme}>{children}</ThemeProvider>,
     controls: { breakpoints: { hidden: true } }
   }
 };

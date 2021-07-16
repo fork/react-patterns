@@ -30,8 +30,8 @@ export const space =
     }
 
     if (typeof spacing === 'string') {
-      return px2rem(spacings[spacing]);
+      return `var(--spacings-${spacing})`;
     }
 
-    return spacing.map(id => px2rem(spacings[id])).join(' ');
+    return spacing.map(id => `var(--spacings-${id})`).join(' ');
   };

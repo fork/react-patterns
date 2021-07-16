@@ -5,6 +5,43 @@ const tokens: Tokens = {
     m: 960,
     l: 1340
   },
+  colors: {
+    neutral: {
+      default: '90',
+      '10': '#ffffff',
+      '20': '#f7f3f2',
+      '30': '#b3adac',
+      '50': '#8f8786',
+      '90': '#343232',
+      '100': '#020000'
+    },
+    primary: {
+      default: '50',
+      '50': '#f23e23',
+      '60': '#a91f0a',
+      '90': '#78020c'
+    },
+    accent1: {
+      default: '50',
+      '50': '#0000ff'
+    },
+    warning: {
+      default: '50',
+      '50': '#ed0b1f'
+    },
+    success: {
+      default: '50',
+      '50': '#2dc845'
+    },
+    notification: {
+      default: '50',
+      '50': '#ffcc16'
+    },
+    interaction: {
+      default: '50',
+      '50': '#069cc1'
+    }
+  },
   fontFamilies: {
     default: 'sans-serif',
     serif: 'serif'
@@ -56,14 +93,6 @@ const tokens: Tokens = {
       fontSizes: [12, 14]
     }
   },
-  colors: {
-    black: '#181920',
-    white: '#fff',
-    primary: '#1E41FF',
-    secondary: '#eee',
-    positive: '#009900',
-    critical: '#ff0000'
-  },
   grid: {
     default: {
       columns: 4,
@@ -93,18 +122,17 @@ const tokens: Tokens = {
   }
 };
 
-export type Colors = keyof typeof tokens.colors;
-export type Spacings = keyof typeof tokens.spacings;
-export type Breakpoints = keyof typeof tokens.breakpoints;
-export type Typography = keyof typeof tokens.typography;
-export type FontFamilies = keyof typeof tokens.fontFamilies;
-
 type TypographyToken = {
   fontSizes: number[];
   lineHeights?: number[];
   letterSpacings?: number[];
   family?: FontFamilies;
   weight?: string;
+};
+
+type ColorToken = {
+  default: string;
+  [key: string]: string;
 };
 
 export type Tokens = {
@@ -129,12 +157,13 @@ export type Tokens = {
     formHint: TypographyToken;
   };
   colors: {
-    black: string;
-    white: string;
-    primary: string;
-    secondary: string;
-    positive: string;
-    critical: string;
+    neutral: ColorToken;
+    primary: ColorToken;
+    accent1: ColorToken;
+    warning: ColorToken;
+    success: ColorToken;
+    notification: ColorToken;
+    interaction: ColorToken;
   };
   grid: {
     default: {
@@ -164,5 +193,11 @@ export type Tokens = {
     xxl: number;
   };
 };
+
+export type Colors = keyof Tokens['colors'];
+export type Spacings = keyof Tokens['spacings'];
+export type Breakpoints = keyof Tokens['breakpoints'];
+export type Typography = keyof Tokens['typography'];
+export type FontFamilies = keyof Tokens['fontFamilies'];
 
 export default tokens;

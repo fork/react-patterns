@@ -7,7 +7,6 @@ import docs from './docs.mdx';
 import Button from '../Button';
 import Text from '../Text';
 import Radio from '../Radio';
-import Row from '../Row';
 
 type DialogSize = 'narrow' | 'default' | 'wide' | 'full';
 
@@ -53,11 +52,9 @@ export const Story = () => {
               />
             </DialogBody>
 
-            <DialogFooter justifyContent="flex-end">
-              <Row gap="s">
-                <Button variant="secondary" onClick={() => setVisible(false)} label="Cancel" />
-                <Button onClick={() => setVisible(false)} label="Accept" />
-              </Row>
+            <DialogFooter>
+              <Button variant="secondary" onClick={() => setVisible(false)} label="Cancel" />
+              <Button onClick={() => setVisible(false)} label="Accept" />
             </DialogFooter>
           </Dialog>
         </>

@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+import tokens from '../tokens';
 
 import sanitize from './sanitize';
+import {
+  colorsToCSSVariables,
+  objectToCSSVariables,
+  typographyToCSSVariables
+} from './tools/css-variables';
 
 const GlobalStyle = createGlobalStyle`
   ${sanitize}
@@ -9,6 +15,18 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     width: 100%;
+  }
+
+  :root {
+    /* General object to css variables transformation */
+    ${objectToCSSVariables('spacings', tokens.spacings)}
+    ${objectToCSSVariables('font-families', tokens.fontFamilies)}
+
+    /* Special mixin to avoid color default value as css variable */
+    ${colorsToCSSVariables(tokens.colors)}
+    
+    /* Special mixin to build css variables from adaptive-size */
+    ${typographyToCSSVariables(tokens.typography)}
   }
 
   html {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { space, color } from '../../stylesheets';
 
 const StyledTeaser = styled.div`
-  border: 1px solid ${color('black')};
+  border: 1px solid ${color('neutral', 100)};
 
   img {
     display: block;

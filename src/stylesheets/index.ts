@@ -1,3 +1,5 @@
+export { default as ThemeProvider } from './ThemeProvider';
+
 export { btnReset, hideVisually, hexToRgbA } from './tools/utility';
 
 export { space, px2rem } from './tools/spacing';

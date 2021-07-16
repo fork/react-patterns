@@ -16,11 +16,27 @@ const StyledButton = styled.button<StyledButtonProps>`
   ${variant({
     primary: css`
       background: ${color('primary')};
-      color: ${color('white')};
+      color: ${color('neutral', 10)};
+
+      &:hover {
+        background: ${color('primary', 60)};
+      }
+
+      &:active {
+        background: ${color('primary', 90)};
+      }
     `,
     secondary: css`
-      background: ${color('secondary')};
-      color: ${color('black')};
+      background: ${color('neutral', 20)};
+      color: ${color('neutral', 100)};
+
+      &:hover {
+        background: ${color('neutral', 30)};
+      }
+
+      &:active {
+        background: ${color('neutral', 50)};
+      }
     `
   })}
 

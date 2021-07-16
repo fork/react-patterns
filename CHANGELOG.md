@@ -9,10 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added custom ThemeProvider
+- Added tokens as CSS Variables
 - Added TeaserContainer component
 - Added Link component
 - Basic Dialog component
-- Different layout components (e.g. Flex, Box, Stack and Row)
 - TypeScript linting
 - MDX for stories
 
@@ -28,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+- Removed svg-sprite-loader in favor of @svgr/cli
 - Removed IconButton component in favor of iconPosition prop on Button
 - Removed Cookielayer component
 - Dedicated Picture component in favor of new Image Component

@@ -5,7 +5,7 @@ DIR=${@%/}
 SRCDIR=${@%/src}
 
 # Variables
-DEP="react react-dom styled-components lazysizes picturefill what-input js-cookie svg-sprite-loader"
+DEP="react react-dom styled-components lazysizes picturefill what-input js-cookie @svgr/cli"
 DEVDEP="@types/js-cookie @types/node @types/react @types/react-dom @types/styled-components typescript"
 
 PURPLE='\033[0;35m'
@@ -162,22 +162,13 @@ else
     echo "DEPLOY_SRC=storybook-static";
   fi
 
-  # svg-sprite-loader information
-  echo ""
-  echo -e "$INFO The components make use of the 'svg-sprite-loader'. Make sure you add the following rule to your webpack config:"; 
-  echo ""
-  echo "{";
-  echo "  test: /\.svg$/,";
-  echo "  loader: 'svg-sprite-loader'";
-  echo "}";
-
   # Theme Provider Information
   echo ""
   echo -e "$INFO Also make sure that you wrap your React tree in a 'ThemeProvider':"; 
   echo ""
   echo "import React from 'react';"
-  echo "import { ThemeProvider } from 'styled-components';"
   echo ""
+  echo "import { ThemeProvider } from 'path/to/stylesheets';"
   echo "import tokens from 'path/to/tokens';"
   echo ""
   echo "export default () => ("

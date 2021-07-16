@@ -6,7 +6,7 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     display: block;
     margin-bottom: ${space('xs')};
     font-weight: bold;
-    color: ${color('black')};
+    color: ${color('neutral', 100)};
     line-height: 1;
     ${props => props.hideLabel && hideVisually()}
   }
@@ -28,11 +28,11 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     outline: none;
     background: transparent;
     appearance: none;
-    color: ${color('black')};
+    color: ${color('neutral', 100)};
     font-size: inherit;
     font-weight: normal;
     line-height: 1;
-    border: 1px solid ${color('black')};
+    border: 1px solid ${color('neutral', 100)};
 
     padding: ${space('xs')};
 
@@ -57,11 +57,11 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     props.success &&
     css`
       label {
-        color: ${color('positive')};
+        color: ${color('success')};
       }
 
       select {
-        border-color: ${color('positive')};
+        border-color: ${color('success')};
       }
     `}
 
@@ -69,17 +69,17 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     props.error &&
     css`
       label {
-        color: ${color('critical')};
+        color: ${color('warning')};
       }
 
       select {
-        border-color: ${color('critical')};
+        border-color: ${color('warning')};
       }
     `}
 
   .select__error {
     display: block;
-    color: ${color('critical')};
+    color: ${color('warning')};
   }
 `;
 

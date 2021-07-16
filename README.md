@@ -56,7 +56,7 @@ Copy all components you need for your new project. All components consist of a `
 
 ```sh
 # Install dependencies
-yarn add react react-dom styled-components prop-types lazysizes picturefill what-input js-cookie svg-sprite-loader
+yarn add react react-dom styled-components prop-types lazysizes picturefill what-input js-cookie @svgr/cli
 
 # Install dev dependencies
 yarn add -D @storybook/react @storybook/addon-a11y @storybook/theming @storybook/addon-docs @storybook/addon-viewport babel-loader @babel/core babel-jest enzyme enzyme-adapter-react-16 enzyme-to-json jest react-is react-test-renderer @4rk/staticpages-cli
@@ -72,21 +72,8 @@ yarn add -D @storybook/react @storybook/addon-a11y @storybook/theming @storybook
 "storybook:build": "build-storybook",
 "deploy": "yarn storybook:build && staticpages-cli",
 "test": "jest --config ./jest.config.json",
-"test:update": "jest --config ./jest.config.json -u"
-```
-
-</details>
-
-<details>
-  <summary>Add <b>svg-sprite-loader</b> to your webpack config</summary>
-
-The components make use of the 'svg-sprite-loader'. Make sure you add the following rule to your webpack config:
-
-```js
-{
-  test: /\.svg$/,
-  loader: "svg-sprite-loader"
-}
+"test:update": "jest --config ./jest.config.json -u",
+"build:icons": "svgr --no-dimensions --typescript -d src/components/Icon/compiled src/components/Icon/icons"
 ```
 
 </details>
@@ -96,7 +83,7 @@ The components make use of the 'svg-sprite-loader'. Make sure you add the follow
 
 ```js
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'path/to/stylesheets';
 
 import tokens from 'path/to/tokens';
 
@@ -116,7 +103,7 @@ The theming of our components is based on a `tokens` file, where we store our ma
 You need to wrap the whole React tree inside a `ThemeProvider` to make the tokens available for the components. Otherwise the styling helpers will return an error.
 
 ```js
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'path/to/stylesheets';
 import tokens from 'path/to/tokens';
 
 const App = ({ children }) => {
@@ -139,7 +126,7 @@ const StyledComponent = styled.h2`
   color: ${color('primary')};
 
   ${mq('m')} {
-    color: ${color('secondary')};
+    color: ${color('neutral', 30)};
   }
 `;
 ```

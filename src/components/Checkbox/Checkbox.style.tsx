@@ -14,7 +14,7 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
     position: relative;
     display: flex;
     align-items: center;
-    color: ${color('black')};
+    color: ${color('neutral', 100)};
     cursor: pointer;
     hyphens: auto;
     padding-left: ${space('s')};
@@ -37,20 +37,20 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border: 1px solid ${color('black')};
+    border: 1px solid ${color('neutral', 100)};
     width: 20px;
     height: 20px;
 
     ${props =>
       props.error &&
       css`
-        border-color: ${color('critical')};
+        border-color: ${color('warning')};
       `}
 
     ${props =>
       props.success &&
       css`
-        border-color: ${color('positive')};
+        border-color: ${color('success')};
       `}
 
     svg {
@@ -61,7 +61,7 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
       ${props =>
         props.success &&
         css`
-          fill: ${color('positive')};
+          fill: ${color('success')};
         `}
     }
   }
@@ -86,24 +86,24 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
     line-height: 1;
     width: 6px;
     height: 6px;
-    color: ${color('black')};
+    color: ${color('neutral', 100)};
 
     ${props =>
       props.error &&
       css`
-        color: ${color('critical')};
+        color: ${color('warning')};
       `}
 
     ${props =>
       props.success &&
       css`
-        color: ${color('positive')};
+        color: ${color('success')};
       `}
   }
 
   .checkbox__error {
     display: block;
-    color: ${color('critical')};
+    color: ${color('warning')};
   }
 `;
 

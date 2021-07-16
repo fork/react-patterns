@@ -59,7 +59,7 @@ export const adaptiveSize = ({
   properties = defaultProperties
 }: AdaptiveSizeOptions): AdaptiveSizeStyles => {
   const mediaQueries: { [key: string]: any } = {};
-  const props = { ...properties, ...defaultProperties };
+  const props = { ...defaultProperties, ...properties };
 
   for (let i = 1; i < fontSizes.length; i += 1) {
     // Check if steps is a number else use key from steps array

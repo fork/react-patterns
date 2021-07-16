@@ -5,7 +5,7 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
   label {
     display: block;
     font-weight: bold;
-    color: ${color('black')};
+    color: ${color('neutral', 100)};
     line-height: 1;
     margin-bottom: ${space('s')};
     ${props => props.hideLabel && hideVisually()}
@@ -15,10 +15,10 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
     width: 100%;
     outline: none;
     background: transparent;
-    color: ${color('black')};
+    color: ${color('neutral', 100)};
     font-size: inherit;
     font-weight: normal;
-    border: 1px solid ${color('black')};
+    border: 1px solid ${color('neutral', 100)};
     padding: ${space('s')};
 
     &::placeholder {
@@ -38,7 +38,7 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
     }
 
     &:focus {
-      border-color: ${color('secondary')};
+      border-color: ${color('neutral', 30)};
     }
   }
 
@@ -48,18 +48,18 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
 
   .input__error {
     display: block;
-    color: ${color('critical')};
+    color: ${color('warning')};
   }
 
   ${props =>
     props.success &&
     css`
       label {
-        color: ${color('positive')};
+        color: ${color('success')};
       }
 
       input {
-        border-color: ${color('positive')};
+        border-color: ${color('success')};
       }
     `}
 
@@ -67,11 +67,11 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
     props.error &&
     css`
       label {
-        color: ${color('critical')};
+        color: ${color('warning')};
       }
 
       input {
-        border-color: ${color('critical')};
+        border-color: ${color('warning')};
       }
     `}
 `;

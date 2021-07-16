@@ -29,3 +29,9 @@ Large.args = {
   size: 'large',
   variant: 'primary'
 };
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: 'Secondary Button',
+  variant: 'secondary'
+};

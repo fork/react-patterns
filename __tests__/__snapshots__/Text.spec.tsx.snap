@@ -10,12 +10,41 @@ exports[`Text Text should render correctly 1`] = `
         "s": 580,
       },
       "colors": Object {
-        "black": "#181920",
-        "critical": "#ff0000",
-        "positive": "#009900",
-        "primary": "#1E41FF",
-        "secondary": "#eee",
-        "white": "#fff",
+        "accent1": Object {
+          "50": "#0000ff",
+          "default": "50",
+        },
+        "interaction": Object {
+          "50": "#069cc1",
+          "default": "50",
+        },
+        "neutral": Object {
+          "10": "#ffffff",
+          "100": "#020000",
+          "20": "#f7f3f2",
+          "30": "#b3adac",
+          "50": "#8f8786",
+          "90": "#343232",
+          "default": "90",
+        },
+        "notification": Object {
+          "50": "#ffcc16",
+          "default": "50",
+        },
+        "primary": Object {
+          "50": "#f23e23",
+          "60": "#a91f0a",
+          "90": "#78020c",
+          "default": "50",
+        },
+        "success": Object {
+          "50": "#2dc845",
+          "default": "50",
+        },
+        "warning": Object {
+          "50": "#ed0b1f",
+          "default": "50",
+        },
       },
       "fontFamilies": Object {
         "default": "sans-serif",

@@ -9,7 +9,7 @@ const StyledTabs = styled.div<{ centered?: boolean }>`
     display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
-    border-bottom: 1px solid ${color('black')};
+    border-bottom: 1px solid ${color('neutral', 100)};
     padding: ${space('xs')} 0 0;
     border-radius: 0;
     margin: 0;
@@ -23,22 +23,22 @@ const StyledTabs = styled.div<{ centered?: boolean }>`
       position: relative;
       display: flex;
       align-items: center;
-      color: ${color('black')};
+      color: ${color('neutral', 100)};
       padding: ${space('xs')} ${space('m')};
       border-bottom: 2px solid transparent;
 
       &:hover {
-        color: ${color('black')};
+        color: ${color('neutral', 100)};
         border-color: ${color('primary')};
       }
 
       &:focus {
         outline: none;
-        border-color: ${color('secondary')};
+        border-color: ${color('neutral', 30)};
       }
 
       &[aria-selected='true'] {
-        border-color: ${color('black')};
+        border-color: ${color('neutral', 100)};
       }
     }
 

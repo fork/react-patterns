@@ -7,7 +7,6 @@ import { Colors } from '../../tokens';
 
 import useFocusTrap from '../../hooks/useFocusTrap';
 
-import Flex from '../Flex';
 import Button from '../Button';
 
 const DialogContext = createContext({
@@ -34,8 +33,11 @@ const ShimLayer = styled.button`
   cursor: zoom-out;
 `;
 
-const StyledDialog = styled(Flex)<StyledDialogProps>`
+const StyledDialog = styled.div<StyledDialogProps>`
+  display: flex;
   position: fixed;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
   top: 0;
@@ -43,6 +45,8 @@ const StyledDialog = styled(Flex)<StyledDialogProps>`
   z-index: 999;
 
   .dialog__wrapper {
+    display: flex;
+    flex-direction: column;
     height: ${props => props.fullHeight && '100%'};
     max-width: 750px;
     width: 100%;
@@ -51,6 +55,7 @@ const StyledDialog = styled(Flex)<StyledDialogProps>`
     z-index: 999;
     border-radius: ${space('s')};
     overflow: hidden;
+    background: ${color('neutral', 10)};
 
     ${variant({
       prop: 'size',
@@ -65,14 +70,13 @@ const StyledDialog = styled(Flex)<StyledDialogProps>`
         width: calc(100% - ${space('l')});
         height: calc(100vh - ${space('l')});
       `
-    })}
+    })};
   }
 `;
 
 export interface DialogProps {
   onClose: () => void;
   initialFocusRef?: React.RefObject<HTMLElement> | null;
-  background?: Colors;
   children: ReactNode;
   size?: 'full' | 'wide' | 'default' | 'narrow';
   fullHeight?: boolean;
@@ -81,7 +85,6 @@ export interface DialogProps {
 const Dialog = ({
   children,
   size = 'default',
-  background = 'white',
   onClose,
   fullHeight,
   initialFocusRef
@@ -94,19 +97,13 @@ const Dialog = ({
   });
 
   return createPortal(
-    <StyledDialog
-      role="dialog"
-      justifyContent="center"
-      alignItems="center"
-      size={size}
-      fullHeight={fullHeight}
-    >
+    <StyledDialog role="dialog" size={size} fullHeight={fullHeight}>
       <DialogContext.Provider value={{ onClose }}>
         <ShimLayer aria-label="Close Dialog" onClick={onClose} />
 
-        <Flex ref={ref} direction="column" background={background} className="dialog__wrapper">
+        <div ref={ref} className="dialog__wrapper">
           {children}
-        </Flex>
+        </div>
       </DialogContext.Provider>
     </StyledDialog>,
     document.body
@@ -129,7 +126,9 @@ export const DialogBody = styled.div<{ background?: Colors }>`
   overflow-y: scroll;
 `;
 
-export const DialogFooter = styled(Flex)`
+export const DialogFooter = styled.div`
+  display: flex;
+  justify-content: flex-end;
   padding: ${space('m')};
   padding-top: ${space('s')};
   border-radius: 0;
@@ -139,7 +138,7 @@ export const DialogFooter = styled(Flex)`
 export const DialogClose = () => {
   const { onClose } = useContext(DialogContext);
 
-  return <Button icon="close" label="Close dialog" onClick={onClose} iconPosition="only" />;
+  return <Button icon="Close" label="Close dialog" onClick={onClose} iconPosition="only" />;
 };
 
 export default Dialog;
