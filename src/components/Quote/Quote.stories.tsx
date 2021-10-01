@@ -5,7 +5,7 @@ import Quote, { QuoteProps } from './Quote';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Quote',
+  title: 'Components/Content/Quote',
   component: Quote,
   parameters: {
     docs: {
@@ -14,14 +14,15 @@ export default {
   }
 } as Meta;
 
+const defaultData = {
+  quote: 'May the Fork be with you 📐',
+  author: 'Fork Unstable Media'
+};
+
 const Template: Story<QuoteProps> = args => <Quote {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  quote: 'May the Fork be with you',
-  author: 'Fork Unstable Media'
-};
+Default.args = defaultData;
+
 export const NoAuthor = Template.bind({});
-NoAuthor.args = {
-  quote: 'May the Fork be with you'
-};
+NoAuthor.args = { ...defaultData, author: null };

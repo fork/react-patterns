@@ -5,7 +5,7 @@ import Button, { ButtonProps } from './Button';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Button',
+  title: 'Components/Input/Button',
   component: Button,
   parameters: {
     docs: {

@@ -4,7 +4,7 @@ import Image from './Image';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Image',
+  title: 'Components/Content/Image',
   component: Image,
   parameters: {
     docs: {
@@ -13,7 +13,7 @@ export default {
   }
 };
 
-export const Normal = () => (
+export const Default = () => (
   <div style={{ maxWidth: '500px' }}>
     <Image src="/images/750x750.jpg" lazy width={750} height={750} />
   </div>

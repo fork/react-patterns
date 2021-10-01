@@ -4,7 +4,7 @@ import Sharing from './Sharing';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Sharing',
+  title: 'Components/Navigation/Sharing',
   component: Sharing,
   parameters: {
     docs: {

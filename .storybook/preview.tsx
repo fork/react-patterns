@@ -10,9 +10,16 @@ import { ThemeProvider } from '../src/stylesheets';
 import GlobalStyle from '../src/stylesheets/global';
 
 export const parameters = {
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: ['Brand-Story', 'Tokens', 'Components', 'Templates']
+    }
+  },
   viewport: {
     viewports: INITIAL_VIEWPORTS
   },
+
   themePlayground: {
     theme: [
       { name: 'Default Theme', theme: tokens.default },

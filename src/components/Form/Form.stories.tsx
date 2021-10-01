@@ -6,7 +6,7 @@ import FormInput, { FormInputProps } from './FormInput';
 import Button from '../Button';
 
 export default {
-  title: 'Components/Form',
+  title: 'Components/Input/Form',
   component: Form,
   parameters: {
     docs: {
@@ -15,7 +15,7 @@ export default {
   }
 };
 
-export const form = () => {
+export const Default = () => {
   const initialFormData: FormInputProps[] = [
     {
       fieldType: 'select',

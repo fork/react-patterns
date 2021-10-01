@@ -4,7 +4,7 @@ import Input, { InputProps } from './Input';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Input',
+  title: 'Components/Input/Input',
   component: Input,
   parameters: {
     docs: {

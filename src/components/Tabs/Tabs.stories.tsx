@@ -5,7 +5,7 @@ import Tab from './Tab';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Tabs',
+  title: 'Components/Layout/Tabs',
   component: Tabs,
   parameters: {
     docs: {
