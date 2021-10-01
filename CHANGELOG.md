@@ -15,7 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Link component
 - Basic Dialog component
 - TypeScript linting
-- MDX for stories
+- Added Storybook Docs, enable to write MDX in separate file
+- Added custom Storybook theme
 
 ### Changed
 
@@ -35,5 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dedicated Picture component in favor of new Image Component
 - Removed some unused packages (e.g. prop-types)
 - Removed debug grid
+- Removed components: box, flex, row and grid
 
 ## [0.1.0] - 2020-10-05
