@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated stories and jest snapshot tests for typescript
 - Updated all packages
 - Changed grid tokens structure & grid helpers
+- Updated default template story
 
 ### Removed
 
