@@ -1,6 +1,7 @@
 import React from 'react';
+import { Story } from '@storybook/react';
 
-import ShareLinks from './ShareLinks';
+import ShareLinks, { ShareLinksProps } from './ShareLinks';
 import docs from './docs.mdx';
 
 export default {
@@ -13,12 +14,12 @@ export default {
   }
 };
 
-export const Default = () => (
-  <ShareLinks
-    links={['Facebook', 'Instagram', 'Twitter', 'WhatsApp', 'Mail']}
-    url="https://fork.de"
-    subject="Subject"
-    text="Text"
-    title="Title"
-  />
-);
+const Template: Story<ShareLinksProps> = args => <ShareLinks {...args} />;
+export const Default = Template.bind({});
+Default.args = {
+  links: ['Facebook', 'Instagram', 'Twitter', 'WhatsApp', 'Mail'],
+  url: 'https://fork.de',
+  subject: 'Subject',
+  text: 'Text',
+  title: 'Title'
+};
