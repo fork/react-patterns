@@ -33,9 +33,11 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
       weight: 'bold'
     },
     copy: {
+      lineHeights: [1, 1],
       fontSizes: [12, 14]
     },
     copySmall: {
+      lineHeights: [1, 1],
       fontSizes: [12, 14]
     },
     quote: {
@@ -43,18 +45,23 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
       family: 'serif'
     },
     link: {
+      lineHeights: [1, 1],
       fontSizes: [12, 14]
     },
     button: {
-      fontSizes: [12, 14]
+      lineHeights: [1, 1],
+      fontSizes: [14, 16]
     },
     formLabel: {
+      lineHeights: [1, 1],
       fontSizes: [12, 14]
     },
     formValue: {
+      lineHeights: [1, 1],
       fontSizes: [12, 14]
     },
     formHint: {
+      lineHeights: [1, 1],
       fontSizes: [12, 14]
     }
   },
