@@ -1,7 +1,8 @@
 /* eslint-disable react/display-name */
 import React, { useState } from 'react';
+import { Story } from '@storybook/react';
 
-import Dialog, { DialogBody, DialogClose, DialogHeader, DialogFooter } from './Dialog';
+import Dialog, { DialogBody, DialogClose, DialogHeader, DialogFooter, DialogProps } from './Dialog';
 import docs from './docs.mdx';
 
 import Button from '../Button';
@@ -20,9 +21,8 @@ export default {
   }
 };
 
-export const Story = () => {
+const Template: Story<DialogProps> = args => {
   const [size, setSize] = useState<DialogSize>('default');
-
   const [visible, setVisible] = useState<boolean>(false);
 
   return (
@@ -62,3 +62,6 @@ export const Story = () => {
     </>
   );
 };
+
+export const Default = Template.bind({});
+Default.args = {};

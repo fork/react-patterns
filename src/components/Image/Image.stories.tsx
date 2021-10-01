@@ -1,6 +1,7 @@
 import React from 'react';
+import { Story } from '@storybook/react';
 
-import Image from './Image';
+import Image, { ImageProps } from './Image';
 import docs from './docs.mdx';
 
 export default {
@@ -13,34 +14,31 @@ export default {
   }
 };
 
-export const Default = () => (
-  <div style={{ maxWidth: '500px' }}>
-    <Image src="/images/750x750.jpg" lazy width={750} height={750} />
+const Template: Story<ImageProps> = args => (
+  <div>
+    <Image {...args} />
   </div>
 );
 
-export const withSrcset = () => (
-  <div style={{ maxWidth: '500px' }}>
-    <Image
-      src="/images/750x750.jpg"
-      srcSet="/images/750x750.jpg 1x, /images/750x750-2x.jpg 2x"
-      width={750}
-      height={750}
-    />
-  </div>
-);
+export const Default = Template.bind({});
+Default.args = { width: 750, height: 750, src: '/images/750x750.jpg' };
 
-export const withSrcsetSizes = () => (
-  <div style={{ maxWidth: '1440px' }}>
-    <Image
-      src="/images/750x750-2x.jpg"
-      srcSet="/images/750x750-2x.jpg 1500w, /images/750x750.jpg 750w"
-      sizes="(min-width: 1440px) 1440w, 100vw"
-      width={750}
-      height={750}
-    />
-  </div>
-);
+export const withSrcset = Template.bind({});
+withSrcset.args = {
+  width: 750,
+  height: 750,
+  src: '/images/750x750.jpg',
+  srcSet: '/images/750x750.jpg 1x, /images/750x750-2x.jpg 2x'
+};
+
+export const withSrcsetSizes = Template.bind({});
+withSrcset.args = {
+  width: 750,
+  height: 750,
+  src: '/images/750x750-2x.jpg',
+  srcSet: '/images/750x750-2x.jpg 1500w, /images/750x750.jpg 750w',
+  sizes: '(min-width: 1440px) 1440w, 100vw'
+};
 
 export const Picture = () => (
   <div style={{ maxWidth: '1440px' }}>

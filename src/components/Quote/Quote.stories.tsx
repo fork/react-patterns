@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Story } from '@storybook/react';
 
 import Quote, { QuoteProps } from './Quote';
 import docs from './docs.mdx';
@@ -12,7 +12,7 @@ export default {
       page: docs
     }
   }
-} as Meta;
+};
 
 const defaultData = {
   quote: 'May the Fork be with you 📐',
