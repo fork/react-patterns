@@ -1,6 +1,7 @@
 import React from 'react';
+import { Story } from '@storybook/react';
 
-import Tabs from './Tabs';
+import Tabs, { TabsProps } from './Tabs';
 import Tab from './Tab';
 import docs from './docs.mdx';
 
@@ -14,8 +15,8 @@ export default {
   }
 };
 
-export const Default = () => (
-  <Tabs>
+const TemplateDefault: Story<TabsProps> = args => (
+  <Tabs {...args}>
     <Tab title="Profile">
       <h2>Profile</h2>
     </Tab>
@@ -28,22 +29,8 @@ export const Default = () => (
   </Tabs>
 );
 
-export const Centered = () => (
-  <Tabs centered>
-    <Tab title="Profile">
-      <h2>Profile</h2>
-    </Tab>
-    <Tab title="Friends">
-      <h2>Friends</h2>
-    </Tab>
-    <Tab title="Contact">
-      <h2>Contact</h2>
-    </Tab>
-  </Tabs>
-);
-
-export const Scrolled = () => (
-  <Tabs>
+const TemplateLong: Story<TabsProps> = args => (
+  <Tabs {...args}>
     <Tab title="Pricing">
       <h2>Pricing</h2>
     </Tab>
@@ -109,3 +96,11 @@ export const Scrolled = () => (
     </Tab>
   </Tabs>
 );
+
+export const Default = TemplateDefault.bind({});
+
+export const Centered = TemplateDefault.bind({});
+Centered.args = { centered: true };
+
+export const Scrolled = TemplateLong.bind({});
+Scrolled.args = { centered: true };

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Story } from '@storybook/react';
 
-import AspectRatio from './AspectRatio';
+import AspectRatio, { AspectRatioProps } from './AspectRatio';
 import docs from './docs.mdx';
 
 export default {
@@ -13,8 +14,15 @@ export default {
   }
 };
 
-export const Default = () => (
-  <div style={{ background: '#80ff00', width: '400px' }}>
-    <AspectRatio ratio="16:9">16:9</AspectRatio>
-  </div>
-);
+const Template: Story<AspectRatioProps> = args => {
+  const { ratio } = args;
+
+  return (
+    <div style={{ background: '#80ff00', width: '400px' }}>
+      <AspectRatio {...args}>{ratio}</AspectRatio>
+    </div>
+  );
+};
+
+export const Default = Template.bind({});
+Default.args = { ratio: '16:9' };

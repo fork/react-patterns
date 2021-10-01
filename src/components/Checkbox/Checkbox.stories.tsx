@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Story, Meta } from '@storybook/react';
+import { Story } from '@storybook/react';
 
 import Checkbox, { CheckboxProps } from './Checkbox';
 import docs from './docs.mdx';
@@ -12,7 +12,7 @@ export default {
       page: docs
     }
   }
-} as Meta;
+};
 
 const defaultData = {
   label: 'Checkbox a',
