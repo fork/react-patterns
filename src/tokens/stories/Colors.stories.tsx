@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { tokens, Colors } from '../index';
+import './Colors_storybook.css'; /* eslint-disable guard-for-in */
 
 export default {
   title: 'Tokens/Colors'
@@ -9,34 +10,25 @@ export default {
 export const Default = () => (
   <div>
     {Object.keys(tokens.default.colors).map((key: Colors) => (
-      <div
-        key={key}
-        style={{
-          margin: '20px'
-        }}
-      >
-        <p>{key}</p>
+      <div key={key} className="st-colors">
+        <p className="st-colors__title">{key}</p>
 
-        <div style={{ display: 'inline-flex' }}>
+        <ul className="st-colors__list">
           {Object.keys(tokens.default.colors[key]).map(shade =>
             shade !== 'default' ? (
-              <div key={`${key}-${shade}`}>
-                <div
-                  style={{
-                    width: '150px',
-                    height: '150px',
-                    border: '1px solid #ddd',
-                    background: tokens.default.colors[key][shade]
-                  }}
-                />
-
-                <p>
-                  <b>{shade}</b> {tokens.default.colors[key][shade]}
-                </p>
-              </div>
+              <li
+                className="st-colors__item"
+                key={`${key}-${shade}`}
+                style={{ background: tokens.default.colors[key][shade] }}
+              >
+                <div className="st-colors__item-info">
+                  <div className="st-colors__item-key">{shade}</div>
+                  <div className="st-colors__item-value">{tokens.default.colors[key][shade]}</div>
+                </div>
+              </li>
             ) : null
           )}
-        </div>
+        </ul>
       </div>
     ))}
   </div>

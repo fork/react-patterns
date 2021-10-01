@@ -53,6 +53,3 @@ FormLabel.args = { ...defaults, variant: 'formLabel' };
 
 export const FormHint = Template.bind({});
 FormHint.args = { ...defaults, variant: 'formHint' };
-
-export const Colored = Template.bind({});
-Colored.args = { ...defaults, color: 'primary' };

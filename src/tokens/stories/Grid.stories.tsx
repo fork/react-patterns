@@ -9,13 +9,14 @@ export default {
 };
 
 const GridContainer = styled.div`
+  background: rgba(0, 0, 0, 0.05);
   ${gridContainer};
   ${getGrid()};
 `;
 
 const GridColumn = styled.span`
   grid-column: span 1;
-  background: #7aa0cc;
+  background: #d8d8d8;
   height: 100vh;
 `;
 
