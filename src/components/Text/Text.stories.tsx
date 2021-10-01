@@ -5,7 +5,7 @@ import Text, { TextProps } from './Text';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Text',
+  title: 'Tokens/Text',
   component: Text,
   parameters: {
     docs: {

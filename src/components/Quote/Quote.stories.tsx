@@ -4,7 +4,7 @@ import Quote from './Quote';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Quote',
+  title: 'Components/Content/Quote',
   component: Quote,
   parameters: {
     docs: {

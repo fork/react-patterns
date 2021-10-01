@@ -5,7 +5,7 @@ import Textarea, { TextareaProps } from './Textarea';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Textarea',
+  title: 'Components/Input/Textarea',
   component: Textarea,
   parameters: {
     docs: {

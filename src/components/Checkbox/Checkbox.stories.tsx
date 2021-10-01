@@ -4,7 +4,7 @@ import Checkbox from './Checkbox';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Checkbox',
+  title: 'Components/Input/Checkbox',
   component: Checkbox,
   parameters: {
     docs: {

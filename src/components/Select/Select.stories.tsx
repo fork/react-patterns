@@ -6,7 +6,6 @@ import docs from './docs.mdx';
 const data = {
   id: '2',
   label: 'Select an option',
-  defaultValue: 'option1',
   options: [
     {
       value: 'option1',
@@ -21,7 +20,7 @@ const data = {
 };
 
 export default {
-  title: 'Components/Select',
+  title: 'Components/Input/Select',
   component: Select,
   parameters: {
     docs: {
@@ -30,7 +29,9 @@ export default {
   }
 };
 
-export const withDefaultValue = () => <Select {...data} />;
+export const withDefaultValue = () => (
+  <Select {...data} defaultValue="option1" placeholder="Choose an option" />
+);
 export const withPlaceholder = () => <Select {...data} placeholder="Choose an option" />;
 export const withoutLabel = () => <Select {...data} hideLabel />;
 export const success = () => <Select {...data} success />;

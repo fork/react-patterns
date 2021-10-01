@@ -6,7 +6,7 @@ import Teaser from '../Teaser/Teaser';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/TeaserContainer',
+  title: 'Components/Navigation/TeaserContainer',
   component: TeaserContainer,
   parameters: {
     docs: {

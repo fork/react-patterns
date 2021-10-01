@@ -5,7 +5,7 @@ import Icon, { IconProps } from './Icon';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Icon',
+  title: 'Tokens/Icon',
   component: Icon,
   parameters: {
     docs: {

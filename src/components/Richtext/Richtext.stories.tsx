@@ -5,7 +5,7 @@ import Richtext, { RichttextProps } from './Richtext';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Richtext',
+  title: 'Components/Content/Richtext',
   component: Richtext,
   parameters: {
     docs: {

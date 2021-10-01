@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated all packages
 - Changed grid tokens structure & grid helpers
 - Updated default template story
+- Change Storybook hierarchy and order
 
 ### Removed
 
