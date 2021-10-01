@@ -11,16 +11,14 @@ const StyledDefaultTemplate = styled.div`
   }
 `;
 
-type DefaultTemplateProps = {
+export type DefaultTemplateProps = {
   children: ReactNode;
 };
 
-const Default = ({ children }: DefaultTemplateProps): JSX.Element => {
-  return (
-    <StyledDefaultTemplate>
-      <div className="default__wrapper">{children}</div>
-    </StyledDefaultTemplate>
-  );
-};
+const Default = ({ children }: DefaultTemplateProps): JSX.Element => (
+  <StyledDefaultTemplate>
+    <div className="default__wrapper">{children}</div>
+  </StyledDefaultTemplate>
+);
 
 export default Default;

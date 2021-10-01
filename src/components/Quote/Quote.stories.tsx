@@ -1,19 +1,28 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import Quote from './Quote';
+import Quote, { QuoteProps } from './Quote';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Quote',
+  title: 'Components/Content/Quote',
   component: Quote,
   parameters: {
     docs: {
       page: docs
     }
   }
+} as Meta;
+
+const defaultData = {
+  quote: 'May the Fork be with you 📐',
+  author: 'Fork Unstable Media'
 };
 
-export const Default = () => (
-  <Quote author="Fork Unstable Media" quote="May the Fork be with you 📐" />
-);
-export const NoAuthor = () => <Quote quote="May the Fork be with you 📐" />;
+const Template: Story<QuoteProps> = args => <Quote {...args} />;
+
+export const Default = Template.bind({});
+Default.args = defaultData;
+
+export const NoAuthor = Template.bind({});
+NoAuthor.args = { ...defaultData, author: null };

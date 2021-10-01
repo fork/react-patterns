@@ -1,10 +1,16 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import Default from './Default';
+import DefaultTemplate, { DefaultTemplateProps } from './Default';
 
 export default {
   title: 'Templates/Default',
-  component: Default
-};
+  component: DefaultTemplate
+} as Meta;
 
-export const Normal = () => <Default>Default Template Content</Default>;
+const Template: Story<DefaultTemplateProps> = args => <DefaultTemplate {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Default Template Content.'
+};

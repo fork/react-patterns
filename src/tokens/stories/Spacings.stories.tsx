@@ -6,7 +6,7 @@ export default {
   title: 'Tokens/Spacings'
 };
 
-export const Simple = () => (
+export const Default = () => (
   <div style={{ display: 'flex', flexWrap: 'wrap' }}>
     {Object.keys(tokens.default.spacings).map((key: Spacings) => (
       <div

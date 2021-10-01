@@ -4,7 +4,7 @@ import AspectRatio from './AspectRatio';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/AspectRatio',
+  title: 'Components/Utility/AspectRatio',
   component: AspectRatio,
   parameters: {
     docs: {
@@ -13,20 +13,8 @@ export default {
   }
 };
 
-export const Square = () => (
-  <div style={{ background: '#80ff00', width: '400px' }}>
-    <AspectRatio ratio="1:1">1:1</AspectRatio>
-  </div>
-);
-
-export const Horizontal = () => (
+export const Default = () => (
   <div style={{ background: '#80ff00', width: '400px' }}>
     <AspectRatio ratio="16:9">16:9</AspectRatio>
-  </div>
-);
-
-export const Vertical = () => (
-  <div style={{ background: '#80ff00', width: '400px' }}>
-    <AspectRatio ratio="2:3">2:3</AspectRatio>
   </div>
 );

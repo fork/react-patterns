@@ -5,7 +5,7 @@ import Radio, { RadioProps } from './Radio';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Radio',
+  title: 'Components/Input/Radio',
   component: Radio,
   parameters: {
     docs: {

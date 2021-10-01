@@ -5,7 +5,7 @@ import Link, { LinkProps } from './Link';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Link',
+  title: 'Components/Navigation/Link',
   component: Link,
   parameters: {
     docs: {

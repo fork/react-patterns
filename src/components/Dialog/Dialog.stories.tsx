@@ -11,7 +11,7 @@ import Radio from '../Radio';
 type DialogSize = 'narrow' | 'default' | 'wide' | 'full';
 
 export default {
-  title: 'Components/Dialog',
+  title: 'Components/Feedback/Dialog',
   component: Dialog,
   parameters: {
     docs: {
