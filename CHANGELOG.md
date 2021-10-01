@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Refactored share links component
 - Refactored Tabs to use buttons instead of anchors
 - Updated babel config to build esmodules
 - Added new Image Component

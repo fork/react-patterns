@@ -1,15 +1,13 @@
 import styled from 'styled-components';
 import { space } from '../../stylesheets';
 
-const StyledSharing = styled.div`
+const StyledShareLinks = styled.div`
   display: flex;
-  margin: ${space('m')};
   align-items: center;
 
-  .sharing__item,
-  p {
+  a {
     margin-right: ${space('s')};
   }
 `;
 
-export default StyledSharing;
+export default StyledShareLinks;
