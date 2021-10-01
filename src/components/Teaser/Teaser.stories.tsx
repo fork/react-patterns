@@ -1,6 +1,7 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import Teaser from './Teaser';
+import Teaser, { TeaserProps } from './Teaser';
 import docs from './docs.mdx';
 
 export default {
@@ -11,21 +12,27 @@ export default {
       page: docs
     }
   }
+} as Meta;
+
+const defaultData = {
+  href: '#',
+  title: 'A Highlighting Headline',
+  copy: 'And a capturing copy',
+  linkText: 'Read more'
 };
 
-export const Default = () => (
-  <Teaser
-    headline="A Highlighting Headline"
-    copy="And a capturing copy"
-    image={{
-      src: '/images/750x750.jpg',
-      srcset: { '400w': '/images/750x750.jpg' },
-      ratio: '1:1',
-      alt: 'Fan on red background'
-    }}
-  />
-);
+const Template: Story<TeaserProps> = args => <Teaser {...args} />;
 
-export const withoutImage = () => (
-  <Teaser headline="A Highlighting Headline" copy="And a capturing copy" />
-);
+export const Default = Template.bind({});
+Default.args = defaultData;
+
+export const NoAuthor = Template.bind({});
+NoAuthor.args = {
+  ...defaultData,
+  image: {
+    src: '/images/750x750.jpg',
+    srcset: { '400w': '/images/750x750.jpg' },
+    ratio: '1:1',
+    alt: 'Fan on red background'
+  }
+};

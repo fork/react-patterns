@@ -1,17 +1,26 @@
 import styled from 'styled-components';
 
-import { space, color } from '../../stylesheets';
+import { space, mq } from '../../stylesheets';
 
-const StyledTeaser = styled.div`
-  border: 1px solid ${color('neutral', 100)};
+const StyledTeaser = styled.a`
+  display: block;
+  margin-bottom: ${space('m')};
+  text-decoration: none;
 
   img {
-    display: block;
+    height: auto;
+    width: 100%;
   }
 
   p,
   h2 {
-    padding: ${space('s')};
+    margin-bottom: ${space('s')};
+    margin-top: 0;
+
+    ${mq('s')} {
+      padding-left: 10px;
+      padding-right: ${space('s')};
+    }
   }
 `;
 
