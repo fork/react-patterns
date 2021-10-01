@@ -35,3 +35,17 @@ Secondary.args = {
   label: 'Secondary Button',
   variant: 'secondary'
 };
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  label: 'Primary Button',
+  variant: 'primary',
+  icon: 'Check'
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  label: 'Primary Button',
+  variant: 'primary',
+  disabled: true
+};

@@ -19,7 +19,9 @@ exports[`Textarea Textarea should render correctly 1`] = `
 `;
 
 exports[`Textarea Textarea with default value should render correctly 1`] = `
-<styled.div>
+<styled.div
+  hideLabel={true}
+>
   <label
     htmlFor="1"
   >
@@ -38,7 +40,9 @@ exports[`Textarea Textarea with default value should render correctly 1`] = `
 `;
 
 exports[`Textarea Textarea with hidden label should render correctly 1`] = `
-<styled.div>
+<styled.div
+  hideLabel={true}
+>
   <label
     htmlFor="1"
   >

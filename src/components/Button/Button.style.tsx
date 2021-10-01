@@ -12,6 +12,21 @@ const StyledButton = styled.button<StyledButtonProps>`
   font-size: 12px;
   border-radius: ${space('xxs')};
 
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  svg {
+    color: currentColor;
+    fill: currentColor;
+
+    &:not(:only-child) {
+      margin-right: space(xxs);
+    }
+  }
+
   /* variant Prop */
   ${variant({
     primary: css`

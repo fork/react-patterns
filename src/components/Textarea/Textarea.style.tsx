@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components';
-import { color, space } from '../../stylesheets';
+import { color, hideVisually, space } from '../../stylesheets';
 
-const StyledTextarea = styled.div<{ error?: boolean; success?: boolean }>`
+const StyledTextarea = styled.div<{ error?: boolean; success?: boolean; hideLabel?: boolean }>`
   label {
     display: block;
     font-weight: bold;
     color: ${color('neutral', 100)};
-    margin-bottom: ${space('m')};
+    margin-bottom: ${space('s')};
+    ${props => props.hideLabel && hideVisually()}
   }
 
   textarea {

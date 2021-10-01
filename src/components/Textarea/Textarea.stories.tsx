@@ -38,6 +38,9 @@ Default.args = {
   errorMessage: ''
 };
 
+export const WithoutLabel = Template.bind({});
+WithoutLabel.args = { ...Default.args, hideLabel: true };
+
 export const Error = Template.bind({});
 Error.args = { ...Default.args, error: true, errorMessage: 'Bitte verfasse eine Nachricht.' };
 

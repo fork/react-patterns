@@ -78,6 +78,7 @@ const Input = ({
         </datalist>
       )}
     </div>
+
     {error && errorMessage && <span className="input__error">{errorMessage}</span>}
   </StyledInput>
 );

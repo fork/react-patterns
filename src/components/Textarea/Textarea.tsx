@@ -15,6 +15,7 @@ export type TextareaProps = {
   value?: string;
   placeholder?: string;
   success?: boolean;
+  hideLabel?: boolean;
   autocomplete?: string;
   rows?: number;
 };
@@ -33,9 +34,10 @@ const Textarea = ({
   disabled,
   autocomplete,
   rows,
+  hideLabel,
   errorMessage
 }: TextareaProps) => (
-  <StyledTextarea error={error} success={success}>
+  <StyledTextarea error={error} success={success} hideLabel={hideLabel}>
     <label htmlFor={id}>
       <span className="textarea__labelText">{label}</span>
       {required && <span className="textarea__required">*</span>}
