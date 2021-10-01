@@ -6,7 +6,7 @@ export default {
   title: 'Tokens/Colors'
 };
 
-export const Simple = () => (
+export const Default = () => (
   <div>
     {Object.keys(tokens.default.colors).map((key: Colors) => (
       <div
