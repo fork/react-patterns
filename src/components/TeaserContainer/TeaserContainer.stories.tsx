@@ -15,6 +15,23 @@ export default {
   }
 } as Meta;
 
+const teaserDefault = {
+  href: '#',
+  title: 'A Highlighting Headline',
+  copy: 'And a capturing copy',
+  linkText: 'Read more'
+};
+
+const teaserWithImage = {
+  ...teaserDefault,
+  image: {
+    src: '/images/750x750.jpg',
+    srcset: { '400w': '/images/750x750.jpg' },
+    ratio: '1:1',
+    alt: 'Fan on red background'
+  }
+};
+
 const Template: Story<TeaserContainerProps> = ({ children, ...args }) => (
   <TeaserContainer {...args}>{children}</TeaserContainer>
 );
@@ -23,13 +40,10 @@ export const Default = Template.bind({});
 Default.args = {
   children: (
     <>
-      <Teaser headline="Teaser-Headline" />
-      <Teaser headline="Teaser-Headline" />
-      <Teaser headline="Teaser-Headline" />
-      <Teaser headline="Teaser-Headline" />
-      <Teaser headline="Teaser-Headline" />
-      <Teaser headline="Teaser-Headline" />
-      <Teaser headline="Teaser-Headline" />
+      <Teaser {...teaserDefault} />
+      <Teaser {...teaserDefault} />
+      <Teaser {...teaserWithImage} />
+      <Teaser {...teaserWithImage} />
     </>
   )
 };

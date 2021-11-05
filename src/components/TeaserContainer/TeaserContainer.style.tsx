@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { mq, space } from '../../stylesheets';
+import { mq, space, gridContainer, getGrid } from '../../stylesheets';
 
 const StyledTeaserContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  ${gridContainer};
+  ${getGrid()};
   grid-gap: ${space('xs')};
 
-  & > div {
+  & > a {
     grid-column: span 2;
 
     ${mq('m')} {
@@ -14,7 +14,7 @@ const StyledTeaserContainer = styled.div`
     }
 
     ${mq('l')} {
-      grid-column: span 3;
+      grid-column: span 4;
     }
   }
 `;
