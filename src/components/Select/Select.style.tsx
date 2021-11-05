@@ -33,7 +33,6 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     font-weight: normal;
     line-height: 1;
     border: 1px solid ${color('neutral', 100)};
-
     padding: ${space('xs')};
 
     option {

@@ -8,9 +8,9 @@ export default {
 };
 
 export const Default = () => (
-  <div>
+  <div className="st-colors">
     {Object.keys(tokens.default.colors).map((key: Colors) => (
-      <div key={key} className="st-colors">
+      <div key={key}>
         <p className="st-colors__title">{key}</p>
 
         <ul className="st-colors__list">

@@ -12,6 +12,7 @@ export type ButtonProps = {
   variant?: 'primary' | 'secondary';
   size?: 'small' | 'large';
   icon?: IconTypes;
+  className?: string;
   iconPosition?: 'before' | 'after' | 'only';
   onClick?: (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
@@ -22,11 +23,13 @@ const Button = ({
   disabled,
   variant = 'primary',
   size = 'small',
+  className,
   onClick,
   iconPosition = 'before',
   icon
 }: ButtonProps) => (
   <StyledButton
+    className={className}
     type={type}
     disabled={disabled}
     aria-disabled={disabled}
@@ -37,7 +40,7 @@ const Button = ({
     onClick={onClick}
     iconPosition={iconPosition}
   >
-    {icon && <Icon icon={icon} />}
+    {icon && <Icon icon={icon} size={size === 'small' ? 'tiny' : 'large'} />}
     {iconPosition === 'only' && icon ? null : <Text variant="copy">{label}</Text>}
   </StyledButton>
 );

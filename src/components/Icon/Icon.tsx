@@ -7,7 +7,7 @@ import * as icons from './compiled';
 
 export type IconTypes = keyof typeof icons;
 
-export type IconProps = { icon: IconTypes; size?: 'small' | 'large' };
+export type IconProps = { icon: IconTypes; size?: 'tiny' | 'small' | 'large' };
 
 const Icon = ({ icon, size = 'small' }: IconProps) => {
   const ThisIcon = icons[icon];

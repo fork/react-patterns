@@ -4,6 +4,7 @@ import StyledInput from './Input.style';
 
 export type InputProps = {
   autocomplete?: string;
+  className?: string;
   disabled?: boolean;
   error?: boolean;
   errorMessage?: string;
@@ -14,8 +15,8 @@ export type InputProps = {
   onChange?: (ev: React.ChangeEvent<HTMLInputElement>) => void;
   onFocus?: (ev: React.FocusEvent<HTMLInputElement>) => void;
   /**
-   Regex pattern for validation
-  */
+   * Regex pattern for validation
+   */
   pattern?: string;
   placeholder?: string;
   required?: boolean;
@@ -23,6 +24,11 @@ export type InputProps = {
   type?: string;
   value?: string;
   list?: { id: string; options: string[] };
+  /**
+   * Pass additional children to input wrapper
+   * e.g. show password button, clear button
+   */
+  children?: React.ReactNode;
 };
 
 const Input = ({
@@ -36,15 +42,17 @@ const Input = ({
   onBlur,
   onChange,
   onFocus,
+  className,
   pattern,
   placeholder,
   required,
   success,
   type = 'text',
   value,
+  children,
   list
 }: InputProps) => (
-  <StyledInput error={error} success={success} hideLabel={hideLabel}>
+  <StyledInput error={error} success={success} hideLabel={hideLabel} className={className}>
     <label htmlFor={id}>
       <span className="input__labelText">{label}</span>
       {required && <span className="input__required">*</span>}
@@ -77,6 +85,8 @@ const Input = ({
           ))}
         </datalist>
       )}
+
+      {children}
     </div>
 
     {error && errorMessage && <span className="input__error">{errorMessage}</span>}
