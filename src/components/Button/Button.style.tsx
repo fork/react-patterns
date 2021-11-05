@@ -33,7 +33,8 @@ const StyledButton = styled.button<StyledButtonProps>`
       background: ${color('primary')};
       color: ${color('neutral', 10)};
 
-      &:hover {
+      &:hover,
+      &:focus {
         background: ${color('primary', 60)};
       }
 
@@ -45,12 +46,23 @@ const StyledButton = styled.button<StyledButtonProps>`
       background: ${color('neutral', 20)};
       color: ${color('neutral', 100)};
 
-      &:hover {
+      &:hover,
+      &:focus {
         background: ${color('neutral', 30)};
       }
 
       &:active {
         background: ${color('neutral', 50)};
+      }
+    `,
+    tertiary: css`
+      background: transparent;
+      color: ${color('neutral', 100)};
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: transparent;
       }
     `
   })}
@@ -73,8 +85,7 @@ const StyledButton = styled.button<StyledButtonProps>`
       flex-direction: row-reverse;
     `,
     only: css`
-      border-radius: 999px;
-      padding: ${space('s')};
+      padding: ${space('xs')};
     `
   })};
 `;

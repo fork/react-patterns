@@ -18,7 +18,7 @@ const Password = (props: PasswordProps) => {
         icon={showPassword ? 'EyeOff' : 'Eye'}
         iconPosition="only"
         size="small"
-        variant="secondary"
+        variant="tertiary"
       />
     </StyledPassword>
   );

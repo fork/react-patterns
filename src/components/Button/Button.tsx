@@ -9,7 +9,7 @@ export type ButtonProps = {
   label: string;
   type?: 'button' | 'submit';
   disabled?: boolean;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'tertiary';
   size?: 'small' | 'large';
   icon?: IconTypes;
   className?: string;
@@ -40,7 +40,7 @@ const Button = ({
     onClick={onClick}
     iconPosition={iconPosition}
   >
-    {icon && <Icon icon={icon} size={size === 'small' ? 'tiny' : 'large'} />}
+    {icon && <Icon icon={icon} size={size} />}
     {iconPosition === 'only' && icon ? null : <Text variant="copy">{label}</Text>}
   </StyledButton>
 );

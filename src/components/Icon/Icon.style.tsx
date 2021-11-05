@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { space, variant } from '../../stylesheets';
 
-const StyledIcon = styled.svg<{ size: 'tiny' | 'small' | 'large^' }>`
+const StyledIcon = styled.svg<{ size: 'tiny' | 'small' | 'large' }>`
   ${variant({
     prop: 'size',
     tiny: css`
