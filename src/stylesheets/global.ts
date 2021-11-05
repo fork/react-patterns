@@ -43,11 +43,19 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
+    color: ${color('neutral', 100)};
     background: ${color('neutral', 10)};
   }
   
   input, textarea, select, button {
     font-family: Helvetica, sans-serif;
+  }
+
+  input:is([type='button'], [type='submit'], [type='reset']),
+  input[type='file']::file-selector-button,
+  button,
+  select {
+    color: inherit;
   }
 
   a {
