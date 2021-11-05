@@ -1,4 +1,6 @@
 export { default as AngleDown } from './AngleDown'
+export { default as ArrowLeft } from './ArrowLeft'
+export { default as ArrowRight } from './ArrowRight'
 export { default as Check } from './Check'
 export { default as Close } from './Close'
 export { default as Date } from './Date'

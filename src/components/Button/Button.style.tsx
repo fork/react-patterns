@@ -58,6 +58,7 @@ const StyledButton = styled.button<StyledButtonProps>`
     tertiary: css`
       background: transparent;
       color: ${color('neutral', 100)};
+      border: 2px solid ${color('neutral', 100)};
 
       &:hover,
       &:focus,
@@ -85,6 +86,7 @@ const StyledButton = styled.button<StyledButtonProps>`
       flex-direction: row-reverse;
     `,
     only: css`
+      border-radius: 999px;
       padding: ${space('xs')};
     `
   })};
