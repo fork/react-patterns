@@ -15,7 +15,7 @@ const Password = (props: PasswordProps) => {
       <Button
         label={showPassword ? 'Hide password' : 'Show password'}
         onClick={() => setShowPassword(prev => !prev)}
-        icon={showPassword ? 'Close' : 'AngleDown'}
+        icon={showPassword ? 'EyeOff' : 'Eye'}
         iconPosition="only"
         size="small"
         variant="secondary"
