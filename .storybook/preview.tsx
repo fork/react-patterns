@@ -10,6 +10,7 @@ import { ThemeProvider } from '../src/stylesheets';
 import GlobalStyle from '../src/stylesheets/global';
 
 export const parameters = {
+  viewMode: 'docs',
   options: {
     storySort: {
       method: 'alphabetical',

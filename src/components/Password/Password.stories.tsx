@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 
 import Password, { PasswordProps } from './Password';
-import docs from './docs.mdx';
 
 export default {
   title: 'Components/Input/Password',
-  component: Password,
-  parameters: {
-    docs: {
-      page: docs
-    }
-  }
+  component: Password
 };
 
 const props: PasswordProps = {

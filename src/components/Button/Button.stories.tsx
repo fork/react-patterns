@@ -16,8 +16,8 @@ export default {
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
 
-export const Small = Template.bind({});
-Small.args = {
+export const Default = Template.bind({});
+Default.args = {
   label: 'Small Button',
   size: 'small',
   variant: 'primary'
