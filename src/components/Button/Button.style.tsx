@@ -44,7 +44,7 @@ const StyledButton = styled.button<StyledButtonProps>`
     `,
     secondary: css`
       background: ${color('neutral', 20)};
-      color: ${color('neutral', 100)};
+      color: ${color('neutral')};
 
       &:hover,
       &:focus {
@@ -57,7 +57,7 @@ const StyledButton = styled.button<StyledButtonProps>`
     `,
     tertiary: css`
       background: transparent;
-      color: ${color('neutral', 100)};
+      color: ${color('neutral')};
 
       &:hover,
       &:focus,

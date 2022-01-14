@@ -19,7 +19,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
     cursor: pointer;
     display: flex;
     align-items: center;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     line-height: 1;
   }
 
@@ -28,7 +28,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
     display: inline-block;
     width: ${space('m')};
     height: ${space('m')};
-    border: 1px solid ${color('neutral', 100)};
+    border: 1px solid ${color('neutral')};
     margin-right: ${space('xs')};
     border-radius: 100%;
 
@@ -42,7 +42,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
       transform: translate(-50%, -50%);
       width: ${space('xs')};
       height: ${space('xs')};
-      background: ${color('neutral', 100)};
+      background: ${color('neutral')};
     }
   }
 

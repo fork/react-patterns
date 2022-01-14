@@ -5,7 +5,7 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
   label {
     display: block;
     font-weight: bold;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     line-height: 1;
     margin-bottom: ${space('s')};
     ${props => props.hideLabel && hideVisually()}
@@ -15,10 +15,10 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
     width: 100%;
     outline: none;
     background: transparent;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     font-size: inherit;
     font-weight: normal;
-    border: 1px solid ${color('neutral', 100)};
+    border: 1px solid ${color('neutral')};
     padding: ${space('s')};
 
     &::placeholder {

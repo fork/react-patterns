@@ -8,7 +8,7 @@ export type QuoteProps = { author?: string; quote: string; className?: string };
 
 const Quote = ({ author, quote, className }: QuoteProps) => (
   <StyledQuote className={className}>
-    <Text>{quote}</Text>
+    <Text variant="quote">{quote}</Text>
 
     {author && <Text as="cite">{author}</Text>}
   </StyledQuote>

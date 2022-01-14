@@ -6,14 +6,14 @@ export type AspectRatioProps = {
   children: ReactNode;
 };
 
-const getRatio = ({ ratio = '16:9' }: AspectRatioProps): string => {
+const getRatio = ({ ratio = '16:9' }: AspectRatioProps) => {
   const [width, height] = ratio.split(':');
-  return `${height}/${width}`;
+  return `${(parseInt(height, 10) / parseInt(width, 10)) * 100}%`;
 };
 
 const AspectRatio = styled.div<AspectRatioProps>`
   height: 0;
-  padding-bottom: calc(${getRatio} * 100%);
+  padding-bottom: ${getRatio};
   position: relative;
 
   > * {
