@@ -26,3 +26,6 @@ const Template: Story<ContactPersonProps> = args => <ContactPerson {...args} />;
 
 export const Default = Template.bind({});
 Default.args = defaultData;
+
+export const NoImage = Template.bind({});
+NoImage.args = { ...defaultData, image: undefined };
