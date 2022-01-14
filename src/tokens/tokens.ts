@@ -13,56 +13,58 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
   },
   typography: {
     headline1: {
-      fontSizes: [26, 42],
-      lineHeights: [1.4, 1.2],
+      fontSizes: [29, 81],
+      lineHeights: [1, 1],
       weight: 'bold'
     },
     headline2: {
-      fontSizes: [22, 34],
-      lineHeights: [1.3, 1.2],
+      fontSizes: [24, 54],
+      lineHeights: [1, 1],
       weight: 'bold'
     },
     headline3: {
-      fontSizes: [20, 24],
-      lineHeights: [1.5, 1.5],
+      fontSizes: [20, 36],
+      lineHeights: [1.1, 1.1],
       weight: 'bold'
     },
     headline4: {
-      fontSizes: [18, 18],
-      lineHeights: [1.65, 2],
+      fontSizes: [17, 24],
+      lineHeights: [1.33, 1.33],
       weight: 'bold'
     },
     copy: {
-      lineHeights: [1, 1],
-      fontSizes: [12, 14]
+      fontSizes: [14, 16],
+      lineHeights: [1.5, 1.5]
     },
     copySmall: {
-      lineHeights: [1, 1],
-      fontSizes: [12, 14]
+      fontSizes: [12, 14],
+      lineHeights: [1.5, 1.5]
     },
     quote: {
-      fontSizes: [12, 14],
+      fontSizes: [24, 54],
+      lineHeights: [1, 1],
       family: 'serif'
     },
     link: {
-      lineHeights: [1, 1],
-      fontSizes: [12, 14]
+      fontSizes: [14, 16],
+      lineHeights: [1, 1]
     },
     button: {
-      lineHeights: [1, 1],
-      fontSizes: [14, 16]
+      fontSizes: [14, 16],
+      lineHeights: [1, 1]
     },
     formLabel: {
+      fontSizes: [12, 14],
       lineHeights: [1, 1],
-      fontSizes: [12, 14]
+      weight: 'bold'
     },
     formValue: {
-      lineHeights: [1, 1],
-      fontSizes: [12, 14]
+      fontSizes: [12, 14],
+      lineHeights: [1, 1]
     },
     formHint: {
-      lineHeights: [1, 1],
-      fontSizes: [12, 14]
+      fontSizes: [10, 12],
+      lineHeights: [1, 1]
     }
   },
   grid: {
@@ -87,10 +89,10 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
     xxs: 4,
     xs: 8,
     s: 12,
-    m: 20,
-    l: 40,
-    xl: 60,
-    xxl: 80
+    m: 24,
+    l: 36,
+    xl: 48,
+    xxl: 60
   }
 };
 
@@ -100,11 +102,10 @@ const defaultTokens: Tokens = {
     neutral: {
       default: '90',
       '10': '#ffffff',
-      '20': '#f7f3f2',
-      '30': '#b3adac',
-      '50': '#8f8786',
-      '90': '#343232',
-      '100': '#020000'
+      '30': '#eeeeee',
+      '50': '#888888',
+      '70': '#4d4d4d',
+      '90': '#000000'
     },
     primary: {
       default: '50',
@@ -114,23 +115,23 @@ const defaultTokens: Tokens = {
     },
     accent1: {
       default: '50',
-      '50': '#0000ff'
+      '50': '#069cc1'
     },
     warning: {
       default: '50',
-      '50': '#ed0b1f'
+      '50': '#ff0000'
     },
     success: {
       default: '50',
-      '50': '#2dc845'
+      '50': '#00b30d'
     },
     notification: {
       default: '50',
-      '50': '#ffcc16'
+      '50': '#ffe200'
     },
     interaction: {
       default: '50',
-      '50': '#069cc1'
+      '50': '#2400fe'
     }
   }
 };
@@ -141,12 +142,11 @@ const invertedTokens: Tokens = {
     ...defaultTokens.colors,
     neutral: {
       default: '90',
-      '10': '#020000',
-      '20': '#343232',
-      '30': '#8f8786',
-      '50': '#b3adac',
-      '90': '#f7f3f2',
-      '100': '#ffffff'
+      '10': '#000000',
+      '30': '#4d4d4d',
+      '50': '#888888',
+      '70': '#eeeeee',
+      '90': '#ffffff'
     }
   }
 };

@@ -6,7 +6,7 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     display: block;
     margin-bottom: ${space('xs')};
     font-weight: bold;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     line-height: 1;
     ${props => props.hideLabel && hideVisually()}
   }
@@ -28,11 +28,11 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     outline: none;
     background: transparent;
     appearance: none;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     font-size: inherit;
     font-weight: normal;
     line-height: 1;
-    border: 1px solid ${color('neutral', 100)};
+    border: 1px solid ${color('neutral')};
     padding: ${space('xs')};
 
     option {

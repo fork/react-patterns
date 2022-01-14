@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     background: ${color('neutral', 10)};
   }
   
