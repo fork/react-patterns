@@ -60,6 +60,17 @@ export const Default = () => {
       label: 'Message'
     },
     {
+      fieldType: 'fileUpload',
+      id: 'file-upload',
+      label: 'File Upload',
+      required: true,
+      multiple: false,
+      error: false,
+      success: false,
+      disabled: false,
+      errorMessage: 'Dies ist ein Pflichtfeld'
+    },
+    {
       fieldType: 'checkbox',
       value: false,
       id: 'dataPrivacy',

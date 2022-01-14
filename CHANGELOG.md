@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Storybook Docs, enable to write MDX in separate file
 - Added custom Storybook theme
 - Added password component
+- Added file upload component
 
 ### Changed
 
