@@ -1,7 +1,42 @@
-import { Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Story, Canvas } from '@storybook/addon-docs';
 
 # Select
 
+Ein Select ist ein Eingabefeld, das Nutzer:innen die Auswahl einer Option aus einer Liste ermöglicht.
+
+Selects **werden eingesetzt**:
+
+- in Formularen für die Auswahl aus einer großen Menge an Optionen, z.B. Länderauswahl.
+- als Filtermenü
+
+**Nicht eingesetzt** werden Selects für die Auswahl von mehreren Optionen.
+
+_Hinweis:_ Das HTML-Tag `<select>` unterstützt zwar Mehrfachauswahl, jedoch sollte aus Usability-Gründen eine [Checkbox](?path=/docs/components-input-checkbox)-Gruppe eingesetzt werden.
+
 <Canvas>
-  <Story id="components-input-select--with-placeholder" />
+  <Story id="components-input-select--with-default-value" />
 </Canvas>
+
+## Anatomie
+
+Ein Select besteht aus dem Eingabefeld und einem Auswahlmenü. Das Auswahlmenü wird nicht geskinnt, sondern vom Betriebssystem gerendert.
+
+<!-- Optional: schematische Darstellung -->
+
+1. **Label** (optional): Beschreibt den Inhalt des Selects
+2. **Placeholder** (optional): Hinweis, falls keine Option gewählt ist
+3. **Category** (optional): Ermöglicht die Gruppierung mehrerer Optionen
+4. **Option**: Beschreibt die Auswahlmöglichkeit
+5. **Error**: Fehlermeldung
+
+<!--
+## Platzierung
+
+Hier kann beschrieben werden, wie ein Select in verschiedenen Kontexten platziert wird.
+-->
+
+<!--
+## Inhalt
+
+Hier können Regeln für die Inhalte eines Selects definiert werden, z.B. Wording von Labels und Optionen.
+-->
