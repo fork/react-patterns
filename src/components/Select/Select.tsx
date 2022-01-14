@@ -69,7 +69,7 @@ const Select = ({
           </option>
         ))}
       </select>
-      <Icon icon="AngleDown" />
+      <Icon icon="Expand" />
     </div>
     {error && errorMessage && <span className="select__error">{errorMessage}</span>}
   </StyledSelect>

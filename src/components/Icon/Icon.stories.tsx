@@ -17,4 +17,4 @@ export default {
 const Template: Story<IconProps> = args => <Icon {...args} />;
 
 export const Default = Template.bind({});
-Default.args = { icon: 'AngleDown', size: 'small' };
+Default.args = { icon: 'Expand', size: 'small' };

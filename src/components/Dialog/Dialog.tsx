@@ -138,7 +138,7 @@ export const DialogFooter = styled.div`
 export const DialogClose = () => {
   const { onClose } = useContext(DialogContext);
 
-  return <Button icon="Close" label="Close dialog" onClick={onClose} iconPosition="only" />;
+  return <Button icon="Cancel" label="Close dialog" onClick={onClose} iconPosition="only" />;
 };
 
 export default Dialog;

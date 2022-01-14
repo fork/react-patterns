@@ -40,7 +40,7 @@ export const WithIcon = Template.bind({});
 WithIcon.args = {
   label: 'Primary Button',
   variant: 'primary',
-  icon: 'Check'
+  icon: 'Expand'
 };
 
 export const Disabled = Template.bind({});
