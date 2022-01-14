@@ -17,7 +17,7 @@ export default {
 const defaultData = {
   name: 'Lotta Trouble',
   title: 'CEO',
-  image: 'https://randomuser.me/api/portraits/',
+  image: '/images/contact-person/contact-person.jpg',
   phone: '+1 (917) 593-3246',
   email: 'lotta.trouble@ceo.com'
 };
