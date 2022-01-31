@@ -14,13 +14,18 @@ exports[`Checkbox Checkbox should render correctly 1`] = `
       className="checkbox__custom-checkbox"
     >
       <Icon
-        icon="Check"
+        icon="Checkmark"
       />
     </span>
     <span
       className="checkbox__label"
     >
-      Checkbox Label
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Checkbox Label
+      </styled.p>
     </span>
   </label>
 </styled.div>
@@ -43,13 +48,18 @@ exports[`Checkbox Checkbox with default value should render correctly 1`] = `
       className="checkbox__custom-checkbox"
     >
       <Icon
-        icon="Check"
+        icon="Checkmark"
       />
     </span>
     <span
       className="checkbox__label"
     >
-      Checkbox Label
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Checkbox Label
+      </styled.p>
     </span>
   </label>
 </styled.div>
@@ -71,13 +81,18 @@ exports[`Checkbox Checkbox without label should render correctly 1`] = `
       className="checkbox__custom-checkbox"
     >
       <Icon
-        icon="Check"
+        icon="Checkmark"
       />
     </span>
     <span
       className="checkbox__label"
     >
-      Checkbox Label
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Checkbox Label
+      </styled.p>
     </span>
   </label>
 </styled.div>

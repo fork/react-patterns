@@ -16,7 +16,8 @@ const data = {
       label: 'option 2'
     }
   ],
-  required: true
+  required: true,
+  errorMessage: 'Please choose an Option'
 };
 
 export default {

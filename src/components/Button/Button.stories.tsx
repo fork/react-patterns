@@ -16,17 +16,9 @@ export default {
 
 const Template: Story<ButtonProps> = args => <Button {...args} />;
 
-export const Small = Template.bind({});
-Small.args = {
-  label: 'Small Button',
-  size: 'small',
-  variant: 'primary'
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  label: 'Large Button',
-  size: 'large',
+export const Primary = Template.bind({});
+Primary.args = {
+  label: 'Primary Button',
   variant: 'primary'
 };
 
@@ -36,11 +28,17 @@ Secondary.args = {
   variant: 'secondary'
 };
 
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  label: 'Tertiary Button',
+  variant: 'tertiary'
+};
+
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   label: 'Primary Button',
   variant: 'primary',
-  icon: 'Check'
+  icon: 'Expand'
 };
 
 export const Disabled = Template.bind({});

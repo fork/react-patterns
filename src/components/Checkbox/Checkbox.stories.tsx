@@ -31,11 +31,11 @@ const TemplateWithState: Story<CheckboxProps> = args => {
   return <Checkbox {...args} checked={checked} onChange={() => setChecked(prev => !prev)} />;
 };
 
+export const Default = Template.bind({});
+Default.args = { ...defaultData, label: 'Checkbox 2', id: '2', checked: false };
+
 export const Checked = Template.bind({});
 Checked.args = { ...defaultData, label: 'Checkbox 1', id: '1', checked: true };
-
-export const Unchecked = Template.bind({});
-Unchecked.args = { ...defaultData, label: 'Checkbox 2', id: '2', checked: false };
 
 export const Error = Template.bind({});
 Error.args = {

@@ -19,18 +19,18 @@ export type Tokens = {
     serif: string;
   };
   typography: {
-    headline1: TypographyToken;
-    headline2: TypographyToken;
-    headline3: TypographyToken;
-    headline4: TypographyToken;
+    'headline-1': TypographyToken;
+    'headline-2': TypographyToken;
+    'headline-3': TypographyToken;
+    'headline-4': TypographyToken;
     copy: TypographyToken;
-    copySmall: TypographyToken;
+    'copy-small': TypographyToken;
     quote: TypographyToken;
     link: TypographyToken;
     button: TypographyToken;
-    formLabel: TypographyToken;
-    formValue: TypographyToken;
-    formHint: TypographyToken;
+    'form-label': TypographyToken;
+    'form-value': TypographyToken;
+    'form-hint': TypographyToken;
   };
   colors: {
     neutral: ColorToken;

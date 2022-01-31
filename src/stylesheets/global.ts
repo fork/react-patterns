@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import sanitize from './sanitize';
 
 import color from './tools/color';
+import typography from './tools/typography';
 import {
   colorsToCSSVariables,
   objectToCSSVariables,
@@ -37,18 +38,22 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: Helvetica, sans-serif;
+    font-family: var(--font-families-default);
     font-display: swap;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
     padding: 0;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     background: ${color('neutral', 10)};
   }
   
   input, textarea, select, button {
-    font-family: Helvetica, sans-serif;
+    font-family: var(--font-families-default);
+  }
+
+  input, textarea, select {
+    ${typography('form-value')};
   }
 
   input:is([type='button'], [type='submit'], [type='reset']),

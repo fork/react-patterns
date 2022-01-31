@@ -5,11 +5,12 @@ exports[`Input Input should render correctly 1`] = `
   <label
     htmlFor="1"
   >
-    <span
-      className="input__labelText"
+    <styled.p
+      as="span"
+      variant="form-label"
     >
       Input Label
-    </span>
+    </styled.p>
   </label>
   <div
     className="input__wrapper"
@@ -30,11 +31,12 @@ exports[`Input Input with default value should render correctly 1`] = `
   <label
     htmlFor="1"
   >
-    <span
-      className="input__labelText"
+    <styled.p
+      as="span"
+      variant="form-label"
     >
       Input Label
-    </span>
+    </styled.p>
   </label>
   <div
     className="input__wrapper"
@@ -56,11 +58,12 @@ exports[`Input Input with hidden label should render correctly 1`] = `
   <label
     htmlFor="1"
   >
-    <span
-      className="input__labelText"
+    <styled.p
+      as="span"
+      variant="form-label"
     >
       Input Label
-    </span>
+    </styled.p>
   </label>
   <div
     className="input__wrapper"

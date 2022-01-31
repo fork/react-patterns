@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import { mq, space, gridContainer, getGrid } from '../../stylesheets';
+import { mq, gridContainer, getGrid } from '../../stylesheets';
 
 const StyledTeaserContainer = styled.div`
   ${gridContainer};
   ${getGrid()};
-  grid-gap: ${space('xs')};
 
   & > a {
     grid-column: span 2;

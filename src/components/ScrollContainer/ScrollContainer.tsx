@@ -82,20 +82,18 @@ const ScrollContainer = ({ children }: ScrollContainerProps) => {
           <Button
             label="Previous"
             onClick={() => scrollTo(-containerWidth)}
-            icon="ArrowLeft"
+            icon="Previous"
             iconPosition="only"
-            size="small"
-            variant="tertiary"
+            variant="secondary"
             className="scrollContainer__prev"
             disabled={prevDisabled}
           />
           <Button
             label="Next"
             onClick={() => scrollTo(containerWidth)}
-            icon="ArrowRight"
+            icon="Next"
             iconPosition="only"
-            size="small"
-            variant="tertiary"
+            variant="secondary"
             className="scrollContainer__next"
             disabled={nextDisabled}
           />

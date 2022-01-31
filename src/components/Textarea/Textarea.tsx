@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Text from '../Text';
+
 import StyledTextarea from './Textarea.style';
 
 export type TextareaProps = {
@@ -39,10 +41,11 @@ const Textarea = ({
 }: TextareaProps) => (
   <StyledTextarea error={error} success={success} hideLabel={hideLabel}>
     <label htmlFor={id}>
-      <span className="textarea__labelText">{label}</span>
-      {required && <span className="textarea__required">*</span>}
+      <Text as="span" variant="form-label">
+        {label}
+        {required && <span className="textarea__required">*</span>}
+      </Text>
     </label>
-
     <textarea
       id={id}
       name={id}
@@ -59,7 +62,13 @@ const Textarea = ({
       rows={rows}
     />
 
-    {error && errorMessage && <span className="textarea__error">{errorMessage}</span>}
+    {error && errorMessage && (
+      <div className="textarea__error">
+        <Text as="span" variant="copy-small">
+          {errorMessage}
+        </Text>
+      </div>
+    )}
   </StyledTextarea>
 );
 

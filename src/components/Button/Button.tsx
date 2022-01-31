@@ -10,7 +10,6 @@ export type ButtonProps = {
   type?: 'button' | 'submit';
   disabled?: boolean;
   variant?: 'primary' | 'secondary' | 'tertiary';
-  size?: 'small' | 'large';
   icon?: IconTypes;
   className?: string;
   iconPosition?: 'before' | 'after' | 'only';
@@ -22,7 +21,6 @@ const Button = ({
   type = 'button',
   disabled,
   variant = 'primary',
-  size = 'small',
   className,
   onClick,
   iconPosition = 'before',
@@ -36,12 +34,11 @@ const Button = ({
     title={label}
     aria-label={label}
     variant={variant}
-    size={size}
     onClick={onClick}
     iconPosition={iconPosition}
   >
-    {icon && <Icon icon={icon} size={size} />}
-    {iconPosition === 'only' && icon ? null : <Text variant="copy">{label}</Text>}
+    {icon && <Icon icon={icon} />}
+    {iconPosition === 'only' && icon ? null : <Text variant="button">{label}</Text>}
   </StyledButton>
 );
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Text from '../Text';
 import StyledInput from './Input.style';
 
 export type InputProps = {
@@ -54,8 +55,10 @@ const Input = ({
 }: InputProps) => (
   <StyledInput error={error} success={success} hideLabel={hideLabel} className={className}>
     <label htmlFor={id}>
-      <span className="input__labelText">{label}</span>
-      {required && <span className="input__required">*</span>}
+      <Text as="span" variant="form-label">
+        {label}
+        {required && <span className="input__required">*</span>}
+      </Text>
     </label>
 
     <div className="input__wrapper">
@@ -89,7 +92,13 @@ const Input = ({
       {children}
     </div>
 
-    {error && errorMessage && <span className="input__error">{errorMessage}</span>}
+    {error && errorMessage && (
+      <div className="input__error">
+        <Text as="span" variant="copy-small">
+          {errorMessage}
+        </Text>
+      </div>
+    )}
   </StyledInput>
 );
 

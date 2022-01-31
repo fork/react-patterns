@@ -16,13 +16,9 @@ export type TeaserProps = {
 const Teaser = ({ href, title, copy, image, linkText }: TeaserProps) => (
   <StyledTeaser href={href}>
     {image && <Image src={image.src} srcSet={image.srcSet} alt={image.alt} lazy={image.lazy} />}
-
-    <Text as="h2" variant="headline2">
-      {title}
-    </Text>
-
+    <Text variant="headline-2">{title}</Text>
     <Text>{copy}</Text>
-    <Text>{linkText}</Text>
+    <Text variant="link">{linkText}</Text>
   </StyledTeaser>
 );
 

@@ -5,7 +5,7 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
   label {
     display: block;
     font-weight: bold;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     line-height: 1;
     margin-bottom: ${space('s')};
     ${props => props.hideLabel && hideVisually()}
@@ -15,22 +15,14 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
     width: 100%;
     outline: none;
     background: transparent;
-    color: ${color('neutral', 100)};
-    font-size: inherit;
-    font-weight: normal;
-    border: 1px solid ${color('neutral', 100)};
+    color: ${color('neutral')};
+    border: 1px solid ${color('neutral')};
     padding: ${space('s')};
 
     &::placeholder {
       font-weight: normal;
-    }
-
-    &::-ms-input-placeholder {
-      font-weight: normal;
-    }
-
-    &:-ms-input-placeholder {
-      font-weight: normal;
+      color: ${color('neutral', 50)};
+      opacity: 1;
     }
 
     &[disabled] {
@@ -48,6 +40,7 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
 
   .input__error {
     display: block;
+    margin-top: ${space('s')};
     color: ${color('warning')};
   }
 

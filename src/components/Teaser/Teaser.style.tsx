@@ -7,6 +7,11 @@ const StyledTeaser = styled.a`
   margin-bottom: ${space('m')};
   text-decoration: none;
 
+  [data-whatintent='mouse'] &,
+  [data-whatintent='touch'] & {
+    outline: 0;
+  }
+
   img {
     height: auto;
     width: 100%;
@@ -14,12 +19,12 @@ const StyledTeaser = styled.a`
 
   p,
   h2 {
+    display: block;
     margin-bottom: ${space('s')};
     margin-top: 0;
 
     ${mq('s')} {
-      padding-left: 10px;
-      padding-right: ${space('s')};
+      padding: 0 ${space('s')};
     }
   }
 `;

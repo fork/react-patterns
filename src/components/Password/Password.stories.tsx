@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 
 import Password, { PasswordProps } from './Password';
-import docs from './docs.mdx';
 
 export default {
   title: 'Components/Input/Password',
-  component: Password,
-  parameters: {
-    docs: {
-      page: docs
-    }
-  }
+  component: Password
 };
 
 const props: PasswordProps = {
@@ -18,7 +12,7 @@ const props: PasswordProps = {
   label: 'Passwort',
   value: '',
   required: true,
-  placeholder: 'Gebe einen Passwortn ein...',
+  placeholder: 'Gebe einen Passwort ein...',
   onChange: () => console.log('Change'),
   onFocus: () => console.log('Focus'),
   onBlur: () => console.log('Blur'),

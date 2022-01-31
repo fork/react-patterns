@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { gridContainer, getGrid, mq } from '../../stylesheets';
+import { gridContainer, getGrid, mq, space } from '../../stylesheets';
 
 const StyledQuote = styled.blockquote`
   ${gridContainer};
@@ -15,7 +15,13 @@ const StyledQuote = styled.blockquote`
   }
 
   cite {
+    font-style: normal;
     display: block;
+  }
+
+  p {
+    font-style: italic;
+    padding-bottom: ${space('xs')};
   }
 `;
 

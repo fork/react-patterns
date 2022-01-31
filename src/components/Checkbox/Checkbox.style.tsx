@@ -14,7 +14,7 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
     position: relative;
     display: flex;
     align-items: center;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
     cursor: pointer;
     hyphens: auto;
     padding-left: ${space('s')};
@@ -37,9 +37,9 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border: 1px solid ${color('neutral', 100)};
-    width: 20px;
-    height: 20px;
+    border: 1px solid ${color('neutral')};
+    width: ${space('m')};
+    height: ${space('m')};
 
     ${props =>
       props.error &&
@@ -55,8 +55,9 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
 
     svg {
       display: none;
-      fill: #000;
-      margin-left: 2px;
+      fill: ${color('neutral')};
+      width: 100%;
+      height: auto;
 
       ${props =>
         props.success &&
@@ -86,7 +87,7 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
     line-height: 1;
     width: 6px;
     height: 6px;
-    color: ${color('neutral', 100)};
+    color: ${color('neutral')};
 
     ${props =>
       props.error &&

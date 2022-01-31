@@ -1,0 +1,5 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M120 220c55.228 0 100-44.772 100-100S175.228 20 120 20 20 64.772 20 120s44.772 100 100 100Zm50.5-99.5-75 45v-90l75 45Z"
+    fill="currentColor" fill-rule="evenodd" />
+</svg>

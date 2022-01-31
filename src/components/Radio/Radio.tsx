@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Text from '../Text';
+
 import StyledRadio from './Radio.style';
 
 export type RadioOption = {
@@ -34,10 +36,11 @@ const Radio = ({
 }: RadioProps) => (
   <StyledRadio error={error} hideLabel={hideLabel}>
     <p className="radio__label">
-      {label}
-      {required && <span className="radio__required">*</span>}
+      <Text as="span" variant="form-label">
+        {label}
+        {required && <span className="radio__required">*</span>}
+      </Text>
     </p>
-
     {options.map(option => (
       <div className="radio__item" key={option.value}>
         <input
@@ -52,11 +55,20 @@ const Radio = ({
         />
         <label htmlFor={option.value}>
           <span className={`radio__custom-icon ${value === option.value ? 'checked' : ''}`} />
-          {option.label}
+          <Text as="span" variant="form-value">
+            {option.label}
+          </Text>
         </label>
       </div>
     ))}
-    {error && errorMessage && <span className="radio__error">{errorMessage}</span>}
+
+    {error && errorMessage && (
+      <div className="radio__error">
+        <Text as="span" variant="copy-small">
+          {errorMessage}
+        </Text>
+      </div>
+    )}
   </StyledRadio>
 );
 
