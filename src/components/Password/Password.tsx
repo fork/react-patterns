@@ -15,9 +15,8 @@ const Password = (props: PasswordProps) => {
       <Button
         label={showPassword ? 'Hide password' : 'Show password'}
         onClick={() => setShowPassword(prev => !prev)}
-        icon={showPassword ? 'EyeOff' : 'Eye'}
+        icon={showPassword ? 'Hide' : 'Show'}
         iconPosition="only"
-        size="small"
         variant="tertiary"
       />
     </StyledPassword>

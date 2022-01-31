@@ -16,21 +16,13 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
     outline: none;
     background: transparent;
     color: ${color('neutral')};
-    font-size: inherit;
-    font-weight: normal;
     border: 1px solid ${color('neutral')};
     padding: ${space('s')};
 
     &::placeholder {
       font-weight: normal;
-    }
-
-    &::-ms-input-placeholder {
-      font-weight: normal;
-    }
-
-    &:-ms-input-placeholder {
-      font-weight: normal;
+      color: ${color('neutral', 50)};
+      opacity: 1;
     }
 
     &[disabled] {
@@ -48,6 +40,7 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
 
   .input__error {
     display: block;
+    margin-top: ${space('s')};
     color: ${color('warning')};
   }
 

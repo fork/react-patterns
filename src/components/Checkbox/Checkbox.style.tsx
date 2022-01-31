@@ -38,8 +38,8 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
     justify-content: center;
     flex-shrink: 0;
     border: 1px solid ${color('neutral')};
-    width: 20px;
-    height: 20px;
+    width: ${space('m')};
+    height: ${space('m')};
 
     ${props =>
       props.error &&
@@ -55,8 +55,9 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
 
     svg {
       display: none;
-      fill: #000;
-      margin-left: 2px;
+      fill: ${color('neutral')};
+      width: 100%;
+      height: auto;
 
       ${props =>
         props.success &&

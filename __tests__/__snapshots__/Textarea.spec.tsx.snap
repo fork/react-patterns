@@ -5,11 +5,12 @@ exports[`Textarea Textarea should render correctly 1`] = `
   <label
     htmlFor="1"
   >
-    <span
-      className="textarea__labelText"
+    <styled.p
+      as="span"
+      variant="form-label"
     >
       Textarea Label
-    </span>
+    </styled.p>
   </label>
   <textarea
     id="1"
@@ -25,11 +26,12 @@ exports[`Textarea Textarea with default value should render correctly 1`] = `
   <label
     htmlFor="1"
   >
-    <span
-      className="textarea__labelText"
+    <styled.p
+      as="span"
+      variant="form-label"
     >
       Textarea Label
-    </span>
+    </styled.p>
   </label>
   <textarea
     id="1"
@@ -46,11 +48,12 @@ exports[`Textarea Textarea with hidden label should render correctly 1`] = `
   <label
     htmlFor="1"
   >
-    <span
-      className="textarea__labelText"
+    <styled.p
+      as="span"
+      variant="form-label"
     >
       Textarea Label
-    </span>
+    </styled.p>
   </label>
   <textarea
     id="1"

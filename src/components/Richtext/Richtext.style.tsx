@@ -9,15 +9,15 @@ const StyledRichtext = styled.div`
   }
 
   h2 {
-    ${typography('headline2')};
+    ${typography('headline-2')};
   }
 
   h3 {
-    ${typography('headline3')};
+    ${typography('headline-3')};
   }
 
   h4 {
-    ${typography('headline4')};
+    ${typography('headline-4')};
   }
 
   h2,

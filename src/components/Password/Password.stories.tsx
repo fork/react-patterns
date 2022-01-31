@@ -12,7 +12,7 @@ const props: PasswordProps = {
   label: 'Passwort',
   value: '',
   required: true,
-  placeholder: 'Gebe einen Passwortn ein...',
+  placeholder: 'Gebe einen Passwort ein...',
   onChange: () => console.log('Change'),
   onFocus: () => console.log('Focus'),
   onBlur: () => console.log('Blur'),

@@ -4,8 +4,7 @@ import { color, space, hideVisually } from '../../stylesheets';
 const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?: boolean }>`
   label {
     display: block;
-    margin-bottom: ${space('xs')};
-    font-weight: bold;
+    margin-bottom: ${space('s')};
     color: ${color('neutral')};
     line-height: 1;
     ${props => props.hideLabel && hideVisually()}
@@ -16,7 +15,7 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     pointer-events: none;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
-    right: ${space('xs')};
+    right: ${space('s')};
   }
 
   .select__wrapper {
@@ -29,11 +28,9 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     background: transparent;
     appearance: none;
     color: ${color('neutral')};
-    font-size: inherit;
-    font-weight: normal;
     line-height: 1;
     border: 1px solid ${color('neutral')};
-    padding: ${space('xs')};
+    padding: ${space('s')};
 
     option {
       color: black;
@@ -79,6 +76,7 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
   .select__error {
     display: block;
     color: ${color('warning')};
+    margin-top: ${space('s')};
   }
 `;
 

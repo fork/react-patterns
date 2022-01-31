@@ -51,7 +51,7 @@ const StyledDialog = styled.div<StyledDialogProps>`
     max-width: 750px;
     width: 100%;
     max-height: calc(100vh - ${space('l')});
-    margin: ${space('m')};
+    margin: ${space('l')};
     z-index: 999;
     border-radius: ${space('s')};
     overflow: hidden;

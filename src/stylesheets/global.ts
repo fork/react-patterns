@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 import sanitize from './sanitize';
 
 import color from './tools/color';
+import typography from './tools/typography';
 import {
   colorsToCSSVariables,
   objectToCSSVariables,
@@ -49,6 +50,10 @@ const GlobalStyle = createGlobalStyle`
   
   input, textarea, select, button {
     font-family: var(--font-families-default);
+  }
+
+  input, textarea, select {
+    ${typography('form-value')};
   }
 
   input:is([type='button'], [type='submit'], [type='reset']),

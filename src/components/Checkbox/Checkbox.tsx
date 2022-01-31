@@ -2,6 +2,7 @@ import React from 'react';
 
 import StyledCheckbox from './Checkbox.style';
 import Icon from '../Icon';
+import Text from '../Text';
 
 export type CheckboxProps = {
   label: string;
@@ -40,13 +41,22 @@ const Checkbox = ({
 
       <span className="checkbox__custom-checkbox">
         <Icon icon="Checkmark" />
-
         {required && <span className="checkbox__required">*</span>}
       </span>
-      <span className="checkbox__label">{label}</span>
+      <span className="checkbox__label">
+        <Text as="span" variant="form-value">
+          {label}
+        </Text>
+      </span>
     </label>
 
-    {error && errorMessage && <span className="checkbox__error">{errorMessage}</span>}
+    {error && errorMessage && (
+      <div className="checkbox__error">
+        <Text as="span" variant="copy-small">
+          {errorMessage}
+        </Text>
+      </div>
+    )}
   </StyledCheckbox>
 );
 

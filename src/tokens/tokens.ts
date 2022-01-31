@@ -12,22 +12,22 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
     serif: '"IBM Plex Mono", serif'
   },
   typography: {
-    headline1: {
+    'headline-1': {
       fontSizes: [29, 81],
       lineHeights: [1, 1],
       weight: 'bold'
     },
-    headline2: {
+    'headline-2': {
       fontSizes: [24, 54],
       lineHeights: [1, 1],
       weight: 'bold'
     },
-    headline3: {
+    'headline-3': {
       fontSizes: [20, 36],
       lineHeights: [1.1, 1.1],
       weight: 'bold'
     },
-    headline4: {
+    'headline-4': {
       fontSizes: [17, 24],
       lineHeights: [1.33, 1.33],
       weight: 'bold'
@@ -36,7 +36,7 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
       fontSizes: [14, 16],
       lineHeights: [1.5, 1.5]
     },
-    copySmall: {
+    'copy-small': {
       fontSizes: [12, 14],
       lineHeights: [1.5, 1.5]
     },
@@ -53,16 +53,16 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
       lineHeights: [1.5, 1.5],
       weight: 'bold'
     },
-    formLabel: {
+    'form-label': {
       fontSizes: [12, 14],
       lineHeights: [1, 1],
       weight: 'bold'
     },
-    formValue: {
+    'form-value': {
       fontSizes: [12, 14],
       lineHeights: [1, 1]
     },
-    formHint: {
+    'form-hint': {
       fontSizes: [10, 12],
       lineHeights: [1, 1]
     }

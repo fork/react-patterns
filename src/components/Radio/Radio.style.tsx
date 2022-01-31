@@ -3,7 +3,6 @@ import { color, space, hideVisually } from '../../stylesheets';
 
 const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
   .radio__label {
-    font-weight: bold;
     margin-bottom: ${space('s')};
     ${props => props.hideLabel && hideVisually()}
   }

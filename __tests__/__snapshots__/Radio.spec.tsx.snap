@@ -5,7 +5,12 @@ exports[`Radio Radio should render correctly 1`] = `
   <p
     className="radio__label"
   >
-    Radio Label
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Radio Label
+    </styled.p>
   </p>
   <div
     className="radio__item"
@@ -24,7 +29,12 @@ exports[`Radio Radio should render correctly 1`] = `
       <span
         className="radio__custom-icon "
       />
-      Frau
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Frau
+      </styled.p>
     </label>
   </div>
   <div
@@ -44,7 +54,12 @@ exports[`Radio Radio should render correctly 1`] = `
       <span
         className="radio__custom-icon "
       />
-      Herr
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Herr
+      </styled.p>
     </label>
   </div>
   <div
@@ -64,7 +79,12 @@ exports[`Radio Radio should render correctly 1`] = `
       <span
         className="radio__custom-icon "
       />
-      Divers
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Divers
+      </styled.p>
     </label>
   </div>
 </styled.div>
@@ -77,7 +97,12 @@ exports[`Radio Radio with default value should render correctly 1`] = `
   <p
     className="radio__label"
   >
-    Radio Label
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Radio Label
+    </styled.p>
   </p>
   <div
     className="radio__item"
@@ -96,7 +121,12 @@ exports[`Radio Radio with default value should render correctly 1`] = `
       <span
         className="radio__custom-icon checked"
       />
-      Frau
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Frau
+      </styled.p>
     </label>
   </div>
   <div
@@ -116,7 +146,12 @@ exports[`Radio Radio with default value should render correctly 1`] = `
       <span
         className="radio__custom-icon "
       />
-      Herr
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Herr
+      </styled.p>
     </label>
   </div>
   <div
@@ -136,7 +171,12 @@ exports[`Radio Radio with default value should render correctly 1`] = `
       <span
         className="radio__custom-icon "
       />
-      Divers
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Divers
+      </styled.p>
     </label>
   </div>
 </styled.div>
@@ -149,7 +189,12 @@ exports[`Radio Radio without label should render correctly 1`] = `
   <p
     className="radio__label"
   >
-    Radio Label
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Radio Label
+    </styled.p>
   </p>
   <div
     className="radio__item"
@@ -168,7 +213,12 @@ exports[`Radio Radio without label should render correctly 1`] = `
       <span
         className="radio__custom-icon "
       />
-      Frau
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Frau
+      </styled.p>
     </label>
   </div>
   <div
@@ -188,7 +238,12 @@ exports[`Radio Radio without label should render correctly 1`] = `
       <span
         className="radio__custom-icon "
       />
-      Herr
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Herr
+      </styled.p>
     </label>
   </div>
   <div
@@ -208,7 +263,12 @@ exports[`Radio Radio without label should render correctly 1`] = `
       <span
         className="radio__custom-icon "
       />
-      Divers
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Divers
+      </styled.p>
     </label>
   </div>
 </styled.div>
