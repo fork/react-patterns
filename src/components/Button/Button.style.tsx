@@ -121,6 +121,7 @@ const StyledButton = styled.button<StyledButtonProps>`
       flex-direction: row-reverse;
     `,
     only: css`
+      border-radius: 999px;
       padding: ${space('xs')};
     `
   })};

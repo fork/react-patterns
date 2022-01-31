@@ -14,7 +14,7 @@ const StyledContactPerson = styled.div`
   .contact-person__image {
     width: 100%;
     background-color: ${color('neutral', 30)};
-    border-radius: 200px;
+    border-radius: 100%;
     overflow: hidden;
     margin-bottom: ${space('l')};
 

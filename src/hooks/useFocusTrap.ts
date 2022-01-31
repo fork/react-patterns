@@ -4,9 +4,9 @@ export type UseFocusTrapOptions = {
   initialFocusRef?: React.RefObject<HTMLElement> | null;
   onKeyDown?: (e: any) => void;
 };
-export default function useFocusTrap<T>(
-  options?: UseFocusTrapOptions
-): { ref: React.RefObject<T> } {
+export default function useFocusTrap<T>(options?: UseFocusTrapOptions): {
+  ref: React.RefObject<T>;
+} {
   const { initialFocusRef, onKeyDown } = options || {
     initialFocusRef: undefined,
     onKeyDown: undefined
