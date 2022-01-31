@@ -15,7 +15,7 @@ export default {
 };
 
 const defaultData = {
-  quote: 'May the Fork be with you 📐',
+  quote: 'May the Fork be with you',
   author: 'Fork Unstable Media'
 };
 

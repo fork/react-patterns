@@ -3,19 +3,32 @@ import styled, { css } from 'styled-components';
 import { btnReset, space, color, variant } from '../../stylesheets';
 import { ButtonProps } from './Button';
 
-export type StyledButtonProps = Pick<ButtonProps, 'variant' | 'size' | 'iconPosition'>;
+export type StyledButtonProps = Pick<ButtonProps, 'variant' | 'iconPosition'>;
 
 const StyledButton = styled.button<StyledButtonProps>`
   ${btnReset()}
-  display: inline-flex;
-  align-items: center;
-  font-size: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-style: solid;
+  border-width: 2px;
   border-radius: ${space('xxs')};
+  padding: ${space('s')} ${space('m')};
+  transition: color 200ms, background-color 200ms, border-color 200ms;
+
+  /* [data-whatintent='mouse'] &,
+  [data-whatintent='touch'] & {
+    outline: 0;
+  } */
 
   &[disabled] {
-    opacity: 0.5;
     pointer-events: none;
     user-select: none;
+    color: ${color('neutral', 50)};
+  }
+
+  &:focus {
+    border-color: ${color('interaction')};
   }
 
   svg {
@@ -23,60 +36,83 @@ const StyledButton = styled.button<StyledButtonProps>`
     fill: currentColor;
 
     &:not(:only-child) {
-      margin-right: space(xxs);
+      margin-right: ${space('xs')};
     }
   }
 
   /* variant Prop */
   ${variant({
     primary: css`
+      border-color: ${color('primary')};
       background: ${color('primary')};
       color: ${color('neutral', 10)};
 
-      &:hover,
+      &:hover {
+        background: ${color('primary', 70)};
+        border-color: ${color('primary', 70)};
+      }
+
       &:focus {
-        background: ${color('primary', 60)};
+        background: ${color('primary')};
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border: 2px solid ${color('neutral', 10)};
+        }
       }
 
       &:active {
         background: ${color('primary', 90)};
+        border-color: ${color('primary', 90)};
+
+        &:after {
+          display: none;
+        }
+      }
+
+      &[disabled] {
+        background: ${color('neutral', 30)};
+        border-color: ${color('neutral', 30)};
       }
     `,
     secondary: css`
-      background: ${color('neutral', 20)};
-      color: ${color('neutral')};
+      background: ${color('neutral', 10)};
+      color: ${color('primary')};
+      border-color: ${color('primary')};
 
-      &:hover,
-      &:focus {
-        background: ${color('neutral', 30)};
+      &:hover {
+        color: ${color('primary', 70)};
+        border-color: ${color('primary', 70)};
       }
 
       &:active {
-        background: ${color('neutral', 50)};
+        color: ${color('primary', 90)};
+        border-color: ${color('primary', 90)};
+      }
+
+      &[disabled] {
+        border-color: ${color('neutral', 30)};
       }
     `,
     tertiary: css`
+      border-color: transparent;
       background: transparent;
-      color: ${color('neutral')};
+      color: ${color('primary')};
 
-      &:hover,
-      &:focus,
+      &:hover {
+        color: ${color('primary', 70)};
+      }
+
       &:active {
-        background: transparent;
+        color: ${color('primary', 90)};
       }
     `
   })}
-
-  /* size Prop */
-    ${variant({
-    prop: 'size',
-    small: css`
-      padding: ${space('s')} ${space('m')};
-    `,
-    large: css`
-      padding: ${space('m')} ${space('l')};
-    `
-  })};
 
   /* iconPosition Prop */
   ${variant({

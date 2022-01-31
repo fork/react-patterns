@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: Helvetica, sans-serif;
+    font-family: var(--font-families-default);
     font-display: swap;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   input, textarea, select, button {
-    font-family: Helvetica, sans-serif;
+    font-family: var(--font-families-default);
   }
 
   input:is([type='button'], [type='submit'], [type='reset']),

@@ -8,8 +8,8 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
   },
   maxwidth: 1680,
   fontFamilies: {
-    default: 'sans-serif',
-    serif: 'serif'
+    default: '"IBM Plex Mono", monospace',
+    serif: '"IBM Plex Mono", serif'
   },
   typography: {
     headline1: {
@@ -42,8 +42,7 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
     },
     quote: {
       fontSizes: [24, 54],
-      lineHeights: [1, 1],
-      family: 'serif'
+      lineHeights: [1, 1]
     },
     link: {
       fontSizes: [14, 16],
@@ -51,7 +50,8 @@ export const baseTokens: Omit<Tokens, 'colors'> = {
     },
     button: {
       fontSizes: [14, 16],
-      lineHeights: [1, 1]
+      lineHeights: [1.5, 1.5],
+      weight: 'bold'
     },
     formLabel: {
       fontSizes: [12, 14],
@@ -110,7 +110,7 @@ const defaultTokens: Tokens = {
     primary: {
       default: '50',
       '50': '#f23e23',
-      '60': '#a91f0a',
+      '70': '#a91f0a',
       '90': '#78020c'
     },
     accent1: {
@@ -121,13 +121,13 @@ const defaultTokens: Tokens = {
       default: '50',
       '50': '#ff0000'
     },
-    success: {
-      default: '50',
-      '50': '#00b30d'
-    },
     notification: {
       default: '50',
       '50': '#ffe200'
+    },
+    success: {
+      default: '50',
+      '50': '#00b30d'
     },
     interaction: {
       default: '50',

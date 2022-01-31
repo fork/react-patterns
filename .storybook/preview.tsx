@@ -14,7 +14,7 @@ export const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-      order: ['Brand-Story', 'Tokens', 'Components', 'Templates']
+      order: ['Brand Guidelines', 'Tokens', 'Components', 'Templates']
     }
   },
   viewport: {

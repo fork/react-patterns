@@ -1,5 +1,6 @@
 module.exports = {
   stories: [
+    '../src/brand-guidelines/*.stories.mdx',
     '../src/components/**/*.stories.@(jsx|tsx)',
     '../src/templates/**/*.stories.@(jsx|tsx)',
     '../src/tokens/**/*.stories.@(jsx|tsx)'
