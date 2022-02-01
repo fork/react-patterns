@@ -5,6 +5,7 @@ import Input, { InputProps } from '../Input/Input';
 import Checkbox, { CheckboxProps } from '../Checkbox/Checkbox';
 import Select, { SelectProps, SelectOption } from '../Select/Select';
 import Textarea, { TextareaProps } from '../Textarea/Textarea';
+import FileUpload, { FileUploadProps } from '../FileUpload/FileUpload';
 
 export type FormInputProps = {
   fieldType: string;
@@ -27,6 +28,8 @@ const FormInput = ({ fieldType, ...rest }: FormInputProps) => {
       return <Radio {...(rest as RadioProps)} />;
     case 'textarea':
       return <Textarea {...(rest as TextareaProps)} />;
+    case 'fileUpload':
+      return <FileUpload {...(rest as FileUploadProps)} />;
     default:
       return <Input {...(rest as InputProps)} />;
   }

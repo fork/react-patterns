@@ -4,9 +4,7 @@ import { color, space, hideVisually } from '../../stylesheets';
 const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?: boolean }>`
   label {
     display: block;
-    font-weight: bold;
     color: ${color('neutral')};
-    line-height: 1;
     margin-bottom: ${space('s')};
     ${props => props.hideLabel && hideVisually()}
   }
@@ -14,19 +12,18 @@ const StyledInput = styled.div<{ error?: boolean; success?: boolean; hideLabel?:
   input {
     width: 100%;
     outline: none;
-    background: transparent;
+    background: ${color('neutral', 10)};
     color: ${color('neutral')};
     border: 1px solid ${color('neutral')};
     padding: ${space('s')};
 
     &::placeholder {
-      font-weight: normal;
       color: ${color('neutral', 50)};
       opacity: 1;
     }
 
-    &[disabled] {
-      opacity: 0.5;
+    &:disabled {
+      border-color: ${color('neutral', 30)};
     }
 
     &:focus {

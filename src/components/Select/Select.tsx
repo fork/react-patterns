@@ -75,11 +75,11 @@ const Select = ({
     </div>
 
     {error && errorMessage && (
-      <div className="select__error">
+      <small className="select__error" role="status">
         <Text as="span" variant="copy-small">
           {errorMessage}
         </Text>
-      </div>
+      </small>
     )}
   </StyledSelect>
 );

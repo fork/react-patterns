@@ -12,7 +12,7 @@ const StyledTextarea = styled.div<{ error?: boolean; success?: boolean; hideLabe
   textarea {
     width: 100%;
     outline: none;
-    background: transparent;
+    background: ${color('neutral', 10)};
     color: ${color('neutral')};
     resize: none;
     position: relative;
@@ -21,7 +21,11 @@ const StyledTextarea = styled.div<{ error?: boolean; success?: boolean; hideLabe
 
     &::placeholder {
       opacity: 1;
-      color: ${color('neutral', 30)};
+      color: ${color('neutral', 50)};
+    }
+
+    &:disabled {
+      border-color: ${color('neutral', 30)};
     }
 
     &:focus {

@@ -21,7 +21,7 @@ const defaults: RadioProps = {
   error: false,
   disabled: false,
   hideLabel: false,
-  errorMessage: undefined,
+  errorMessage: 'We need to eat something. Choose wisely.',
   options: [
     {
       value: 'cao',
@@ -57,8 +57,11 @@ WithValue.args = { ...defaults, value: 'ottos' };
 export const WithoutLabel = Template.bind({});
 WithoutLabel.args = { ...defaults, value: 'ottos', hideLabel: true };
 
+export const Success = Template.bind({});
+Success.args = { ...defaults, value: 'ottos', success: true };
+
 export const Error = Template.bind({});
-Error.args = { ...defaults, error: true, errorMessage: 'We need to eat something. Choose wisely.' };
+Error.args = { ...defaults, error: true };
 
 export const Disabled = Template.bind({});
 Disabled.args = { ...defaults, disabled: true };

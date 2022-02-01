@@ -51,11 +51,11 @@ const Checkbox = ({
     </label>
 
     {error && errorMessage && (
-      <div className="checkbox__error">
+      <small className="checkbox__error" role="status">
         <Text as="span" variant="copy-small">
           {errorMessage}
         </Text>
-      </div>
+      </small>
     )}
   </StyledCheckbox>
 );

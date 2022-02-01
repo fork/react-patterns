@@ -63,11 +63,11 @@ const Textarea = ({
     />
 
     {error && errorMessage && (
-      <div className="textarea__error">
+      <small className="textarea__error" role="status">
         <Text as="span" variant="copy-small">
           {errorMessage}
         </Text>
-      </div>
+      </small>
     )}
   </StyledTextarea>
 );
