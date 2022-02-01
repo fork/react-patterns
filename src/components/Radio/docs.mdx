@@ -1,7 +1,40 @@
-import { Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Story, Canvas } from '@storybook/addon-docs';
 
-# Radio
+# Radio Button
+
+Radio Buttons ermöglichen eine Auswahl aus einer Gruppe sich gegenseitig ausschließender Optionen. Wenn ein:e Nutzer:in eine andere Option wählt, wird die vorherige Auswahl automatisch deselektiert.
+
+Es können immer nur mehrere Radio Buttons als Gruppe eingesetzt werden. Bei einer großen Anzahl an Optionen und begrenztem Platz kann auch ein [Select](?path=/docs/components-input-select) eingesetzt werden.
+
+Radio Buttons **werden verwendet**:
+
+- in Formularen, z.B. Anrede
+- für die Auswahl von Filteroptionen
+
+**Nicht verwendet** werden Radio Buttons für eine Mehrfachauswahl. Stattdessen kommen [Checkboxes](?path=/docs/components-input-checkbox) zum Einsatz.
 
 <Canvas>
   <Story id="components-input-radio--default" />
 </Canvas>
+
+## Anatomie
+
+Ein Radio Button besteht aus dem eigentlichen Eingabefeld und einem Label. Optional kann eine Gruppe mehrerer Radio Buttons ein Label erhalten.
+
+<!-- Optional: schematische Darstellung -->
+
+1. **Group label** (optional): Beschreibt den Inhalt der Gruppe
+2. **Input**: Eingabefeld des Radio Buttons, zeigt den Zustand (_unselected_, _selected_, _indeterminate_) an
+3. **Radio Button Label**: Beschreibt, was der:die Nutzer:in auswählt
+
+<!--
+## Platzierung
+
+Hier kann beschrieben werden, wie ein Radio Button in verschiedenen Kontexten platziert wird.
+-->
+
+<!--
+## Inhalt
+
+Hier können Regeln für die Inhalte von Radio Buttons definiert werden, z.B. Wording von Labels.
+-->

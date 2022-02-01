@@ -19,6 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added custom Storybook theme
 - Added password component
 - Added file upload component
+- Added scroll container component
+- Added IBM Plex Mono as default font
+- Added Brand Guidelines dummy story
 
 ### Changed
 

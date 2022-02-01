@@ -5,7 +5,7 @@ import Accordion, { AccordionProps } from './Accordion';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Content/Accordion',
+  title: 'Components/Layout/Accordion',
   component: Accordion,
   parameters: {
     docs: {

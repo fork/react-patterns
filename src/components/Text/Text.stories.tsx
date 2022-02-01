@@ -19,22 +19,22 @@ const Template: Story<TextProps> = ({ children, ...args }) => <Text {...args}>{c
 const defaults = { children: 'This is a text component' };
 
 export const Headline1 = Template.bind({});
-Headline1.args = { ...defaults, variant: 'headline1' };
+Headline1.args = { ...defaults, variant: 'headline-1' };
 
 export const Headline2 = Template.bind({});
-Headline2.args = { ...defaults, variant: 'headline2' };
+Headline2.args = { ...defaults, variant: 'headline-2' };
 
 export const Headline3 = Template.bind({});
-Headline3.args = { ...defaults, variant: 'headline3' };
+Headline3.args = { ...defaults, variant: 'headline-3' };
 
 export const Headline4 = Template.bind({});
-Headline4.args = { ...defaults, variant: 'headline4' };
+Headline4.args = { ...defaults, variant: 'headline-4' };
 
 export const Copy = Template.bind({});
 Copy.args = { ...defaults, variant: 'copy' };
 
 export const CopySmall = Template.bind({});
-CopySmall.args = { ...defaults, variant: 'copySmall' };
+CopySmall.args = { ...defaults, variant: 'copy-small' };
 
 export const Quote = Template.bind({});
 Quote.args = { ...defaults, variant: 'quote' };
@@ -46,10 +46,10 @@ export const Link = Template.bind({});
 Link.args = { ...defaults, variant: 'link' };
 
 export const FormValue = Template.bind({});
-FormValue.args = { ...defaults, variant: 'formValue' };
+FormValue.args = { ...defaults, variant: 'form-value' };
 
 export const FormLabel = Template.bind({});
-FormLabel.args = { ...defaults, variant: 'formLabel' };
+FormLabel.args = { ...defaults, variant: 'form-label' };
 
 export const FormHint = Template.bind({});
-FormHint.args = { ...defaults, variant: 'formHint' };
+FormHint.args = { ...defaults, variant: 'form-hint' };

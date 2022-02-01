@@ -1,7 +1,58 @@
-import { Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Story, Canvas } from '@storybook/addon-docs';
 
 # Checkbox
 
+Eine Checkbox ist eine Schaltfläche, mit der Nutzer:innen zwischen zwei gegensätzlichen Zuständen oder Werten auswählen können. Checkboxen können eigenständig oder als Liste eingesetzt werden.
+
+Mehrere Checkboxen in einer Liste schließen sich nicht gegenseitig aus: Nutzer:innen können keine, eine oder alle Optionen einer Liste wählen.
+
+Checkboxen **werden verwendet**:
+
+- in Formularen
+- als Filter
+- um von Nutzer:innen ein Einverständnis für Nutzungsbedingungen zu erhalten
+- eine Option zu aktivieren oder zu deaktivieren
+
+**Nicht eingesetzt** werden Checkboxen, wenn Nutzer:innen aus einer Liste nur eine Option auswählen können. Stattdessen sollten [Radio Buttons](?path=/docs/components-input-radio) oder ein [Select](?path=/docs/components-input-select) verwendet werden.
+
 <Canvas>
-  <Story id="components-input-checkbox--checked" />
+  <Story id="components-input-checkbox--default" />
 </Canvas>
+
+<Canvas>
+  <Story id="components-input-checkbox--disabled" />
+</Canvas>
+
+<Canvas>
+  <Story id="components-input-checkbox--required" />
+</Canvas>
+
+<Canvas>
+  <Story id="components-input-checkbox--success" />
+</Canvas>
+
+<Canvas>
+  <Story id="components-input-checkbox--error" />
+</Canvas>
+
+## Anatomie
+
+Eine Checkbox besteht aus dem eigentlichen Eingabefeld und einem Label. Optional kann eine Gruppe mehrerer Checkboxes ein Label erhalten.
+
+<!-- Optional: schematische Darstellung -->
+
+1. **Group label** (optional): Beschreibt den Inhalt der Gruppe
+2. **Input**: Eingabefeld der Checkbox, zeigt den Zustand (_unselected_, _selected_, _indeterminate_) an
+3. **Checkbox Label**: Beschreibt, was der:die Nutzer:in auswählt
+
+<!--
+## Platzierung
+
+Hier kann beschrieben werden, wie eine Checkbox in verschiedenen Kontexten platziert wird.
+-->
+
+<!--
+## Inhalt
+
+Hier können Regeln für die Inhalte von Checkboxes definiert werden, z.B. Wording von Labels.
+-->

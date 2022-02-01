@@ -51,7 +51,7 @@ const StyledDialog = styled.div<StyledDialogProps>`
     max-width: 750px;
     width: 100%;
     max-height: calc(100vh - ${space('l')});
-    margin: ${space('m')};
+    margin: ${space('l')};
     z-index: 999;
     border-radius: ${space('s')};
     overflow: hidden;
@@ -138,7 +138,7 @@ export const DialogFooter = styled.div`
 export const DialogClose = () => {
   const { onClose } = useContext(DialogContext);
 
-  return <Button icon="Close" label="Close dialog" onClick={onClose} iconPosition="only" />;
+  return <Button icon="Cancel" label="Close dialog" onClick={onClose} iconPosition="only" />;
 };
 
 export default Dialog;

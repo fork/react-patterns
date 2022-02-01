@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Icon from '../Icon';
+import Text from '../Text';
 
 import StyledSelect from './Select.style';
 
@@ -45,10 +46,11 @@ const Select = ({
 }: SelectProps) => (
   <StyledSelect error={error} success={success} hideLabel={hideLabel}>
     <label htmlFor={id}>
-      {label}
-      {required && <span className="select__required">*</span>}
+      <Text as="span" variant="form-label">
+        {label}
+        {required && <span className="select__required">*</span>}
+      </Text>
     </label>
-
     <div className="select__wrapper">
       <select
         id={id}
@@ -69,9 +71,16 @@ const Select = ({
           </option>
         ))}
       </select>
-      <Icon icon="AngleDown" />
+      <Icon icon="Expand" />
     </div>
-    {error && errorMessage && <span className="select__error">{errorMessage}</span>}
+
+    {error && errorMessage && (
+      <div className="select__error">
+        <Text as="span" variant="copy-small">
+          {errorMessage}
+        </Text>
+      </div>
+    )}
   </StyledSelect>
 );
 

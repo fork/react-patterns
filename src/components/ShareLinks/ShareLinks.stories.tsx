@@ -17,7 +17,7 @@ export default {
 const Template: Story<ShareLinksProps> = args => <ShareLinks {...args} />;
 export const Default = Template.bind({});
 Default.args = {
-  links: ['Facebook', 'Instagram', 'Twitter', 'WhatsApp', 'Mail'],
+  links: ['Facebook', 'Instagram', 'Twitter', 'Mail'],
   url: 'https://fork.de',
   subject: 'Subject',
   text: 'Text',

@@ -6,7 +6,7 @@ import Teaser from '../Teaser/Teaser';
 import docs from './docs.mdx';
 
 export default {
-  title: 'Components/Navigation/TeaserContainer',
+  title: 'Components/Layout/TeaserContainer',
   component: TeaserContainer,
   parameters: {
     docs: {
@@ -17,7 +17,7 @@ export default {
 
 const teaserDefault = {
   href: '#',
-  title: 'A Highlighting Headline',
+  title: 'Teaser Title',
   copy: 'And a capturing copy',
   linkText: 'Read more'
 };

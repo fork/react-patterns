@@ -3,38 +3,65 @@ import styled from 'styled-components';
 import { color, space, typography } from '../../stylesheets';
 
 const StyledRichtext = styled.div`
+  li,
   p {
-    padding: 0;
-    margin: 0 0 ${space('s')};
     ${typography('copy')};
   }
 
   h2 {
-    ${typography('headline2')};
+    ${typography('headline-2')};
   }
 
   h3 {
-    ${typography('headline3')};
+    ${typography('headline-3')};
   }
 
   h4 {
-    ${typography('headline4')};
+    ${typography('headline-4')};
   }
 
   h2,
   h3,
   h4 {
-    margin: ${space('m')} 0 ${space('s')};
+    margin: 0 0 ${space('m')} 0;
+  }
+
+  p {
+    margin: 0 0 ${space('m')} 0;
   }
 
   ul,
   ol {
     list-style-position: inside;
-    padding: 0;
-    margin: 0 0 ${space('m')};
+    margin-bottom: ${space('m')};
+    padding-left: ${space('m')};
 
     li {
-      ${typography('copy')};
+      margin-bottom: ${space('xs')};
+
+      &::marker {
+        color: ${color('primary')};
+        font-weight: bold;
+      }
+    }
+
+    li > ul,
+    li > ol {
+      margin-top: ${space('s')};
+    }
+  }
+
+  ul {
+    list-style-type: square;
+  }
+
+  ol {
+    list-style-type: decimal;
+    ol {
+      list-style-type: lower-latin;
+      ol {
+        list-style-type: square;
+      }
     }
   }
 

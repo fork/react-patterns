@@ -3,12 +3,11 @@
 exports[`Button Button should render correctly 1`] = `
 <styled.button
   iconPosition="before"
-  size="small"
   type="button"
   variant="primary"
 >
   <styled.p
-    variant="copy"
+    variant="button"
   />
 </styled.button>
 `;
@@ -16,12 +15,11 @@ exports[`Button Button should render correctly 1`] = `
 exports[`Button Secondary Button should render correctly 1`] = `
 <styled.button
   iconPosition="before"
-  size="small"
   type="button"
   variant="secondary"
 >
   <styled.p
-    variant="copy"
+    variant="button"
   />
 </styled.button>
 `;
