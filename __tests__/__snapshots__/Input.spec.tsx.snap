@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Input should render correctly 1`] = `
+<styled.div>
+  <label
+    htmlFor="1"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Input Label
+    </styled.p>
+  </label>
+  <div
+    className="input__wrapper"
+  >
+    <input
+      id="1"
+      name="1"
+      type="text"
+    />
+  </div>
+</styled.div>
+`;
+
+exports[`Input Input with default value should render correctly 1`] = `
+<styled.div
+  hideLabel={true}
+>
+  <label
+    htmlFor="1"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Input Label
+    </styled.p>
+  </label>
+  <div
+    className="input__wrapper"
+  >
+    <input
+      id="1"
+      name="1"
+      type="text"
+      value="Testinput"
+    />
+  </div>
+</styled.div>
+`;
+
+exports[`Input Input with hidden label should render correctly 1`] = `
+<styled.div
+  hideLabel={true}
+>
+  <label
+    htmlFor="1"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Input Label
+    </styled.p>
+  </label>
+  <div
+    className="input__wrapper"
+  >
+    <input
+      id="1"
+      name="1"
+      type="text"
+    />
+  </div>
+</styled.div>
+`;

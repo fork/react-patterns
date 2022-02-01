@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Checkbox should render correctly 1`] = `
+<styled.div>
+  <label
+    htmlFor="1"
+  >
+    <input
+      id="1"
+      name="1"
+      type="checkbox"
+    />
+    <span
+      className="checkbox__custom-checkbox"
+    >
+      <Icon
+        icon="Checkmark"
+      />
+    </span>
+    <span
+      className="checkbox__label"
+    >
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Checkbox Label
+      </styled.p>
+    </span>
+  </label>
+</styled.div>
+`;
+
+exports[`Checkbox Checkbox with default value should render correctly 1`] = `
+<styled.div
+  hideLabel={true}
+>
+  <label
+    htmlFor="1"
+  >
+    <input
+      checked={true}
+      id="1"
+      name="1"
+      type="checkbox"
+    />
+    <span
+      className="checkbox__custom-checkbox"
+    >
+      <Icon
+        icon="Checkmark"
+      />
+    </span>
+    <span
+      className="checkbox__label"
+    >
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Checkbox Label
+      </styled.p>
+    </span>
+  </label>
+</styled.div>
+`;
+
+exports[`Checkbox Checkbox without label should render correctly 1`] = `
+<styled.div
+  hideLabel={true}
+>
+  <label
+    htmlFor="1"
+  >
+    <input
+      id="1"
+      name="1"
+      type="checkbox"
+    />
+    <span
+      className="checkbox__custom-checkbox"
+    >
+      <Icon
+        icon="Checkmark"
+      />
+    </span>
+    <span
+      className="checkbox__label"
+    >
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Checkbox Label
+      </styled.p>
+    </span>
+  </label>
+</styled.div>
+`;

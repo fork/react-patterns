@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea Textarea should render correctly 1`] = `
+<styled.div>
+  <label
+    htmlFor="1"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Textarea Label
+    </styled.p>
+  </label>
+  <textarea
+    id="1"
+    name="1"
+  />
+</styled.div>
+`;
+
+exports[`Textarea Textarea with default value should render correctly 1`] = `
+<styled.div
+  hideLabel={true}
+>
+  <label
+    htmlFor="1"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Textarea Label
+    </styled.p>
+  </label>
+  <textarea
+    id="1"
+    name="1"
+    value="true"
+  />
+</styled.div>
+`;
+
+exports[`Textarea Textarea with hidden label should render correctly 1`] = `
+<styled.div
+  hideLabel={true}
+>
+  <label
+    htmlFor="1"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Textarea Label
+    </styled.p>
+  </label>
+  <textarea
+    id="1"
+    name="1"
+  />
+</styled.div>
+`;

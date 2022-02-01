@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio Radio should render correctly 1`] = `
+<styled.div>
+  <p
+    className="radio__label"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Radio Label
+    </styled.p>
+  </p>
+  <div
+    className="radio__item"
+    key="frau"
+  >
+    <input
+      checked={false}
+      id="frau"
+      name="1"
+      type="radio"
+      value="frau"
+    />
+    <label
+      htmlFor="frau"
+    >
+      <span
+        className="radio__custom-icon "
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Frau
+      </styled.p>
+    </label>
+  </div>
+  <div
+    className="radio__item"
+    key="herr"
+  >
+    <input
+      checked={false}
+      id="herr"
+      name="1"
+      type="radio"
+      value="herr"
+    />
+    <label
+      htmlFor="herr"
+    >
+      <span
+        className="radio__custom-icon "
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Herr
+      </styled.p>
+    </label>
+  </div>
+  <div
+    className="radio__item"
+    key="divers"
+  >
+    <input
+      checked={false}
+      id="divers"
+      name="1"
+      type="radio"
+      value="divers"
+    />
+    <label
+      htmlFor="divers"
+    >
+      <span
+        className="radio__custom-icon "
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Divers
+      </styled.p>
+    </label>
+  </div>
+</styled.div>
+`;
+
+exports[`Radio Radio with default value should render correctly 1`] = `
+<styled.div
+  hideLabel={true}
+>
+  <p
+    className="radio__label"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Radio Label
+    </styled.p>
+  </p>
+  <div
+    className="radio__item"
+    key="frau"
+  >
+    <input
+      checked={true}
+      id="frau"
+      name="1"
+      type="radio"
+      value="frau"
+    />
+    <label
+      htmlFor="frau"
+    >
+      <span
+        className="radio__custom-icon checked"
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Frau
+      </styled.p>
+    </label>
+  </div>
+  <div
+    className="radio__item"
+    key="herr"
+  >
+    <input
+      checked={false}
+      id="herr"
+      name="1"
+      type="radio"
+      value="herr"
+    />
+    <label
+      htmlFor="herr"
+    >
+      <span
+        className="radio__custom-icon "
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Herr
+      </styled.p>
+    </label>
+  </div>
+  <div
+    className="radio__item"
+    key="divers"
+  >
+    <input
+      checked={false}
+      id="divers"
+      name="1"
+      type="radio"
+      value="divers"
+    />
+    <label
+      htmlFor="divers"
+    >
+      <span
+        className="radio__custom-icon "
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Divers
+      </styled.p>
+    </label>
+  </div>
+</styled.div>
+`;
+
+exports[`Radio Radio without label should render correctly 1`] = `
+<styled.div
+  hideLabel={true}
+>
+  <p
+    className="radio__label"
+  >
+    <styled.p
+      as="span"
+      variant="form-label"
+    >
+      Radio Label
+    </styled.p>
+  </p>
+  <div
+    className="radio__item"
+    key="frau"
+  >
+    <input
+      checked={false}
+      id="frau"
+      name="1"
+      type="radio"
+      value="frau"
+    />
+    <label
+      htmlFor="frau"
+    >
+      <span
+        className="radio__custom-icon "
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Frau
+      </styled.p>
+    </label>
+  </div>
+  <div
+    className="radio__item"
+    key="herr"
+  >
+    <input
+      checked={false}
+      id="herr"
+      name="1"
+      type="radio"
+      value="herr"
+    />
+    <label
+      htmlFor="herr"
+    >
+      <span
+        className="radio__custom-icon "
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Herr
+      </styled.p>
+    </label>
+  </div>
+  <div
+    className="radio__item"
+    key="divers"
+  >
+    <input
+      checked={false}
+      id="divers"
+      name="1"
+      type="radio"
+      value="divers"
+    />
+    <label
+      htmlFor="divers"
+    >
+      <span
+        className="radio__custom-icon "
+      />
+      <styled.p
+        as="span"
+        variant="form-value"
+      >
+        Divers
+      </styled.p>
+    </label>
+  </div>
+</styled.div>
+`;

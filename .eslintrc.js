@@ -1,11 +1,41 @@
 module.exports = {
-  extends: ['airbnb', 'prettier', 'plugin:jsx-a11y/recommended'],
-  plugins: ['prettier'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'plugin:jsx-a11y/recommended',
+    'plugin:@typescript-eslint/recommended'
+  ],
+  plugins: ['prettier', 'eslint-plugin-react-hooks', '@typescript-eslint'],
   env: {
-    browser: true
+    browser: true,
+    jest: true
   },
-  parser: 'babel-eslint',
+  parser: '@typescript-eslint/parser',
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    }
+  },
   rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
+    'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'linebreak-style': 'off',
     'prettier/prettier': ['error'],
