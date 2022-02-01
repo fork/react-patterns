@@ -17,6 +17,7 @@ export default {
 const defaults = {
   id: 'file-upload',
   label: 'File Upload',
+  placeholder: 'Laden Sie hier ihre Datei hoch',
   required: true,
   multiple: false,
   error: false,
@@ -30,8 +31,8 @@ const defaults = {
 
 const Template: Story<FileUploadProps> = args => <FileUpload {...args} />;
 
-export const Default = Template.bind({});
-Default.args = { ...defaults };
+export const WithoutValue = Template.bind({});
+WithoutValue.args = { ...defaults };
 
 export const Multiple = Template.bind({});
 Multiple.args = {
@@ -39,3 +40,9 @@ Multiple.args = {
   multiple: true,
   required: false
 };
+
+export const Error = Template.bind({});
+Error.args = { ...defaults, error: true };
+
+export const Disabled = Template.bind({});
+Disabled.args = { ...defaults, disabled: true };

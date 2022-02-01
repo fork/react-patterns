@@ -6,7 +6,6 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
     display: block;
     margin-bottom: ${space('s')};
     color: ${color('neutral')};
-    line-height: 1;
     ${props => props.hideLabel && hideVisually()}
   }
 
@@ -25,7 +24,7 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
   select {
     width: 100%;
     outline: none;
-    background: transparent;
+    background: ${color('neutral', 10)};
     appearance: none;
     color: ${color('neutral')};
     line-height: 1;
@@ -36,12 +35,8 @@ const StyledSelect = styled.div<{ error?: boolean; success?: boolean; hideLabel?
       color: black;
     }
 
-    &[disabled] {
-      opacity: 0.5;
-
-      & + svg {
-        opacity: 0.5;
-      }
+    &:disabled {
+      border-color: ${color('neutral', 30)};
     }
 
     &::-ms-expand {

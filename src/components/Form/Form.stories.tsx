@@ -49,7 +49,8 @@ export const Default = () => {
       id: 'fullName',
       name: 'fullName',
       required: true,
-      label: 'Full name'
+      label: 'Full name',
+      placeholder: 'Ihr voller Name'
     },
     {
       fieldType: 'textarea',
@@ -57,7 +58,8 @@ export const Default = () => {
       id: 'message',
       name: 'message',
       required: true,
-      label: 'Message'
+      label: 'Message',
+      placeholder: 'Geben Sie ihre Nachricht ein'
     },
     {
       fieldType: 'fileUpload',
@@ -68,7 +70,7 @@ export const Default = () => {
       error: false,
       success: false,
       disabled: false,
-      errorMessage: 'Dies ist ein Pflichtfeld'
+      placeholder: 'Laden Sie hier ihre Datei hoch'
     },
     {
       fieldType: 'checkbox',

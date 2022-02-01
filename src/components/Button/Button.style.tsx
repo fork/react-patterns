@@ -21,7 +21,7 @@ const StyledButton = styled.button<StyledButtonProps>`
     outline: 0;
   } */
 
-  &[disabled] {
+  &:disabled {
     pointer-events: none;
     user-select: none;
     color: ${color('neutral', 50)};
@@ -75,7 +75,7 @@ const StyledButton = styled.button<StyledButtonProps>`
         }
       }
 
-      &[disabled] {
+      &:disabled {
         background: ${color('neutral', 30)};
         border-color: ${color('neutral', 30)};
       }
@@ -95,7 +95,7 @@ const StyledButton = styled.button<StyledButtonProps>`
         border-color: ${color('primary', 90)};
       }
 
-      &[disabled] {
+      &:disabled {
         border-color: ${color('neutral', 30)};
       }
     `,

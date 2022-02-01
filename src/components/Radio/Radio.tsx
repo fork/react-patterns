@@ -17,6 +17,7 @@ export type RadioProps = {
   label: string;
   onChange?: (ev: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
+  success?: boolean;
   value?: string;
   options: RadioOption[];
   hideLabel?: boolean;
@@ -30,11 +31,12 @@ const Radio = ({
   label,
   onChange,
   required,
+  success,
   value,
   options,
   hideLabel
 }: RadioProps) => (
-  <StyledRadio error={error} hideLabel={hideLabel}>
+  <StyledRadio error={error} hideLabel={hideLabel} success={success}>
     <p className="radio__label">
       <Text as="span" variant="form-label">
         {label}
@@ -63,11 +65,11 @@ const Radio = ({
     ))}
 
     {error && errorMessage && (
-      <div className="radio__error">
+      <small className="radio__error" role="status">
         <Text as="span" variant="copy-small">
           {errorMessage}
         </Text>
-      </div>
+      </small>
     )}
   </StyledRadio>
 );

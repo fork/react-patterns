@@ -41,6 +41,9 @@ Default.args = {
 export const WithoutLabel = Template.bind({});
 WithoutLabel.args = { ...Default.args, hideLabel: true };
 
+export const Disabled = Template.bind({});
+Disabled.args = { ...Default.args, disabled: true };
+
 export const Error = Template.bind({});
 Error.args = { ...Default.args, error: true, errorMessage: 'Bitte verfasse eine Nachricht.' };
 

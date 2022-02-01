@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import Text from '../Text';
+import Icon from '../Icon';
+
 import StyledFileUpload from './FileUpload.style';
 
 export type FileUploadProps = {
@@ -9,6 +12,7 @@ export type FileUploadProps = {
   errorMessage?: string;
   hideLabel?: boolean;
   id: string;
+  placeholder?: string;
   label: string;
   multiple?: boolean;
   onBlur?: (ev: React.FocusEvent<HTMLInputElement>) => void;
@@ -27,6 +31,7 @@ const FileUpload = ({
   errorMessage,
   hideLabel,
   id,
+  placeholder,
   label,
   multiple,
   onBlur,
@@ -53,37 +58,55 @@ const FileUpload = ({
   };
 
   return (
-    <StyledFileUpload success={success} error={error} hideLabel={hideLabel} className={className}>
+    <StyledFileUpload
+      success={success}
+      error={error}
+      hideLabel={hideLabel}
+      className={className}
+      output={output}
+    >
       <label htmlFor={id}>
         {label && (
-          <span className="fileUpload__label">
-            {label}
-            {required && <span className="input__required">*</span>}
-          </span>
+          <div className="fileUpload__label">
+            <Text as="span" variant="form-label">
+              {label}
+              {required && <span className="input__required">*</span>}
+            </Text>
+          </div>
         )}
         <input
           type="file"
           id={id}
           name={id}
           value={value}
+          required={required}
+          placeholder={placeholder}
+          disabled={disabled}
+          multiple={multiple}
+          accept={accept}
           onBlur={onBlur}
           onChange={ev => {
             handleChange(ev);
             onChange(ev);
           }}
           onFocus={onFocus}
-          required={required}
-          disabled={disabled}
-          multiple={multiple}
-          accept={accept}
         />
-        <span className="fileUpload__custom">Datei auswählen</span>
-      </label>
-      <span className="fileUpload__output">{output || 'Keine ausgewählt'}</span>
-      {error && errorMessage && (
-        <span className="fileUpload__error" role="status">
-          {errorMessage}
+        <span className="fileUpload__custom">
+          <span className="fileUpload__output">
+            <Text as="span" variant="copy-small">
+              {output || placeholder}
+            </Text>
+          </span>
+          <Icon icon="Upload" />
         </span>
+      </label>
+
+      {error && errorMessage && (
+        <small className="fileUpload__error" role="status">
+          <Text as="span" variant="copy-small">
+            {errorMessage}
+          </Text>
+        </small>
       )}
     </StyledFileUpload>
   );

@@ -93,11 +93,11 @@ const Input = ({
     </div>
 
     {error && errorMessage && (
-      <div className="input__error">
+      <small className="input__error" role="status">
         <Text as="span" variant="copy-small">
           {errorMessage}
         </Text>
-      </div>
+      </small>
     )}
   </StyledInput>
 );

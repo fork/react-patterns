@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { color, space, hideVisually } from '../../stylesheets';
 
-const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
+const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean; success?: boolean }>`
   .radio__label {
     margin-bottom: ${space('s')};
     ${props => props.hideLabel && hideVisually()}
@@ -49,7 +49,7 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
     ${hideVisually()}
   }
 
-  input[disabled] ~ label {
+  input:disabled ~ label {
     opacity: 0.5;
     cursor: not-allowed;
   }
@@ -67,6 +67,18 @@ const StyledRadio = styled.div<{ error?: boolean; hideLabel?: boolean }>`
     color: ${color('warning')};
     margin-top: ${space('s')};
   }
+
+  ${props =>
+    props.success &&
+    css`
+      .radio__label {
+        color: ${color('success')};
+      }
+
+      label .radio__custom-icon {
+        border-color: ${color('success')};
+      }
+    `}
 
   ${props =>
     props.error &&

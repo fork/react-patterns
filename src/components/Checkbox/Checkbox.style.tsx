@@ -70,7 +70,7 @@ const StyledCheckbox = styled.div<{ error?: boolean; success?: boolean; hideLabe
   input {
     ${hideVisually()}
 
-    &[disabled] ~ .checkbox__label, &[disabled] ~ .checkbox__custom-checkbox {
+    &:disabled ~ .checkbox__label, &:disabled ~ .checkbox__custom-checkbox {
       opacity: 0.5;
       cursor: not-allowed;
     }
